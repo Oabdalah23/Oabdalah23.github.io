@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+body {
+  color: rgba(255, 255, 255);
+  font-family: 'Anonymous Pro', monospace;
+  background-image: url("bgg.jpg");
+}
+
+html,
+body { height: 100%; }
+
+body {
+  display: table;
+  width: 100%;
+}
+
+.middlecontent {
+  position: relative;
+  height: 55%;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.title {
+  width: 10.3em;
+  position: absolute;
+  border-right: 2px solid rgba(255, 255, 255);
+  font-size: 9vw;
+  text-align: center;
+  text-shadow: 2px 2px blue;
+  color: white;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.anim-typewriter {
+  animation: typewriter 4s steps(40) 1s 1 normal both,
+  blinkTextCursor 750ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0em;
+  }
+  to{
+    width: 10.3em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.page-footer {
+  display: table-row;
+  height: 1px;
+  text-align: center;
+  width: 100%;
+}
+
+.page-footer p {
+  text-shadow: 1px 1px blue;
+  font-size: 15px;
+}
+
+.page-buttons { 
+  height: 100%; 
+  vertical-align: middle;
+}
+
+nav navwidth {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  nav ul     { display: none; }
+  nav navwidth { display: inline-block; }
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+@media only screen and (max-width:620px) {
+  .middlecontent, .page-row-expanded, .page-footer {
+    width:100%;
+  }
+}
+
+#buttons02 {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border-color: 1px 1px white;
+}
+
+#buttons02 a {
+  text-align: center;
+	white-space: nowrap;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  top: 1vh;
+  right: 2%;
+  transform: translateX(-50%);
+  margin: 0.75rem;
+	line-height: 3.125rem;
+	padding: 0 2rem;
+	font-size: 2vw;
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 400;
+	border-radius: 0rem;
+}
+ 
+#buttons02 .button {
+	color: #FFFFFF;
+  animation: fadein 7s;
+}
+
+.buttons {
+	text-align: center;
+}
+
+#buttons02 .button:hover {
+	color: lightgrey !important;
+  font-weight: bold;
+  text-shadow: 3px 3px blue;
+}
+
+.mid-center { 
+  position: absolute;
+  top: 60%; 
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+}

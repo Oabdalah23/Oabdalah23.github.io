@@ -1,0 +1,179 @@
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+body {
+  color: rgba(255, 255, 255);
+  font-family: 'Anonymous Pro', monospace;
+  background-image: url("bgg.jpg");
+}
+
+html,
+body { height: 99%; }
+
+body {
+  display: table;
+  width: 99.5%;
+}
+
+.middlecontent {
+  position: relative;
+  height: 60%;
+  vertical-align: bottom;
+}
+
+.title {
+  position: absolute;
+  font-size: 13vw;
+  width: 100vw;
+  text-align: center;
+  text-shadow: 2px 2px blue;
+  color: white;
+  top: 13vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+
+
+.button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90%;
+  font-family: 'Anonymous Pro', monospace;
+  text-decoration: none;
+	padding: 0;
+	letter-spacing: 0;
+  color: white;
+  font-size: 1.75em;
+  
+}
+
+.button:hover{
+
+  color: lightgray !important;
+  font-weight: bold;
+  text-shadow: 3px 3px blue;
+  text-decoration: none;
+
+}
+
+.Games {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
+  font-family: 'Anonymous Pro', monospace;
+  text-decoration: none;
+	padding: 0;
+	letter-spacing: 0;
+  color: white;
+  font-size: 3em;
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  cursor: pointer;
+  
+  
+}
+
+.Games:hover{
+
+  color: lightgray !important;
+  font-weight: bold;
+  text-shadow: 3px 3px blue;
+
+}
+
+.check{
+
+  background-color: transparent;
+  border-color: transparent;
+
+}
+
+.textinput {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 45vh;
+  font-family: 'Anonymous Pro', monospace;
+  text-decoration: none;
+	padding: 0;
+	letter-spacing: 0;
+  color: white;
+  text-shadow: 0.3vw 0.3vw blue;
+  background-color: transparent;
+  font-size: 10vw;
+  text-align: center;
+  width: 50vw;
+  height: 15vw;
+  outline: none;
+  border-color: white;
+  box-shadow: 2px 2px blue;
+}
+.solution {
+  position: absolute;
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 2px 2px blue;
+  color: white;
+  left: 89vw;
+  top: 0.01vh;
+}
+
+.coins {
+  position: absolute;
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 2px 2px blue;
+  color: white;
+  top: 0.01vh;
+  left: 2.3vw;
+  width: 8.5vw;
+}
+
+
+div divdrop {
+  position: relative;
+  display: none;
+  font-size:150%;
+  cursor: pointer;
+  left: 2vw;
+}
+
+.dropdown:hover{
+  text-shadow: 2px 2px blue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  text-shadow: 2px 2px blue;
+  font-size: 100%;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 940px) {
+  .textinput {text-shadow: 0px 0px white;}
+  div divdrop { display: inline-block; }
+  .sc {display: none;}
+}
+.mid-center { 
+  position: absolute;
+  top: 90%; 
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+}
+
+

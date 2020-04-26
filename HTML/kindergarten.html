@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kindergarten - KidKalc</title>
+    <link rel="stylesheet" href="look/kindergarten.css">
+    <meta name="description" content="KidKalc is the best website for kindergarten kids to learn math, in a fun, futuristic way!" />
+  </head>
+  <body>
+    <div class="dropdown">
+      <divdrop>
+        <span>Score & Coins</span>
+        <div class="dropdown-content">
+        <p id="dropdownscore">Score: 0</p>
+        <p id="dropdowncoins">Coins: 0</p>
+        </div>
+      </divdrop>
+    </div>
+
+    <div class="middlecontent">
+      <h1 class="title" id="question"></h1>
+        <ul class="sc">
+          <p id="finprompt" class="solution">
+            Score<br />0
+          </p>
+          <p id="coins" class="coins">
+            Coins<br />0
+          </p>
+        </ul>
+    </div>
+
+    <input id="textbox" name="name" class="textinput" type="text" value=""> 
+
+    <button id="check" type="button" class="check" onclick="outputname()" ></button>
+
+    <id="buttons02" class="buttons">
+      <a href="/index.html" class="button">Back</a>
+    
+    <button id="game" class="Games" onclick="game()" target="_blank">Game</button>
+    
+  </body>
+
+  <script src="javascript/kindergarten.js"></script>
+
+</html>
