@@ -179,10 +179,10 @@ nav navwidth {
   text-align: center;
 }
 .btn {
-  color:white;
+  color:black;
   font-family:inherit;
   font-size: 1.5vw;
-  background: black;
+  background: white;
   padding: 1vw 3.4vw;
   border: 3px solid blue;
   box-shadow: 0 0 0 blue;
@@ -196,7 +196,7 @@ nav navwidth {
 .btn:hover {
   box-shadow: 0.4rem 0.4rem 0 blue;
   transform: translate(-0.4rem, -0.4rem);
-  color: whitesmoke;
+  color: black;
 }
 
 .btn:active {
