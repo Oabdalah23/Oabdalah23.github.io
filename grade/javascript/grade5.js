@@ -10,23 +10,74 @@ else
     document.getElementById("game").style.display = "none";
   }
 
-num1 = 500;
-num2 = 500;
-accans = num1 + num2;
-while(accans>10)
-  {
-    num1 = Math.floor(Math.random()*10+1);
-    num2 = Math.floor(Math.random()*10+1);
+operations = ['+','-','*','/'];
+operation = operations[Math.floor(Math.random() * operations.length)];
+if(operation == '+')
+{
+    num1 = 5000;
+    num2 = 5000;
     accans = num1 + num2;
+    while(accans>5000)
+    {
+      num1 = Math.floor(Math.random()*5000+1);
+      num2 = Math.floor(Math.random()*5000+1);
+      accans = num1 + num2;
+    } 
+    document.getElementById("question").innerHTML = num1+" + "+num2;
+}
+else if(operation == '-')
+{
+  num1 = Math.floor(Math.random()*5000+1);
+  num2 = Math.floor(Math.random()*5000+1);
+  if(num1 > num2)
+  {
+    document.getElementById("question").innerHTML = num1+" - "+num2;
+    accans = num1 - num2;
   }
-
-document.getElementById("question").innerHTML = num1+" + "+num2;
+  else
+  {
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+    document.getElementById("question").innerHTML = num1+" - "+num2;
+    accans = num1 - num2;
+  }
+}
+else if(operation == '*')
+{
+  num1 = Math.floor(Math.random()*12);
+  num2 = Math.floor(Math.random()*12);
+  document.getElementById("question").innerHTML = num1+" × "+num2;
+  accans = num1 * num2;
+}
+else if(operation == '/')
+{
+  num2 = Math.floor(Math.random()*12);
+  items = [
+  [1,2,3,4,5,6,7,8,9,10,11,12],
+  [2,4,6,8,10,12,14,16,18,20,22,24],
+  [3,6,9,12,15,18,21,24,27,30,33,36],
+  [4,8,12,16,20,24,28,32,36,40,44,48],
+  [5,10,15,20,25,30,35,40,45,50,55,60],
+  [6,12,18,24,30,36,42,48,54,60,66,72],
+  [7,14,21,28,35,42,49,56,63,70,77,84],
+  [8,16,24,32,40,48,56,64,72,80,88,96],
+  [9,18,27,36,45,54,63,72,81,90,99,108],
+  [10,20,30,40,50,60,70,80,90,100,110,120],
+  [11,22,33,44,55,66,77,88,99,110,121,132],
+  [12,24,36,48,60,72,84,96,108,120,132,144]
+  ];   
+  x = Math.floor(Math.random()*11);
+  num1 = items[num2-1][x];
+  document.getElementById("question").innerHTML = num1+" ÷ "+num2;
+  accans = num1 / num2;
+}
 
 function game () {
   coins =  coins - 1;
   document.getElementById("coins").innerHTML="Coins\n"+coins;
   document.getElementById("dropdowncoins").innerHTML="Coins: "+coins;
-  window.location.href="/game.html";
+  window.location.href="/game";
   document.getElementById("game").style.display = "none";
 }
  
@@ -66,17 +117,68 @@ function newquestion() {
   var input = document.getElementById('textbox');
   setCaretPosition(input, input.value.length);
   document.getElementById('textbox').value = '';
-  num1 = 500;
-  num2 = 500;
-  accans = num1 + num2;
-  while(accans>10)
+  operations = ['+','-','*','/'];
+operation = operations[Math.floor(Math.random() * operations.length)];
+if(operation == '+')
+{
+    num1 = 5000;
+    num2 = 5000;
+    accans = num1 + num2;
+    while(accans>5000)
     {
-      num1 = Math.floor(Math.random()*10+1);
-      num2 = Math.floor(Math.random()*10+1);
+      num1 = Math.floor(Math.random()*5000+1);
+      num2 = Math.floor(Math.random()*5000+1);
       accans = num1 + num2;
-    }
-    
-       document.getElementById("question").innerHTML = num1+" + "+num2;
+    } 
+    document.getElementById("question").innerHTML = num1+" + "+num2;
+}
+else if(operation == '-')
+{
+  num1 = Math.floor(Math.random()*5000+1);
+  num2 = Math.floor(Math.random()*5000+1);
+  if(num1 > num2)
+  {
+    document.getElementById("question").innerHTML = num1+" - "+num2;
+    accans = num1 - num2;
+  }
+  else
+  {
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+    document.getElementById("question").innerHTML = num1+" - "+num2;
+    accans = num1 - num2;
+  }
+}
+else if(operation == '*')
+{
+  num1 = Math.floor(Math.random()*12);
+  num2 = Math.floor(Math.random()*12);
+  document.getElementById("question").innerHTML = num1+" × "+num2;
+  accans = num1 * num2;
+}
+else if(operation == '/')
+{
+  num2 = Math.floor(Math.random()*12);
+  items = [
+  [1,2,3,4,5,6,7,8,9,10,11,12],
+  [2,4,6,8,10,12,14,16,18,20,22,24],
+  [3,6,9,12,15,18,21,24,27,30,33,36],
+  [4,8,12,16,20,24,28,32,36,40,44,48],
+  [5,10,15,20,25,30,35,40,45,50,55,60],
+  [6,12,18,24,30,36,42,48,54,60,66,72],
+  [7,14,21,28,35,42,49,56,63,70,77,84],
+  [8,16,24,32,40,48,56,64,72,80,88,96],
+  [9,18,27,36,45,54,63,72,81,90,99,108],
+  [10,20,30,40,50,60,70,80,90,100,110,120],
+  [11,22,33,44,55,66,77,88,99,110,121,132],
+  [12,24,36,48,60,72,84,96,108,120,132,144]
+  ];   
+  x = Math.floor(Math.random()*11);
+  num1 = items[num2-1][x];
+  document.getElementById("question").innerHTML = num1+" ÷ "+num2;
+  accans = num1 / num2;
+}
 }
 
 function actual() {
@@ -95,7 +197,7 @@ function outputname() {
   document.getElementById("textbox").readOnly = true;
   var x,y,name,a,b,answer;
   y = document.getElementById("textbox").value;
-  if (y == num1 + num2) {
+  if (y == accans) {
     if ($(window).width() < 900) {
       score = score + 1;
       document.getElementById('textbox').style.textShadow = "0px 0px white";

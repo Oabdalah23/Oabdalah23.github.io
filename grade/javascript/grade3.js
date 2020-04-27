@@ -56,7 +56,7 @@ function game () {
   coins =  coins - 1;
   document.getElementById("coins").innerHTML="Coins\n"+coins;
   document.getElementById("dropdowncoins").innerHTML="Coins: "+coins;
-  window.location.href="/game.html";
+  window.location.href="/game";
   document.getElementById("game").style.display = "none";
 }
  
