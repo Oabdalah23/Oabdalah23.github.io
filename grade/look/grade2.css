@@ -114,8 +114,11 @@ body {
   border-top: hidden;
   border-left: hidden;
   border-right: hidden;
-  border-color: white;
-  box-shadow: 0px 2px blue;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: 2px 2px white;
+  filter: drop-shadow(0px 2px blue);
 }
 .solution {
   position: absolute;
