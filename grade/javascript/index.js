@@ -6,7 +6,7 @@ function yes() {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["KidKalc", "The Future", "Perfection"];
+const textArray = ["KidKalc", "The Future", "Perfection", "Better Math"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2500; // Delay between current and next text
