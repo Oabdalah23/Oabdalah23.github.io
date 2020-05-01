@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Chela+One);
-@import url(https://fonts.googleapis.com/css?family=Patrick+Hand);
+@import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
 
 body {
   color: rgba(255, 255, 255);
@@ -23,20 +23,45 @@ body {
 
 .title {
   font-family: 'Chela One';
-  width: 8em;
+  width: 100%;
   position: absolute;
-  font-size: 12vw;
+  font-size: 11.15vw;
   text-align: center;
-  text-shadow: 2px 2px blue;
-  color: white;
+  text-shadow: 3px 3px blue;
+  color: #f2f2f2;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.middlecontent h1 span.typed-text {
+  font-weight: normal;
+  color: white;
+  text-shadow: 3px 3px blue;
+}
+.middlecontent h1 span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.middlecontent h1 span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
 }
 
 
 .page-footer {
-font-family: 'Chela One';
+  font-family: 'Chela One';
   display: table-row;
   height: 1px;
   text-align: center;
@@ -45,7 +70,7 @@ font-family: 'Chela One';
 
 .page-footer p {
   text-shadow: 1px 1px blue;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .page-buttons { 
@@ -120,14 +145,4 @@ nav navwidth {
   transform: translateX(-50%) translateY(-50%); 
 }
 
-
-@keyframes slide {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -120px 60px;
-  }
-}
 
