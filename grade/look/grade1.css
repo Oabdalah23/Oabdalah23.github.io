@@ -101,14 +101,14 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: 45vh;
-  font-family: 'Chela One';
+  font-family: 'Averia Sans Libre';
   text-decoration: none;
   padding: 0;
   letter-spacing: 0;
   color: #ebebeb;
   text-shadow: 0.3vw 0.3vw blue;
   background-color: transparent;
-  font-size: 13vw;
+  font-size: 10vw;
   text-align: center;
   width: 50vw;
   height: 15vw;
