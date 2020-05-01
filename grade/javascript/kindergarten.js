@@ -42,6 +42,7 @@ document.getElementById("question").innerHTML = num1+" + "+num2;
 
 function game () {
   coins =  coins - 1;
+  localStorage.setItem('savedcoin',JSON.stringify(coins));    
   document.getElementById("coins").innerHTML="Coins\n"+coins;
   document.getElementById("dropdowncoins").innerHTML="Coins: "+coins;
   window.location.href="/game";
