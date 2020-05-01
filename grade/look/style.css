@@ -25,7 +25,7 @@ body {
   font-family: 'Chela One';
   width: 8em;
   position: absolute;
-  font-size: 9vw;
+  font-size: 12vw;
   text-align: center;
   text-shadow: 2px 2px blue;
   color: white;
@@ -93,7 +93,7 @@ nav navwidth {
   margin: 0.75rem;
   line-height: 3.125rem;
   padding: 0 2rem;
-  font-size: 2vw;
+  font-size: 3vw;
   font-weight: 400;
   border-radius: 0rem;
 }
