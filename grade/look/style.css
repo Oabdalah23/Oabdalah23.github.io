@@ -27,7 +27,7 @@ body {
   position: absolute;
   font-size: 11.15vw;
   text-align: center;
-  text-shadow: 3px 3px blue;
+  text-shadow: 5px 5px blue;
   color: #f2f2f2;
   bottom: 5%;
   left: 50%;
@@ -39,7 +39,7 @@ body {
 .middlecontent h1 span.typed-text {
   font-weight: normal;
   color: white;
-  text-shadow: 3px 3px blue;
+  text-shadow: 5px 5px blue;
 }
 .middlecontent h1 span.cursor {
   display: inline-block;
