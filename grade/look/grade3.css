@@ -45,7 +45,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: 90%;
-  font-family: 'Anonymous Pro', monospace;
   text-decoration: none;
 	padding: 0;
 	letter-spacing: 0;
@@ -109,7 +108,7 @@ body {
   color: white;
   text-shadow: 0.3vw 0.3vw blue;
   background-color: transparent;
-  font-size: 10vw;
+  font-size: 13vw;
   text-align: center;
   width: 50vw;
   height: 15vw;
@@ -121,7 +120,7 @@ body {
   border-top-color: transparent;
   border-right-color: transparent;
   border-bottom-color: 2px 2px white;
-  filter: drop-shadow(0px 2px blue);
+  box-shadow: 0px 2px blue;
 }
 
 .solution {
@@ -131,8 +130,9 @@ body {
   text-align: center;
   text-shadow: 2px 2px blue;
   color: white;
-  left: 89vw;
+  left: 89.25vw;
   top: 0.01vh;
+  width: 8.5vw;
 }
 
 .coins {
