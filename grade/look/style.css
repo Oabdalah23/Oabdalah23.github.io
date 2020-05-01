@@ -24,7 +24,6 @@ body {
 .title {
   width: 10.3em;
   position: absolute;
-  border-right: 2px solid rgba(255, 255, 255);
   font-size: 9vw;
   text-align: center;
   text-shadow: 2px 2px blue;
@@ -32,32 +31,8 @@ body {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
-  white-space: nowrap;
 }
 
-.anim-typewriter {
-  animation: typewriter 4s steps(40) 1s 1 normal both,
-  blinkTextCursor 750ms steps(40) infinite normal;
-}
-
-@keyframes typewriter {
-  from {
-    width: 0em;
-  }
-  to{
-    width: 10.3em;
-  }
-}
-
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
 
 .page-footer {
   display: table-row;
