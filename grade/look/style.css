@@ -79,10 +79,11 @@ body {
 }
 
 nav navwidth {
+  font-family: 'Averia Sans Libre';
   display: none;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1203px) {
   nav ul     { display: none; }
   nav navwidth { display: inline-block; }
 }
