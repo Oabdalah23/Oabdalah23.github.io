@@ -29,7 +29,7 @@ body {
   width: 100vw;
   text-align: center;
   text-shadow: 2px 2px blue;
-  color: white;
+  color: #ebebeb;
   top: 4vh;
   left: 50%;
   transform: translateX(-50%);
@@ -48,7 +48,7 @@ body {
   text-decoration: none;
 	padding: 0;
 	letter-spacing: 0;
-  color: white;
+  color: #ebebeb;
   font-size: 2em;
   
 }
@@ -71,7 +71,7 @@ body {
   text-decoration: none;
 	padding: 0;
 	letter-spacing: 0;
-  color: white;
+  color: #ebebeb;
   font-size: 3em;
   background-color: transparent;
   border-color: transparent;
@@ -105,7 +105,7 @@ body {
   text-decoration: none;
   padding: 0;
   letter-spacing: 0;
-  color: white;
+  color: #ebebeb;
   text-shadow: 0.3vw 0.3vw blue;
   background-color: transparent;
   font-size: 13vw;
@@ -129,7 +129,7 @@ body {
   font-size: 3vw;
   text-align: center;
   text-shadow: 2px 2px blue;
-  color: white;
+  color: #ebebeb;
   left: 89.25vw;
   top: 0.01vh;
   width: 8.5vw;
@@ -141,7 +141,7 @@ body {
   font-size: 3vw;
   text-align: center;
   text-shadow: 2px 2px blue;
-  color: white;
+  color: #ebebeb;
   top: 0.01vh;
   left: 2.3vw;
   width: 8.5vw;
