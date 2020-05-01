@@ -1,7 +1,7 @@
 var score;
 var coins;
-if(JSON.parse(localStorage.getItem('savedscore')) > 0) {
-  score = JSON.parse(localStorage.getItem('savedscore'))
+if(JSON.parse(localStorage.getItem('savedscore1')) > 0) {
+  score = JSON.parse(localStorage.getItem('savedscore1'))
   document.getElementById("finprompt").innerHTML="Score\n"+score;
   document.getElementById("dropdownscore").innerHTML="Score: "+score;
 }
@@ -9,8 +9,8 @@ else{
   score = 0;
 }
 
-if(JSON.parse(localStorage.getItem('savedcoin')) > 0) {
-  coins = JSON.parse(localStorage.getItem('savedcoin'))
+if(JSON.parse(localStorage.getItem('savedcoin1')) > 0) {
+  coins = JSON.parse(localStorage.getItem('savedcoin1'))
   document.getElementById("coins").innerHTML="Coins\n"+coins;
   document.getElementById("dropdowncoins").innerHTML="Coins: "+coins;
 }
@@ -65,7 +65,7 @@ else
 
 function game () {
   coins =  coins - 1;
-  localStorage.setItem('savedcoin',JSON.stringify(coins));
+  localStorage.setItem('savedcoin1',JSON.stringify(coins));
   document.getElementById("coins").innerHTML="Coins\n"+coins;
   document.getElementById("dropdowncoins").innerHTML="Coins: "+coins;
   window.location.href="/game";
@@ -73,7 +73,7 @@ function game () {
 }
  
 function newquestion() {
-  localStorage.setItem('savedscore',JSON.stringify(score));
+  localStorage.setItem('savedscore1',JSON.stringify(score));
   if(score % 15 == 0 && score != 0)
     {
       coins = coins + 1;
@@ -88,7 +88,7 @@ function newquestion() {
     {
       document.getElementById("game").style.display = "none";
     }
-  localStorage.setItem('savedcoin',JSON.stringify(coins));
+  localStorage.setItem('savedcoin1',JSON.stringify(coins));
   document.getElementById('textbox').style.color = "white";
   document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw blue";
   document.getElementById("textbox").readOnly = false;
