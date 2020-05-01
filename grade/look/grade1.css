@@ -1,10 +1,10 @@
 
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url(https://fonts.googleapis.com/css?family=Chela+One);
+@import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
 
 /* Global */
 body {
   color: rgba(255, 255, 255);
-  font-family: 'Anonymous Pro', monospace;
   background-image: url("bgg.jpg");
 }
 
@@ -23,13 +23,14 @@ body {
 }
 
 .title {
+  font-family: 'Chela One';
   position: absolute;
-  font-size: 13vw;
+  font-size: 20vw;
   width: 100vw;
   text-align: center;
   text-shadow: 2px 2px blue;
   color: white;
-  top: 13vh;
+  top: 4vh;
   left: 50%;
   transform: translateX(-50%);
     
@@ -39,6 +40,7 @@ body {
 
 
 .button {
+  font-family: 'Averia Sans Libre';
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -48,7 +50,7 @@ body {
 	padding: 0;
 	letter-spacing: 0;
   color: white;
-  font-size: 1.75em;
+  font-size: 2em;
   
 }
 
@@ -66,7 +68,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: 80%;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Averia Sans Libre';
   text-decoration: none;
 	padding: 0;
 	letter-spacing: 0;
@@ -100,7 +102,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: 45vh;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Chela One';
   text-decoration: none;
   padding: 0;
   letter-spacing: 0;
@@ -123,6 +125,7 @@ body {
 }
 
 .solution {
+  font-family: 'Averia Sans Libre';
   position: absolute;
   font-size: 3vw;
   text-align: center;
@@ -133,6 +136,7 @@ body {
 }
 
 .coins {
+  font-family: 'Averia Sans Libre';
   position: absolute;
   font-size: 3vw;
   text-align: center;
@@ -145,6 +149,7 @@ body {
 
 
 div divdrop {
+  font-family: 'Averia Sans Libre';    
   position: relative;
   display: none;
   font-size:150%;
@@ -157,6 +162,7 @@ div divdrop {
 }
 
 .dropdown-content {
+  font-family: 'Averia Sans Libre';    
   display: none;
   position: absolute;
   background-color: black;
