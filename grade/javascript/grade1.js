@@ -90,7 +90,7 @@ function newquestion() {
     }
   localStorage.setItem('savedcoin1',JSON.stringify(coins));
   document.getElementById('textbox').style.color = "white";
-  document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #66a1ff";
+  document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
     
   function setCaretPosition(ctrl, pos) {
