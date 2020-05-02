@@ -97,7 +97,7 @@ function newquestion() {
     }
   localStorage.setItem('savedcoin3',JSON.stringify(coins));
   document.getElementById('textbox').style.color = "white";
-  document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw blue";
+  document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #66a1ff";
   document.getElementById("textbox").readOnly = false;
     
   function setCaretPosition(ctrl, pos) {
@@ -164,11 +164,11 @@ function actual() {
   if ($(window).width() < 900) {
     document.getElementById('textbox').value = accans;
     document.getElementById('textbox').style.textShadow = "0px 0px white";
-    document.getElementById('textbox').style.color = "green";
+    document.getElementById('textbox').style.color = "#57c95a";
   }
   else {
     document.getElementById('textbox').value = accans;
-    document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw green";
+    document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #57c95a";
   }
 }
 
@@ -180,13 +180,13 @@ function outputname() {
     if ($(window).width() < 900) {
       score = score + 1;
       document.getElementById('textbox').style.textShadow = "0px 0px white";
-      document.getElementById('textbox').style.color = "green";
+      document.getElementById('textbox').style.color = "#57c95a";
       document.getElementById("finprompt").innerHTML="Score\n"+score;
       document.getElementById("dropdownscore").innerHTML="Score: "+score;
     }
     else {
       score = score + 1;
-      document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw green";
+      document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #57c95a";
       document.getElementById("finprompt").innerHTML="Score\n"+score;
       document.getElementById("dropdownscore").innerHTML="Score: "+score;
     }
@@ -196,7 +196,7 @@ function outputname() {
       if(score>1) {
         score = score - 2;
         document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "red";
+        document.getElementById('textbox').style.color = "#ff5e5e";
         setTimeout(actual,750);
         document.getElementById("finprompt").innerHTML="Score\n"+score;
         document.getElementById("dropdownscore").innerHTML="Score: "+score;
@@ -204,7 +204,7 @@ function outputname() {
       else if(score==1) {
         score = score - 1;
         document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "red";
+        document.getElementById('textbox').style.color = "#ff5e5e";
         setTimeout(actual,750);
         document.getElementById("finprompt").innerHTML="Score\n"+score;
         document.getElementById("dropdownscore").innerHTML="Score: "+score;
@@ -212,7 +212,7 @@ function outputname() {
       }
       else {
         document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "red";
+        document.getElementById('textbox').style.color = "#ff5e5e";
         setTimeout(actual,750);
         document.getElementById("finprompt").innerHTML="Score\n"+score;
         document.getElementById("dropdownscore").innerHTML="Score: "+score;
@@ -221,20 +221,20 @@ function outputname() {
     else {
       if(score>1) {
         score = score - 2;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw red";
+        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #ff5e5e";
         setTimeout(actual,750);
         document.getElementById("finprompt").innerHTML="Score\n"+score;
         document.getElementById("dropdownscore").innerHTML="Score: "+score;
       }
       else if(score==1) {      
         score = score - 1;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw red";
+        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #ff5e5e";
         setTimeout(actual,750);
         document.getElementById("finprompt").innerHTML="Score\n"+score;
         document.getElementById("dropdownscore").innerHTML="Score: "+score;
       }
       else {
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw red";
+        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #ff5e5e";
         setTimeout(actual,750);
         document.getElementById("finprompt").innerHTML="Score\n"+score;
         document.getElementById("dropdownscore").innerHTML="Score: "+score;
