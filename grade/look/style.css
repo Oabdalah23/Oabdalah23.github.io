@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
 
 body {
-  color: rgba(255, 255, 255);
   background-image: url("bgg.jpg");
 }
 
@@ -10,7 +9,6 @@ html,
 body { height: 100%; }
 
 body {
-  display: table;
   width: 100%;
 }
 
@@ -61,14 +59,17 @@ body {
 
 
 .page-footer {
+  position: absolute;
+  top: 96%;
   font-family: 'Chela One';
-  display: table-row;
   height: 1px;
   text-align: center;
   width: 100%;
+  
 }
 
 .page-footer p {
+  color: white;
   text-shadow: 1px 1px blue;
   font-size: 16px;
 }
@@ -97,6 +98,9 @@ nav navwidth {
 @media only screen and (max-width:620px) {
   .middlecontent, .page-row-expanded, .page-footer {
     width:100%;
+  }
+    .page-footer p {
+    font-size: 14px;
   }
 }
 
@@ -146,4 +150,33 @@ nav navwidth {
   transform: translateX(-50%) translateY(-50%); 
 }
 
+.modal .modal-footer button {
+  background-color: #00a82c !important;
+  border-color: black !important;
+  font-size: 18px;
+
+}
+
+.modal .modal-body{
+  text-align: center;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
 

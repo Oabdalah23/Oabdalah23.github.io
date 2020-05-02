@@ -1,6 +1,30 @@
-function yes() {
-  document.getElementById("modal").style.visibility = "hidden";
-  document.getElementById("options").style.visibility = "hidden";
+$(document).ready(function() {
+    var isshow = localStorage.getItem('isshow');
+    if (isshow == null) {
+        localStorage.setItem('isshow', 1);
+
+        // Show popup here
+        $('#myModal').modal('show');
+    }
+});
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  onOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+function topleftpopup (){
+  Toast.fire({
+  icon: 'success',
+  title: 'Have Fun!'
+    })
 }
 
 const typedTextSpan = document.querySelector(".typed-text");
