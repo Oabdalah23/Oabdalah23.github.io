@@ -160,3 +160,99 @@ nav navwidth {
   vertical-align: middle;
 }
 
+.menushare {
+	 z-index: 999;
+	 position: fixed;
+	 padding: 0;
+	 margin: 0;
+	 list-style-type: none;
+}
+ .menushare .share i.fa {
+	 height: 50px;
+	 width: 50px;
+	 text-align: center;
+	 line-height: 50px;
+	 background-color: #c9deff;
+	 border-radius: 2px;
+}
+ .menushare .share:hover.top .submenu li:nth-child(1) {
+	 opacity: 1;
+	 top: -51px;
+	 transition-delay: 0.08s;
+	 transform: rotateY(0deg);
+	 border-bottom: 1px dashed #d9d9d9;
+}
+ .menushare .share:hover.top .submenu li:nth-child(2) {
+	 opacity: 1;
+	 top: -102px;
+	 transition-delay: 0.16s;
+	 transform: rotateY(0deg);
+	 border-bottom: 1px dashed #d9d9d9;
+}
+ .menushare .share:hover.top .submenu li:nth-child(3) {
+	 opacity: 1;
+	 top: -153px;
+	 transition-delay: 0.24s;
+	 transform: rotateY(0deg);
+	 border-bottom: 1px dashed #d9d9d9;
+}
+ .menushare .share:hover.top .submenu li:nth-child(4) {
+	 opacity: 1;
+	 top: -204px;
+	 transition-delay: 0.32s;
+	 transform: rotateY(0deg);
+	 border-bottom: 1px dashed #d9d9d9;
+}
+ .menushare .share:hover.top .submenu li:nth-child(5) {
+	 opacity: 1;
+	 top: -255px;
+	 transition-delay: 0.4s;
+	 transform: rotateY(0deg);
+	 border-bottom: 1px dashed #d9d9d9;
+}
+ .menushare .submenu {
+	 list-style-type: none;
+	 padding: 0;
+	 margin: 0;
+}
+ .menushare .submenu li {
+	 transition: all ease-in-out 0.5s;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: -1;
+	 opacity: 0;
+}
+ .menushare .submenu li a {
+	 color: #212121;
+}
+ .menushare .submenu li a:hover i.fa {
+	 color: #fff;
+}
+ .menushare .submenu li a:hover.twitter i.fa {
+	 background-color: #55acee;
+}
+ .menushare .submenu li a:hover.envelope i.fa {
+	 background-color: #dd4b39;
+}
+ .menushare .submenu li a:hover.instagram i.fa {
+	 background-color: #e4405f;
+}
+ .menushare .submenu li:nth-child(1) {
+	 transform: rotateX(45deg);
+}
+ .menushare .submenu li:nth-child(2) {
+	 transform: rotateX(90deg);
+}
+ .menushare .submenu li:nth-child(3) {
+	 transform: rotateX(135deg);
+}
+ .menushare .submenu li:nth-child(4) {
+	 transform: rotateX(180deg);
+}
+ .menushare.bottomLeft {
+	 bottom: 10px;
+	 left: 10px;
+}
+
+
