@@ -24,7 +24,7 @@ if(JSON.parse(localStorage.getItem('savedtotal4')) > 0) {
   document.getElementById("dropdowncoins").innerHTML="Total: "+total;
 }
 else{
-  total = 0;
+  total = 1;
 }
 
 
@@ -490,7 +490,7 @@ function outputname() {
   document.getElementById("textbox").readOnly = true;
   var x,y,name,a,b,answer;
   y = document.getElementById("textbox").value;
-  if (y == num1 + num2) {
+  if (y == accans) {
     if ($(window).width() < 900) {
       if(d == 1){
         score = score + 1;
