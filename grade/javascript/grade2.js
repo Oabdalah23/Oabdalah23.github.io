@@ -87,7 +87,7 @@ operations = ['+','-'];
   {
     document.getElementById("question").innerHTML = num1+" - "+num2;
     accans = num1 - num2;
-      if(accans < 5){
+      if(accans < 66){
       d = 1;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #57c95a";
@@ -96,7 +96,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
       }
     }
-    else if(accans < 8){
+    else if(accans < 125){
       d = 2;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
@@ -105,7 +105,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
       }
     }
-    else if(accans < 11){
+    else if(accans < 201){
       d = 3;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
@@ -122,7 +122,7 @@ operations = ['+','-'];
     num1 = num1 - num2;
     document.getElementById("question").innerHTML = num1+" - "+num2;
     accans = num1 - num2;
-      if(accans < 5){
+      if(accans < 66){
       d = 1;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #57c95a";
@@ -131,7 +131,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
       }
     }
-    else if(accans < 8){
+    else if(accans < 125){
       d = 2;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
@@ -140,7 +140,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
       }
     }
-    else if(accans < 11){
+    else if(accans < 201){
       d = 3;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
@@ -247,7 +247,7 @@ operations = ['+','-'];
   {
     document.getElementById("question").innerHTML = num1+" - "+num2;
     accans = num1 - num2;
-      if(accans < 5){
+      if(accans < 66){
       d = 1;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #57c95a";
@@ -256,7 +256,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
       }
     }
-    else if(accans < 8){
+    else if(accans < 125){
       d = 2;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
@@ -265,7 +265,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
       }
     }
-    else if(accans < 11){
+    else if(accans < 201){
       d = 3;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
@@ -282,7 +282,7 @@ operations = ['+','-'];
     num1 = num1 - num2;
     document.getElementById("question").innerHTML = num1+" - "+num2;
     accans = num1 - num2;
-      if(accans < 5){
+      if(accans < 66){
       d = 1;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #57c95a";
@@ -291,7 +291,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
       }
     }
-    else if(accans < 8){
+    else if(accans < 125){
       d = 2;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
@@ -300,7 +300,7 @@ operations = ['+','-'];
         document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
       }
     }
-    else if(accans < 11){
+    else if(accans < 201){
       d = 3;
       if ($(window).width() < 950) {
       document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
