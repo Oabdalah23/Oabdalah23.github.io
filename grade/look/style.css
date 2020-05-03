@@ -130,7 +130,12 @@ nav navwidth {
   transform: translateX(-50%) translateY(-50%); 
 }
 
+.modal .modal-header{
+  font-family: 'Averia Sans Libre';
+}
+
 .modal .modal-footer button {
+  font-family: 'Averia Sans Libre';
   background-color: #00a82c !important;
   border-color: black !important;
   font-size: 18px;
@@ -138,6 +143,7 @@ nav navwidth {
 }
 
 .modal .modal-body{
+  font-family: 'Averia Sans Libre';
   text-align: center;
 }
 
