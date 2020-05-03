@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -18,10 +19,10 @@
   <body>
     <div class="dropdown">
       <divdrop>
-        <span>Score & Coins</span>
+        <span>Total & Score</span>
         <div class="dropdown-content">
+        <p id="dropdowncoins">Total: 1</p>
         <p id="dropdownscore">Score: 0</p>
-        <p id="dropdowncoins">Coins: 0</p>
         </div>
       </divdrop>
     </div>
@@ -33,9 +34,12 @@
             Score<br />0
           </p>
           <p id="coins" class="coins">
-            Coins<br />0
+            Total<br />1
           </p>
         </ul>
+        <p id="difficulty" class="diff">
+            Difficulty
+          </p>
     </div>
 
     <input id="textbox" name="name" class="textinput" type="text" value=""> 
@@ -43,7 +47,7 @@
     <button id="check" type="button" class="check" onclick="outputname()" ></button>
 
     <id="buttons02" class="buttons">
-      <a href="http://kidkalc.com" class="button">Back</a>
+      <a href="https://kidkalc.com" class="button">Back</a>
     
     <button id="game" class="Games" onclick="game()" target="_blank">Game</button>
     

@@ -18,10 +18,10 @@
   <body>
     <div class="dropdown">
       <divdrop>
-        <span>Score & Coins</span>
+        <span>Total & Score</span>
         <div class="dropdown-content">
+        <p id="dropdowncoins">Total: 1</p>
         <p id="dropdownscore">Score: 0</p>
-        <p id="dropdowncoins">Coins: 0</p>
         </div>
       </divdrop>
     </div>
@@ -33,9 +33,12 @@
             Score<br />0
           </p>
           <p id="coins" class="coins">
-            Coins<br />0
+            Total<br />1
           </p>
         </ul>
+        <p id="difficulty" class="diff">
+            Difficulty
+          </p>
     </div>
 
     <input id="textbox" name="name" class="textinput" type="text" value=""> 
@@ -43,9 +46,10 @@
     <button id="check" type="button" class="check" onclick="outputname()" ></button>
 
     <id="buttons02" class="buttons">
-      <a href="http://kidkalc.com" class="button">Back</a>
+      <a href="https://kidkalc.com" class="button">Back</a>
     
-    <button id="game" class="Games" onclick="game()">Game</button>
+    <button id="game" class="Games" onclick="game()" target="_blank">Game</button>
+    
   </body>
 
   <script src="javascript/grade3.js"></script>
