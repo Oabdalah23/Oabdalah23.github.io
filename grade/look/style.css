@@ -261,4 +261,26 @@ nav navwidth {
 	 right: 10px;
 }
 
+.help {
+	 z-index: 999;
+	 position: fixed;
+	 padding: 0;
+	 margin: 0;
+	 list-style-type: none;
+   cursor: pointer;
+   bottom: 10px;
+   left: 10px;
+}
+ .help .menubottom i.fa {
+	 height: 50px;
+	 width: 50px;
+	 text-align: center;
+	 line-height: 50px;
+	 background-color: #c9deff;
+	 border-radius: 2px;
+}
+
+.help .menubottom i.fa:hover {
+  background-color: #a9c8fa;
+}
 
