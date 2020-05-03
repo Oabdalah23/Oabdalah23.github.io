@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>      
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -25,6 +28,49 @@
         </div>
       </divdrop>
     </div>
+        
+        <div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered vcenter">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 type="header" class="modal-title w-100 text-center">
+            Scoring System
+          </h4>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <img src="easy.png" width="300">
+          <br>
+          If either the shadow of the word "difficulty", or the shadow of the actual question turns a light green. This indicates a east difficulty question. Easy questions are worth 1 points.
+          <hr>
+          <img src="medium.png" width="300">
+          <br>
+          If either the shadow of the word "difficulty", or the shadow of the actual question turns yellow. This indicates a medium difficulty question. Mediocre questions are worth 2 points.
+          <hr>
+          <img src="hard.png" width="300">
+          <br>
+          If either the shadow of the word "difficulty", or the shadow of the actual question turns a light red. This indicates a hard difficulty question. Hard questions are worth 3 points.
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer" style="text-align:center;">
+        
+        <button type="button" class="btn btn-primary" style="margin:auto;display:block;" data-dismiss="modal">Understood</button>
+
+
+
+      </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>                     
 
     <div class="middlecontent">
       <h1 class="title" id="question"></h1>
@@ -49,6 +95,11 @@
       <a href="https://kidkalc.com" class="button">Back</a>
     
     <button id="game" class="Games" onclick="game()" target="_blank">Game</button>
+      
+     <ul class="help">
+  <li class="menubottom bottomright">
+  <i onclick="help()" class="fa fa-question"></i>
+</ul>                                                               
     
   </body>
 

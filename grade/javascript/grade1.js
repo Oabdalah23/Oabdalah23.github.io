@@ -1,3 +1,17 @@
+$(document).ready(function() {
+    var isshow = localStorage.getItem('isshowg1');
+    if (isshow == null) {
+        localStorage.setItem('isshowg1', 1);
+
+        // Show popup here
+        $('#myModal').modal('show');
+    }
+});
+
+function help() {
+  $('#myModal').modal('show');
+}
+
 var score;
 var coins;
 var total = 1;;

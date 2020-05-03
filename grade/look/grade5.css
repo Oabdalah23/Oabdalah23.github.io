@@ -4,16 +4,14 @@
 
 /* Global */
 body {
-  color: rgba(255, 255, 255);
   background-image: url("bgg.jpg");
 }
 
 html,
-body { height: 99%; }
+body { height: 100%; }
 
 body {
-  display: table;
-  width: 99.5%;
+  width: 100%;
 }
 
 .middlecontent {
@@ -156,7 +154,7 @@ body {
   text-shadow: 2px 2px #0095ff;
   color: #ebebeb;
   top: 0.01vh;
-  left: 2.3vw;
+  left: 1.6vw;
   width: 8.5vw;
 }
 
@@ -168,6 +166,7 @@ div divdrop {
   font-size:150%;
   cursor: pointer;
   left: 2vw;
+  color: white;
 }
 
 .dropdown:hover{
@@ -203,6 +202,64 @@ div divdrop {
   transform: translateX(-50%) translateY(-50%); 
 }
 
+.modal .modal-header{
+  font-family: 'Averia Sans Libre';
+}
+
+.modal .modal-footer button {
+  font-family: 'Averia Sans Libre';
+  background-color: #00a82c !important;
+  border-color: black !important;
+  font-size: 18px;
+
+}
+
+.modal .modal-body{
+  font-family: 'Averia Sans Libre';
+  text-align: center;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.help {
+	 z-index: 999;
+	 position: fixed;
+	 padding: 0;
+	 margin: 0;
+	 list-style-type: none;
+   cursor: pointer;
+   bottom: 10px;
+   left: 10px;
+}
+ .help .menubottom i.fa {
+	 height: 50px;
+	 width: 50px;
+	 text-align: center;
+	 line-height: 50px;
+	 background-color: #c9deff;
+	 border-radius: 2px;
+}
+
+.help .menubottom i.fa:hover {
+  background-color: #a9c8fa;
+}
 
 
 
