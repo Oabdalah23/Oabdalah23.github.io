@@ -293,8 +293,9 @@ nav navwidth {
    cursor: pointer;
    top: 10px;
    right: 10px;
+    
 }
- .account .account i{
+ .account .account {
 	 height: 50px;
 	 width: 50px;
 	 text-align: center;
@@ -304,11 +305,14 @@ nav navwidth {
    animation: moema 2s infinite;
 }
 
-.account .account i:hover {
+.account .account:hover {
   animation: none;
   background-color: #a9c8fa;
 }
 
+.fa {
+    color: black !important;
+}
 @keyframes moema {
 	60% {
 		-webkit-transform: scale3d(0.8, 0.8, 1);
