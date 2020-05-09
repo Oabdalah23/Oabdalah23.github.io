@@ -8,9 +8,11 @@ firebase.auth().onAuthStateChanged(function(user){
 
     var user = firebase.auth().currentUser;
 
-    console.log(firebase.auth().currentUser);
+    console.log(user);
 
     if(user != null){
+
+      console.log(user);
 
 
       var email_id = user.email;
