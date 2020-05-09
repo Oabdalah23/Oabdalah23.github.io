@@ -2,6 +2,8 @@ firebase.auth().onAuthStateChanged(function(user){
   if (user) {
     // User is signed in.
 
+    console.log(firebase.auth().currentUser.uid);
+
     document.getElementById( "account" ).setAttribute( "onClick", "javascript: showusernamepopup();" );
 
     var user = firebase.auth().currentUser;
