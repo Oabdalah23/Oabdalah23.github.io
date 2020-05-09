@@ -88,10 +88,10 @@ function signup() {
       console.log(error)
       var errorCode = error.code;
       var errorMessage = error.message;
-      var invaliduser = "The email address is badly formatted."
-      var passwordlength = "The password must be 6 characters long or more."
-      var passwordlen = "Password should be at least 6 characters"
-      var taken = "The email address is already in use by another account."
+      var invaliduser = "The email address is badly formatted.";
+      var passwordlength = "The password must be 6 characters long or more.";
+      var passwordlen = "Password should be at least 6 characters";
+      var taken = "The email address is already in use by another account.";
       
   
       if(error.message === invaliduser)
