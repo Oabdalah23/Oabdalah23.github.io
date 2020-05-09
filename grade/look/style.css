@@ -304,7 +304,9 @@ nav navwidth {
 .help .menubottom i.fa:hover {
   background-color: #a9c8fa;
 }
-
+.signinhypercolour {
+	color: #fc8c03;
+}
 .account {
 	 z-index: 999;
 	 position: fixed;
