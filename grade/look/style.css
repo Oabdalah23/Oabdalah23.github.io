@@ -323,7 +323,7 @@ nav navwidth {
 	 line-height: 50px;
 	 background-color: #c9deff;
 	 border-radius: 2px;
-   animation: moema 2s infinite;
+   animation: none;
 }
 
 .account .account:hover {
