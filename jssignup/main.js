@@ -57,17 +57,23 @@
 
 function signupchange () {
     deletetext();
+    document.getElementById('googlebtn').style.display = "none";
     document.getElementById('signup').style.display = "none";
     document.getElementById('signuptxt').style.display = "none";
     document.getElementById('signin').style.display = "inline";
     document.getElementById('signintxt').style.display = "inline";
     document.getElementById('signinbtn').style.display = "none";
     document.getElementById('signupbtn').style.display = "inline";
-    document.getElementById("title").innerHTML = "Sign Up With";
+    document.getElementById("title").innerHTML = "Sign Up";
+    document.getElementById('or').style.display = "none";
+    document.getElementById("title").className = "login100-form-title p-b-20"; 
+
+
 }
 
 function signin () {
     deletetext();
+    document.getElementById('googlebtn').style.display = "flex";
     document.getElementById('signin').style.display = "none";
     document.getElementById('signintxt').style.display = "none";
     document.getElementById('signup').style.display = "inline";
@@ -75,6 +81,8 @@ function signin () {
     document.getElementById('signupbtn').style.display = "none";
     document.getElementById('signinbtn').style.display = "inline";
     document.getElementById("title").innerHTML = "Sign In With";
+    document.getElementById('or').style.display = "block";
+    document.getElementById("title").className = "login100-form-title p-b-50"; 
 
 }
 
@@ -102,17 +110,17 @@ function login(){
       if(error.message === nouser)
       {
          document.getElementById('error').innerHTML = "Username Not Registered";
-         setTimeout(deletetext,3000);
+         setTimeout(deletetext,5000);
       }
       else if(error.message === invaliduser)
       {
          document.getElementById('error').innerHTML = "Invalid Username";
-         setTimeout(deletetext,3000);
+         setTimeout(deletetext,5000);
       }
       else if(error.message === invalidpassword)
       {
          document.getElementById('error').innerHTML = "Wrong Password";
-         setTimeout(deletetext,3000);
+         setTimeout(deletetext,5000);
       }
 
   
@@ -143,17 +151,17 @@ function signup() {
       if(error.message === invaliduser)
       {
          document.getElementById('error').innerHTML = "Invalid Username";
-         setTimeout(deletetext,3000);
+         setTimeout(deletetext,5000);
       }
       else if(error.message === passwordlength || passwordlen)
       {
          document.getElementById('error').innerHTML = "Password Too Short";
-         setTimeout(deletetext,3000);
+         setTimeout(deletetext,5000);
       }
       else if(error.message === taken)
       {
          document.getElementById('error').innerHTML = "Username Already Taken";
-         setTimeout(deletetext,3000);
+         setTimeout(deletetext,5000);
       }
   
       
@@ -185,7 +193,5 @@ function redirect(){
 function deletetext()
 {
     document.getElementById('error').innerHTML = '';
-    document.getElementById('email_field').value = '';
-    document.getElementById('password_field').value = ''
 }
   
