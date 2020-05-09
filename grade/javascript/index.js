@@ -72,6 +72,13 @@ function topleftpopup (){
     })
 }
 
+function signoutsuccess (){
+  Toast.fire({
+  icon: 'success',
+  title: 'Signed Out Successfully'
+    })
+}
+
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
@@ -118,4 +125,5 @@ function logout(){
   firebase.auth().signOut();
   document.getElementById( "account" ).setAttribute( "onClick", "location.href='account';" );
   document.getElementById("account").style.animation = "moema 2s infinite";
+  signoutsuccess();
 }
