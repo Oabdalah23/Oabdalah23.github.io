@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Chela+One);
 @import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
-@import url(https://fonts.googleapis.com/css?family=Merienda+One);
+@font-face {
+	font-family: Montserrat-SemiBold;
+	src: url('../fontssignup/montserrat/Montserrat-SemiBold.ttf'); 
+  }
 
 body {
   background-image: url("bgg.jpg");
@@ -132,7 +135,7 @@ nav navwidth {
 }
 
 #exampleModalLabel{
-  font-family: 'Merienda One';
+	font-family: Montserrat-SemiBold;
 }
 
 #infopopup{
