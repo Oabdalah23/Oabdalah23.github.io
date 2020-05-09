@@ -22,6 +22,21 @@
       <meta name="description" content="KidKalc is the best website for elementary kids to learn math, in a fun, futuristic way!" />
 </head>
 <body>
+<div class="modalusername">
+  <!-- Modal -->
+<div class="modal fade" id="myusername" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modaluser-dialog" role="document">
+    <div id="modaluser" class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title  w-100 text-center " id="exampleModalLabel">Welcome </h1>
+      </div>
+      <div class="modal-footer">
+        <button onclick="logout()" type="button1" id="button" class="btn btn-primary" style="margin:auto;display:block;" data-dismiss="modal" >Sign Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
   
      <div class="container">
   
@@ -33,9 +48,9 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 type="header" class="modal-title w-100 text-center">
+          <h2 type="header" class="modal-title w-100 text-center">
             Welcome To KidKalc
-          </h4>
+          </h2>
         </div>
         
         <!-- Modal body -->
@@ -123,6 +138,24 @@
     </ul>
   </li>
 </ul>                                                                                       
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+
+  <script>
+    
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCSY_guUTymv77PDeCi9A8K11bmAystFX8",
+      authDomain: "kidkalc.firebaseapp.com",
+      databaseURL: "https://kidkalc.firebaseio.com",
+      projectId: "kidkalc",
+      storageBucket: "kidkalc.appspot.com",
+      messagingSenderId: "363718905093"
+    };
+    firebase.initializeApp(config);
+
+  </script>
 
 </body>
 

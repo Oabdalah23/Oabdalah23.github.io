@@ -1,3 +1,34 @@
+firebase.auth().onAuthStateChanged(function(user){
+  if (user) {
+    // User is signed in.
+
+    document.getElementById( "a" ).setAttribute( "onClick", "javascript: showusernamepopup();" );
+
+    var user = firebase.auth().currentUser;
+
+    if(user != null){
+
+
+      var email_id = user.email;
+      var str = email_id.split('@');
+      str.pop();
+
+      document.getElementById("exampleModalLabel").innerHTML = "Welcome " + (str);
+
+    } 
+
+  } else {
+    // No user is signed in.
+
+    document.getElementById( "account" ).setAttribute( "onClick", "location.href='account';" );
+
+  }
+});
+
+function showusernamepopup() {  
+  $('#myusername').modal('show');
+}
+
 $(document).ready(function() {
     var isshow = localStorage.getItem('isshow');
     if (isshow == null) {
@@ -73,3 +104,7 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
+function logout(){
+  firebase.auth().signOut();
+  document.getElementById( "account" ).setAttribute( "onClick", "location.href='account';" );
+}
