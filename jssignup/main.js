@@ -85,6 +85,7 @@ function signup() {
     
     }).catch(function(error) {
       // Handle Errors here.
+      console.log(error)
       var errorCode = error.code;
       var errorMessage = error.message;
       var invaliduser = "The email address is badly formatted."
@@ -105,6 +106,7 @@ function signup() {
       }
       else if(error.message === taken)
       {
+
          document.getElementById('error').innerHTML = "Username Already Taken";
          setTimeout(deletetext,5000);
       }
