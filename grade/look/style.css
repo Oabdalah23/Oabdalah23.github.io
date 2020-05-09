@@ -307,6 +307,10 @@ nav navwidth {
 .signinhypercolour {
 	color: #fc8c03;
 }
+.signinhypercolour:hover {
+	text-decoration:none;
+	color: #a35a00;
+}
 .account {
 	 z-index: 999;
 	 position: fixed;
