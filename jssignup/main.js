@@ -90,7 +90,7 @@ function signup() {
       var errorMessage = error.message;
       var invaliduser = "The email address is badly formatted."
       var passwordlength = "The password must be 6 characters long or more."
-      var passwordlen = "Password should be at least 6 characters";
+      var passwordlen = "Password should be at least 6 characters"
       var taken = "The email address is already in use by another account."
       
   
@@ -99,15 +99,14 @@ function signup() {
          document.getElementById('error').innerHTML = "Invalid Username";
          setTimeout(deletetext,5000);
       }
+      else if(error.message === taken)
+      {
+         document.getElementById('error').innerHTML = "Username Already Taken";
+         setTimeout(deletetext,5000);
+      }
       else if(error.message === passwordlength || passwordlen)
       {
          document.getElementById('error').innerHTML = "Password Too Short";
-         setTimeout(deletetext,5000);
-      }
-      else if(error.message === taken)
-      {
-
-         document.getElementById('error').innerHTML = "Username Already Taken";
          setTimeout(deletetext,5000);
       }
   
