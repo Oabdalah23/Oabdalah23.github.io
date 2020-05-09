@@ -10,7 +10,7 @@ firebase.auth().onAuthStateChanged(function(user){
 
     document.getElementById( "account" ).setAttribute( "onClick", "javascript: showusernamepopup();" );
 
-    document.getElementById("myDIV").style.animation = "none";
+    document.getElementById("account").style.animation = "none";
 
     if(user != null){
 
@@ -30,7 +30,7 @@ firebase.auth().onAuthStateChanged(function(user){
 
     document.getElementById( "account" ).setAttribute( "onClick", "location.href='account';" );
 
-    document.getElementById("myDIV").style.animation = "moema 2s infinite";
+    document.getElementById("account").style.animation = "moema 2s infinite";
 
   }
 });
@@ -117,5 +117,5 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 function logout(){
   firebase.auth().signOut();
   document.getElementById( "account" ).setAttribute( "onClick", "location.href='account';" );
-  document.getElementById("myDIV").style.animation = "moema 2s infinite";
+  document.getElementById("account").style.animation = "moema 2s infinite";
 }
