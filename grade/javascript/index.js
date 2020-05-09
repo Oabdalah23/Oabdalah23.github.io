@@ -8,6 +8,8 @@ firebase.auth().onAuthStateChanged(function(user){
 
     var user = firebase.auth().currentUser;
 
+    console.log(firebase.auth().currentUser);
+
     if(user != null){
 
 
