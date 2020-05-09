@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Chela+One);
 @import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
+@import url(https://fonts.googleapis.com/css?family=Merienda+One);
 
 body {
   background-image: url("bgg.jpg");
@@ -130,8 +131,12 @@ nav navwidth {
   transform: translateX(-50%) translateY(-50%); 
 }
 
-.modal .modal-header{
-  font-family: 'Averia Sans Libre';
+#exampleModalLabel{
+  font-family: 'Merienda One';
+}
+
+#infopopup{
+	font-family: 'Averia Sans Libre';
 }
 
 .modal .modal-footer button {
