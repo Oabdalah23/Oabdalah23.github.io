@@ -1,5 +1,16 @@
-
-
+if ($(window).width() < 585) {
+    document.getElementById('or').innerHTML = "───   Or   ───";
+}else{
+    document.getElementById('or').innerHTML = "──────────   Or   ──────────";
+}
+$(window).on('resize', function(){
+    var win = $(this); //this = window
+    if ($(window).width() < 585) {
+        document.getElementById('or').innerHTML = "───   Or   ───";
+    }else{
+        document.getElementById('or').innerHTML = "──────────   Or   ──────────";
+    }
+});
 function signupchange () {
     deletetext();
     document.getElementById('googlebtn').style.display = "none";
@@ -30,7 +41,13 @@ function signin () {
     document.getElementById('signupbtn').style.display = "none";
     document.getElementById('signinbtn').style.display = "inline";
     document.getElementById("title").innerHTML = "Sign In With";
-    document.getElementById('or').style.display = "block";
+    if ($(window).width() < 585) {
+        document.getElementById('or').style.display = "block";
+        document.getElementById('or').innerHTML = "───   Or   ───";
+    }else{
+        document.getElementById('or').style.display = "block";
+        document.getElementById('or').innerHTML = "──────────   Or   ──────────";
+    }
     document.getElementById("title").className = "login100-form-title p-b-50"; 
 
 }
