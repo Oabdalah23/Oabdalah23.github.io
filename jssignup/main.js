@@ -9,6 +9,8 @@ function signupchange () {
     document.getElementById('signintxt').style.display = "inline";
     document.getElementById('signinbtn').style.display = "none";
     document.getElementById('signupbtn').style.display = "inline";
+    document.getElementById('name').style.display = "inline";
+    document.getElementById('namebox').style.display = "inline";
     document.getElementById("title").innerHTML = "Sign Up";
     document.getElementById('or').style.display = "none";
     document.getElementById("title").className = "login100-form-title p-b-20"; 
@@ -18,6 +20,8 @@ function signupchange () {
 
 function signin () {
     deletetext();
+    document.getElementById('name').style.display = "none";
+    document.getElementById('namebox').style.display = "none";
     document.getElementById('googlebtn').style.display = "flex";
     document.getElementById('signin').style.display = "none";
     document.getElementById('signintxt').style.display = "none";
@@ -72,18 +76,31 @@ function login(){
     });
   
 }
-  
+
 function signup() {
+    var user = null;
     var userEmail = (document.getElementById("email_field").value + "@kidkalc.com");
     var userPass = document.getElementById("password_field").value;
+    var user_name = document.getElementById("name_field").value;
+
   
-    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).then(function(user){
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).then(function(){
         document.getElementById('error').style.color = "#00ff33";
         document.getElementById('error').innerHTML = "Sign Up Succesful";
-        setTimeout(redirect,2000)
+        user = firebase.auth().currentUser;
+
+
+    })
+    .then(function () {
+        user.updateProfile({
+            displayName: user_name,
+            
+        });
+
+        setTimeout(redirect,2000);
+    })  
     
-    
-    }).catch(function(error) {
+    .catch(function(error) {
       // Handle Errors here.
       console.log(error)
       var errorCode = error.code;

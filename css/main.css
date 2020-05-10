@@ -137,6 +137,14 @@ iframe {
   line-height: 1.5;
 }
 
+.txt11 {
+  display: none;
+  font-family: Montserrat-SemiBold;
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+}
+
 
 
 
@@ -306,6 +314,15 @@ iframe {
 [ Input ]*/
 
 .wrap-input100 {
+  width: 100%;
+  position: relative;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.wrap-input1001 {
+  display: none;
   width: 100%;
   position: relative;
   background-color: #f7f7f7;

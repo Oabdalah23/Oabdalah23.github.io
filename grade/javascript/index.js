@@ -16,12 +16,20 @@ firebase.auth().onAuthStateChanged(function(user){
 
       console.log(user);
 
+      var userdisplayname = user.displayName;
 
-      var email_id = user.email;
-      var str = email_id.split('@');
-      str.pop();
+      if(userdisplayname != null)
+      {
+        document.getElementById("exampleModalLabel").innerHTML = "Welcome " + (userdisplayname);
+      }
+      else{
+        var email_id = user.email;
+        var str = email_id.split('@');
+        str.pop();
 
-      document.getElementById("exampleModalLabel").innerHTML = "Welcome " + (str);
+        document.getElementById("exampleModalLabel").innerHTML = "Welcome " + (str);
+
+      }
 
     } 
 
