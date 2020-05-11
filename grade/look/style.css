@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Chela+One);
 @import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
 
 
 body {
@@ -132,7 +133,7 @@ nav navwidth {
 }
 
 #exampleModalLabel{
-	font-family: 'Concert One', cursive;
+	font-family: 'Concert One';
 }
 
 #infopopup{
