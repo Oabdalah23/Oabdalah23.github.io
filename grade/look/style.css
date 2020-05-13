@@ -369,4 +369,7 @@ nav navwidth {
 		transform: scale3d(1, 1, 1);
 	}
 }
-
+::selection {
+ background: #fc8c03;
+ color: black;
+}
