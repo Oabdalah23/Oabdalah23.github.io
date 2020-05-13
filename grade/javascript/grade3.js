@@ -5,23 +5,22 @@ var config = {
   databaseURL: "https://kidkalc.firebaseio.com",
   projectId: "kidkalc",
   storageBucket: "kidkalc.appspot.com",
-  messagingSenderId: "363718905093"
+  messagingSenderId: "363718905093",
 };
 firebase.initializeApp(config);
 
-$(document).ready(function() {
-    var isshow = localStorage.getItem('isshow3');
-    if (isshow == null) {
-        localStorage.setItem('isshow3', 1);
+$(document).ready(function () {
+  var isshow = localStorage.getItem("isshow3");
+  if (isshow == null) {
+    localStorage.setItem("isshow3", 1);
 
-        // Show popup here
-        $('#myModal').modal('show');
-    }
+    // Show popup here
+    $("#myModal").modal("show");
+  }
 });
 
-
 function help() {
-  $('#myModal').modal('show');
+  $("#myModal").modal("show");
 }
 
 var score = 0;
@@ -32,540 +31,506 @@ var scorefire3 = JSON.parse(JSON.stringify(score));
 var coinsfire3 = JSON.parse(JSON.stringify(coins));
 var d;
 
-
-if(JSON.parse(localStorage.getItem('savedscore3')) > 0) {
-  score = JSON.parse(localStorage.getItem('savedscore3'))
-  document.getElementById("finprompt").innerHTML="Score\n"+score;
-  document.getElementById("dropdownscore").innerHTML="Score: "+score;
-}
-else{
+if (JSON.parse(localStorage.getItem("savedscore3")) > 0) {
+  score = JSON.parse(localStorage.getItem("savedscore3"));
+  document.getElementById("finprompt").innerHTML = "Score\n" + score;
+  document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+} else {
   score = 0;
 }
 
-if(JSON.parse(localStorage.getItem('savedcoin3')) > 0) {
-  coins = JSON.parse(localStorage.getItem('savedcoin3'))
-}
-else{
+if (JSON.parse(localStorage.getItem("savedcoin3")) > 0) {
+  coins = JSON.parse(localStorage.getItem("savedcoin3"));
+} else {
   coins = 0;
 }
 
-if(JSON.parse(localStorage.getItem('savedtotal3')) > 0) {
-  total = JSON.parse(localStorage.getItem('savedtotal3'))
-  document.getElementById("coins").innerHTML="Total\n"+total;
-  document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-}
-else{
+if (JSON.parse(localStorage.getItem("savedtotal3")) > 0) {
+  total = JSON.parse(localStorage.getItem("savedtotal3"));
+  document.getElementById("coins").innerHTML = "Total\n" + total;
+  document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+} else {
   total = 1;
 }
 
-
-if(coins>0)
-  {
-    document.getElementById("game").style.display = "block";
-  }
-else
-  {
-    document.getElementById("game").style.display = "none";
-  }
-
- operations = ['+','-','*'];
- operation = operations[Math.floor(Math.random() * operations.length)];
- if(operation == '+')
- {
-    num1 = 500;
-    num2 = 500;
-    accans = num1 + num2;
-    while(accans>500)
-    {
-      num1 = Math.floor(Math.random()*500+1);
-      num2 = Math.floor(Math.random()*500+1);
-      accans = num1 + num2;
-        if(accans < 101){
-      d = 1;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
-      }
-    }
-    else if(accans < 301){
-      d = 2;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 501){
-      d = 3;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    }  
-    } 
-    document.getElementById("question").innerHTML = num1+" + "+num2;
- }
- else if(operation == '-')
- {
-   num1 = Math.floor(Math.random()*500+1);
-   num2 = Math.floor(Math.random()*500+1);
-  if(num1 > num2)
-  {
-    document.getElementById("question").innerHTML = num1+" - "+num2;
-    accans = num1 - num2;
-      if(accans < 101){
-      d = 1;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
-      }
-    }
-    else if(accans < 301){
-      d = 2;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 501){
-      d = 3;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    } 
-  }
-  else
-  {
-    num1 = num1 + num2;
-    num2 = num1 - num2;
-    num1 = num1 - num2;
-    document.getElementById("question").innerHTML = num1+" - "+num2;
-    accans = num1 - num2;
-      if(accans < 101){
-      d = 1;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
-      }
-    }
-    else if(accans < 301){
-      d = 2;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 501){
-      d = 3;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    } 
-  }
- }
-  else if(operation == '*')
- {
-    num1 = Math.floor(Math.random()*5);
-    num2 = Math.floor(Math.random()*5);
-    document.getElementById("question").innerHTML = num1+" × "+num2;
-    accans = num1 * num2;
-     if(accans < 11){
-      d = 1;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
-      }
-    }
-    else if(accans < 18){
-      d = 2;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 26){
-      d = 3;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    } 
-  
-}
-
-function game () {
-  coins =  coins - 1;
-  localStorage.setItem('savedcoin3',JSON.stringify(coins));
-  window.location.href="/game";
+if (coins > 0) {
+  document.getElementById("game").style.display = "block";
+} else {
   document.getElementById("game").style.display = "none";
 }
- 
-function newquestion() {
-    localStorage.setItem('savedtotal3',JSON.stringify(total));
-  localStorage.setItem('savedscore3',JSON.stringify(score));
-  if(total % 15 == 0 && total != 0)
-    {
-      coins = coins + 1;
-    }
-  if(coins>0)
-    {
-      document.getElementById("game").style.display = "block";
-    }
-  else
-    {
-      document.getElementById("game").style.display = "none";
-    }
-  localStorage.setItem('savedcoin3',JSON.stringify(coins));
-  document.getElementById('textbox').style.color = "white";
-  document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #0095ff";
-  document.getElementById("textbox").readOnly = false;
-    
-  function setCaretPosition(ctrl, pos) {
-  if (ctrl.setSelectionRange) {
-    ctrl.focus();
-    ctrl.setSelectionRange(pos, pos); 
-  } 
-  else if (ctrl.createTextRange) {
-    var range = ctrl.createTextRange();
-    range.collapse(true);
-    range.moveEnd('character', pos);
-    range.moveStart('character', pos);
-    range.select();
-  }
-}
 
-  var input = document.getElementById('textbox');
-  setCaretPosition(input, input.value.length);
-  document.getElementById('textbox').value = '';
-    operations = ['+','-','*'];
- operation = operations[Math.floor(Math.random() * operations.length)];
- if(operation == '+')
- {
-    num1 = 500;
-    num2 = 500;
+operations = ["+", "-", "*"];
+operation = operations[Math.floor(Math.random() * operations.length)];
+if (operation == "+") {
+  num1 = 500;
+  num2 = 500;
+  accans = num1 + num2;
+  while (accans > 500) {
+    num1 = Math.floor(Math.random() * 500 + 1);
+    num2 = Math.floor(Math.random() * 500 + 1);
     accans = num1 + num2;
-    while(accans>500)
-    {
-      num1 = Math.floor(Math.random()*500+1);
-      num2 = Math.floor(Math.random()*500+1);
-      accans = num1 + num2;
-        if(accans < 101){
+    if (accans < 101) {
       d = 1;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #57c95a";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #57c95a";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
-      }
-    }
-    else if(accans < 301){
+    } else if (accans < 301) {
       d = 2;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ffcc66";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ffcc66";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 501){
+    } else if (accans < 501) {
       d = 3;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    }  
-    } 
-    document.getElementById("question").innerHTML = num1+" + "+num2;
- }
- else if(operation == '-')
- {
-   num1 = Math.floor(Math.random()*500+1);
-   num2 = Math.floor(Math.random()*500+1);
-  if(num1 > num2)
-  {
-    document.getElementById("question").innerHTML = num1+" - "+num2;
-    accans = num1 - num2;
-      if(accans < 101){
-      d = 1;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ff5e5e";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ff5e5e";
       }
     }
-    else if(accans < 301){
-      d = 2;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 501){
-      d = 3;
-      if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
-      }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    } 
   }
-  else
-  {
+  document.getElementById("question").innerHTML = num1 + " + " + num2;
+} else if (operation == "-") {
+  num1 = Math.floor(Math.random() * 500 + 1);
+  num2 = Math.floor(Math.random() * 500 + 1);
+  if (num1 > num2) {
+    document.getElementById("question").innerHTML = num1 + " - " + num2;
+    accans = num1 - num2;
+    if (accans < 101) {
+      d = 1;
+      if ($(window).width() < 950) {
+        document.getElementById("question").style.textShadow =
+          "3px 3px #57c95a";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #57c95a";
+      }
+    } else if (accans < 301) {
+      d = 2;
+      if ($(window).width() < 950) {
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ffcc66";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ffcc66";
+      }
+    } else if (accans < 501) {
+      d = 3;
+      if ($(window).width() < 950) {
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ff5e5e";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ff5e5e";
+      }
+    }
+  } else {
     num1 = num1 + num2;
     num2 = num1 - num2;
     num1 = num1 - num2;
-    document.getElementById("question").innerHTML = num1+" - "+num2;
+    document.getElementById("question").innerHTML = num1 + " - " + num2;
     accans = num1 - num2;
-      if(accans < 101){
+    if (accans < 101) {
       d = 1;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #57c95a";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #57c95a";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
-      }
-    }
-    else if(accans < 301){
+    } else if (accans < 301) {
       d = 2;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ffcc66";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ffcc66";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 501){
+    } else if (accans < 501) {
       d = 3;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ff5e5e";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ff5e5e";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    } 
+    }
   }
- }
-  else if(operation == '*')
- {
-    num1 = Math.floor(Math.random()*5);
-    num2 = Math.floor(Math.random()*5);
-    document.getElementById("question").innerHTML = num1+" × "+num2;
+} else if (operation == "*") {
+  num1 = Math.floor(Math.random() * 5);
+  num2 = Math.floor(Math.random() * 5);
+  document.getElementById("question").innerHTML = num1 + " × " + num2;
+  accans = num1 * num2;
+  if (accans < 11) {
+    d = 1;
+    if ($(window).width() < 950) {
+      document.getElementById("question").style.textShadow = "3px 3px #57c95a";
+    } else {
+      document.getElementById("difficulty").style.textShadow =
+        "2px 2px #57c95a";
+    }
+  } else if (accans < 18) {
+    d = 2;
+    if ($(window).width() < 950) {
+      document.getElementById("question").style.textShadow = "3px 3px #ffcc66";
+    } else {
+      document.getElementById("difficulty").style.textShadow =
+        "2px 2px #ffcc66";
+    }
+  } else if (accans < 26) {
+    d = 3;
+    if ($(window).width() < 950) {
+      document.getElementById("question").style.textShadow = "3px 3px #ff5e5e";
+    } else {
+      document.getElementById("difficulty").style.textShadow =
+        "2px 2px #ff5e5e";
+    }
+  }
+}
+
+function game() {
+  coins = coins - 1;
+  localStorage.setItem("savedcoin3", JSON.stringify(coins));
+  window.location.href = "/game";
+  document.getElementById("game").style.display = "none";
+}
+
+function newquestion() {
+  localStorage.setItem("savedtotal3", JSON.stringify(total));
+  localStorage.setItem("savedscore3", JSON.stringify(score));
+  if (total % 15 == 0 && total != 0) {
+    coins = coins + 1;
+  }
+  if (coins > 0) {
+    document.getElementById("game").style.display = "block";
+  } else {
+    document.getElementById("game").style.display = "none";
+  }
+  localStorage.setItem("savedcoin3", JSON.stringify(coins));
+  document.getElementById("textbox").style.color = "white";
+  document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
+  document.getElementById("textbox").readOnly = false;
+
+  function setCaretPosition(ctrl, pos) {
+    if (ctrl.setSelectionRange) {
+      ctrl.focus();
+      ctrl.setSelectionRange(pos, pos);
+    } else if (ctrl.createTextRange) {
+      var range = ctrl.createTextRange();
+      range.collapse(true);
+      range.moveEnd("character", pos);
+      range.moveStart("character", pos);
+      range.select();
+    }
+  }
+
+  var input = document.getElementById("textbox");
+  setCaretPosition(input, input.value.length);
+  document.getElementById("textbox").value = "";
+  operations = ["+", "-", "*"];
+  operation = operations[Math.floor(Math.random() * operations.length)];
+  if (operation == "+") {
+    num1 = 500;
+    num2 = 500;
+    accans = num1 + num2;
+    while (accans > 500) {
+      num1 = Math.floor(Math.random() * 500 + 1);
+      num2 = Math.floor(Math.random() * 500 + 1);
+      accans = num1 + num2;
+      if (accans < 101) {
+        d = 1;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #57c95a";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #57c95a";
+        }
+      } else if (accans < 301) {
+        d = 2;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #ffcc66";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #ffcc66";
+        }
+      } else if (accans < 501) {
+        d = 3;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #ff5e5e";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #ff5e5e";
+        }
+      }
+    }
+    document.getElementById("question").innerHTML = num1 + " + " + num2;
+  } else if (operation == "-") {
+    num1 = Math.floor(Math.random() * 500 + 1);
+    num2 = Math.floor(Math.random() * 500 + 1);
+    if (num1 > num2) {
+      document.getElementById("question").innerHTML = num1 + " - " + num2;
+      accans = num1 - num2;
+      if (accans < 101) {
+        d = 1;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #57c95a";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #57c95a";
+        }
+      } else if (accans < 301) {
+        d = 2;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #ffcc66";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #ffcc66";
+        }
+      } else if (accans < 501) {
+        d = 3;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #ff5e5e";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #ff5e5e";
+        }
+      }
+    } else {
+      num1 = num1 + num2;
+      num2 = num1 - num2;
+      num1 = num1 - num2;
+      document.getElementById("question").innerHTML = num1 + " - " + num2;
+      accans = num1 - num2;
+      if (accans < 101) {
+        d = 1;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #57c95a";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #57c95a";
+        }
+      } else if (accans < 301) {
+        d = 2;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #ffcc66";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #ffcc66";
+        }
+      } else if (accans < 501) {
+        d = 3;
+        if ($(window).width() < 950) {
+          document.getElementById("question").style.textShadow =
+            "3px 3px #ff5e5e";
+        } else {
+          document.getElementById("difficulty").style.textShadow =
+            "2px 2px #ff5e5e";
+        }
+      }
+    }
+  } else if (operation == "*") {
+    num1 = Math.floor(Math.random() * 5);
+    num2 = Math.floor(Math.random() * 5);
+    document.getElementById("question").innerHTML = num1 + " × " + num2;
     accans = num1 * num2;
-     if(accans < 11){
+    if (accans < 11) {
       d = 1;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #57c95a";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #57c95a";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #57c95a";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #57c95a";
-      }
-    }
-    else if(accans < 18){
+    } else if (accans < 18) {
       d = 2;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ffcc66";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ffcc66";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ffcc66";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ffcc66";
-      }
-    }
-    else if(accans < 26){
+    } else if (accans < 26) {
       d = 3;
       if ($(window).width() < 950) {
-      document.getElementById('question').style.textShadow = "3px 3px #ff5e5e";
+        document.getElementById("question").style.textShadow =
+          "3px 3px #ff5e5e";
+      } else {
+        document.getElementById("difficulty").style.textShadow =
+          "2px 2px #ff5e5e";
       }
-      else{
-        document.getElementById('difficulty').style.textShadow = "2px 2px #ff5e5e";
-      }
-    } 
-  
-}
+    }
+  }
 }
 
 function actual() {
   if ($(window).width() < 900) {
-    document.getElementById('textbox').value = accans;
-    document.getElementById('textbox').style.textShadow = "0px 0px white";
-    document.getElementById('textbox').style.color = "#57c95a";
-  }
-  else {
-    document.getElementById('textbox').value = accans;
-    document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #57c95a";
+    document.getElementById("textbox").value = accans;
+    document.getElementById("textbox").style.textShadow = "0px 0px white";
+    document.getElementById("textbox").style.color = "#57c95a";
+  } else {
+    document.getElementById("textbox").value = accans;
+    document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #57c95a";
   }
 }
 
 function outputname() {
   document.getElementById("textbox").readOnly = true;
-  var x,y,name,a,b,answer;
+  var x, y, name, a, b, answer;
   y = document.getElementById("textbox").value;
   if (y == accans) {
     if ($(window).width() < 900) {
-      if(d == 1){
+      if (d == 1) {
         score = score + 1;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "#57c95a";
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
-      }
-      else if(d == 2){
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow = "0px 0px white";
+        document.getElementById("textbox").style.color = "#57c95a";
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else if (d == 2) {
         score = score + 2;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "#57c95a";
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;        
-      }
-      else if(d == 3){
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow = "0px 0px white";
+        document.getElementById("textbox").style.color = "#57c95a";
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else if (d == 3) {
         score = score + 3;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "#57c95a";
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;        
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow = "0px 0px white";
+        document.getElementById("textbox").style.color = "#57c95a";
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
       }
-    }
-    else {
-      if(d == 1) {
+    } else {
+      if (d == 1) {
         score = score + 1;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #57c95a";
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
-      }
-      else if (d == 2) {
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow =
+          "0.3vw 0.3vw #57c95a";
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else if (d == 2) {
         score = score + 2;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #57c95a";
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;        
-      }
-      else if (d == 3) {
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow =
+          "0.3vw 0.3vw #57c95a";
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else if (d == 3) {
         score = score + 3;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #57c95a";
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;        
-      }    
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow =
+          "0.3vw 0.3vw #57c95a";
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      }
     }
-  } 
-  else {
+  } else {
     if ($(window).width() < 900) {
-      if(score>1) {
+      if (score > 1) {
         score = score - 2;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "#ff5e5e";
-        setTimeout(actual,750);
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
-      }
-      else if(score==1) {
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow = "0px 0px white";
+        document.getElementById("textbox").style.color = "#ff5e5e";
+        setTimeout(actual, 750);
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else if (score == 1) {
         score = score - 1;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "#ff5e5e";
-        setTimeout(actual,750);
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
-      }
-      else {
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow = "0px 0px white";
+        document.getElementById("textbox").style.color = "#ff5e5e";
+        setTimeout(actual, 750);
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else {
         total = total + 1;
-        document.getElementById('textbox').style.textShadow = "0px 0px white";
-        document.getElementById('textbox').style.color = "#ff5e5e";
-        setTimeout(actual,750);
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
+        document.getElementById("textbox").style.textShadow = "0px 0px white";
+        document.getElementById("textbox").style.color = "#ff5e5e";
+        setTimeout(actual, 750);
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
       }
-    }
-    else {
-      if(score>1) {
+    } else {
+      if (score > 1) {
         score = score - 2;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #ff5e5e";
-        setTimeout(actual,750);
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
-      }
-      else if(score==1) {      
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow =
+          "0.3vw 0.3vw #ff5e5e";
+        setTimeout(actual, 750);
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else if (score == 1) {
         score = score - 1;
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #ff5e5e";
-        setTimeout(actual,750);
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
-      }
-      else {
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow =
+          "0.3vw 0.3vw #ff5e5e";
+        setTimeout(actual, 750);
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+      } else {
         total = total + 1;
-        document.getElementById("coins").innerHTML="Total\n"+total;
-        document.getElementById("dropdowncoins").innerHTML="Total: "+total;
-        document.getElementById('textbox').style.textShadow = "0.3vw 0.3vw #ff5e5e";
-        setTimeout(actual,750);
-        document.getElementById("finprompt").innerHTML="Score\n"+score;
-        document.getElementById("dropdownscore").innerHTML="Score: "+score;
+        document.getElementById("coins").innerHTML = "Total\n" + total;
+        document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+        document.getElementById("textbox").style.textShadow =
+          "0.3vw 0.3vw #ff5e5e";
+        setTimeout(actual, 750);
+        document.getElementById("finprompt").innerHTML = "Score\n" + score;
+        document.getElementById("dropdownscore").innerHTML = "Score: " + score;
       }
     }
   }
 }
 
 var input = document.getElementById("textbox");
-input.addEventListener("keyup", function(e) {
+input.addEventListener("keyup", function (e) {
   if (e.keyCode === 13) {
     e.preventDefault();
     document.getElementById("check").click();
-    setTimeout(newquestion,2250);
+    setTimeout(newquestion, 2250);
   }
 });
 
@@ -573,22 +538,30 @@ function setCaretPosition(ctrl, pos) {
   if (ctrl.setSelectionRange) {
     ctrl.focus();
     ctrl.setSelectionRange(pos, pos);
-  } 
-  else if (ctrl.createTextRange) {
+  } else if (ctrl.createTextRange) {
     var range = ctrl.createTextRange();
     range.collapse(true);
-    range.moveEnd('character', pos);
-    range.moveStart('character', pos);
+    range.moveEnd("character", pos);
+    range.moveStart("character", pos);
     range.select();
   }
 }
 
-var input = document.getElementById('textbox');
+var input = document.getElementById("textbox");
 setCaretPosition(input, input.value.length);
 
 function setInputFilter(textbox, inputFilter) {
-  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
-    textbox.addEventListener(event, function() {
+  [
+    "input",
+    "keydown",
+    "keyup",
+    "mousedown",
+    "mouseup",
+    "select",
+    "contextmenu",
+    "drop",
+  ].forEach(function (event) {
+    textbox.addEventListener(event, function () {
       if (inputFilter(this.value)) {
         this.oldValue = this.value;
         this.oldSelectionStart = this.selectionStart;
@@ -603,7 +576,7 @@ function setInputFilter(textbox, inputFilter) {
   });
 }
 
-
 // Install input filters.
-setInputFilter(document.getElementById("textbox"), function(value) {
-  return /^-?\d*$/.test(value); });
+setInputFilter(document.getElementById("textbox"), function (value) {
+  return /^-?\d*$/.test(value);
+});
