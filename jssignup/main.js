@@ -62,6 +62,7 @@ function login(){
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(function(user){
         document.getElementById('error').style.color = "#00ff33";
         document.getElementById('error').innerHTML = "Log In Succesful";
+        setTimeout(redirect, 2500);
     
     }).catch(function(error) {
       // Handle Errors here.
@@ -103,6 +104,7 @@ function signup() {
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).then(function(){
         document.getElementById('error').style.color = "#00ff33";
         document.getElementById('error').innerHTML = "Sign Up Succesful";
+        setTimeout(redirect, 2500);
         user = firebase.auth().currentUser;
 
 
