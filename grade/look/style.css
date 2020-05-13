@@ -377,3 +377,6 @@ nav navwidth {
 .title::selection{
 	 text-shadow: 0.3vw 0.3vw #ffbc69;
 }
+.middlecontent h1 span.typed-text::selection {
+	text-shadow: 0.3vw 0.3vw #ffbc69;
+}
