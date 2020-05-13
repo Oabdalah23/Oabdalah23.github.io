@@ -1,3 +1,14 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCSY_guUTymv77PDeCi9A8K11bmAystFX8",
+  authDomain: "kidkalc.firebaseapp.com",
+  databaseURL: "https://kidkalc.firebaseio.com",
+  projectId: "kidkalc",
+  storageBucket: "kidkalc.appspot.com",
+  messagingSenderId: "363718905093"
+};
+firebase.initializeApp(config);
+
 $(document).ready(function() {
     var isshow = localStorage.getItem('isshow5');
     if (isshow == null) {
@@ -12,10 +23,11 @@ function help() {
   $('#myModal').modal('show');
 }
 
-var score;
-var coins;
-var total = 1;;
+var score = 0;
+var coins = 0;
+var total = 1;
 var d;
+
 if(JSON.parse(localStorage.getItem('savedscore5')) > 0) {
   score = JSON.parse(localStorage.getItem('savedscore5'))
   document.getElementById("finprompt").innerHTML="Score\n"+score;
@@ -251,7 +263,7 @@ else if(operation == '/')
 
 function game () {
   coins =  coins - 1;
-  localStorage.setItem('savedcoin5',JSON.stringify(coins));    
+  localStorage.setItem('savedcoin5',JSON.stringify(coins));   
   window.location.href="/game";
   document.getElementById("game").style.display = "none";
 }

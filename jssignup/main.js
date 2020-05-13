@@ -62,7 +62,6 @@ function login(){
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(function(user){
         document.getElementById('error').style.color = "#00ff33";
         document.getElementById('error').innerHTML = "Log In Succesful";
-        setTimeout(redirect,2000)
     
     }).catch(function(error) {
       // Handle Errors here.

@@ -1,3 +1,13 @@
+var config = {
+  apiKey: "AIzaSyCSY_guUTymv77PDeCi9A8K11bmAystFX8",
+  authDomain: "kidkalc.firebaseapp.com",
+  databaseURL: "https://kidkalc.firebaseio.com",
+  projectId: "kidkalc",
+  storageBucket: "kidkalc.appspot.com",
+  messagingSenderId: "363718905093"
+};
+firebase.initializeApp(config);
+
 firebase.auth().onAuthStateChanged(function(user){
   if (user) {
     // User is signed in.
