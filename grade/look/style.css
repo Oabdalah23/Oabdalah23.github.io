@@ -372,7 +372,6 @@ nav navwidth {
 ::selection {
  background: #fc8c03;
  color: black;
+ text-shadow: #ffbc69;
 }
-.title::selection{
-	 text-shadow: 0.3vw 0.3vw #a35a00;
-}
+
