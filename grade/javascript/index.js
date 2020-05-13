@@ -14,17 +14,12 @@ firebase.auth().onAuthStateChanged(function(user){
 
     var user = firebase.auth().currentUser;
 
-    console.log(firebase.auth().currentUser.uid);
-
-    console.log(user);
 
     document.getElementById( "account" ).setAttribute( "onClick", "javascript: showusernamepopup();" );
 
     document.getElementById("account").style.animation = "none";
 
     if(user != null){
-
-      console.log(user);
 
       var userdisplayname = user.displayName;
 
