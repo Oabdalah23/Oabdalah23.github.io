@@ -120,10 +120,10 @@ nav navwidth {
 	font-weight: 50;
 	border-radius: 0rem;
   text-shadow: 2px 3px #0095ff;
-  -webkit-transition: font-size .5s ease;
-  -moz-transition: font-size .5s ease;
-  -o-transition: font-size .5s ease;
-  transition: font-size .5s ease;
+  -ms-transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+
 }
  
 #buttons02 .button {
@@ -136,8 +136,10 @@ nav navwidth {
 
 #buttons02 .button:hover {
   font-weight: bold;
-  font-size: 3.75vw;
-  
+  -ms-transform: rotate(15deg); /* IE 9 */
+    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+    transform: rotate(15deg);
+
 }
 
 
