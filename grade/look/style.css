@@ -39,7 +39,7 @@ body {
 .middlecontent h1 span.typed-text {
   font-weight: normal;
   color: white;
-  text-shadow: 0.3vw 0.3vw #ffc77d;
+  text-shadow: 0.3vw 0.3vw #78c7ff;
 ;
 }
 .middlecontent h1 span.cursor {
@@ -120,6 +120,10 @@ nav navwidth {
 	font-weight: 50;
 	border-radius: 0rem;
   text-shadow: 2px 3px #0095ff;
+  -webkit-transition: font-size .5s ease;
+  -moz-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
 }
  
 #buttons02 .button {
@@ -131,10 +135,11 @@ nav navwidth {
 }
 
 #buttons02 .button:hover {
-	color: #d1d1d1 !important;
   font-weight: bold;
-  text-shadow: 4px 5px #0095ff;
+  font-size: 3.75vw;
+  
 }
+
 
 #buttons02 .button:active{
   text-shadow: 0px 0px #2270a8;

@@ -75,16 +75,19 @@ function login(){
 
       if(error.message === nouser)
       {
+         document.getElementById('logincontainer').style.animation = "shake 0.82s"
          document.getElementById('error').innerHTML = "Username Not Registered";
          setTimeout(deletetext,5000);
       }
       else if(error.message === invaliduser)
       {
+        document.getElementById('logincontainer').style.animation = "shake 0.82s"
          document.getElementById('error').innerHTML = "Invalid Username";
          setTimeout(deletetext,5000);
       }
       else if(error.message === invalidpassword)
       {
+        document.getElementById('logincontainer').style.animation = "shake 0.82s"
          document.getElementById('error').innerHTML = "Wrong Password";
          setTimeout(deletetext,5000);
       }
@@ -130,16 +133,19 @@ function signup() {
   
       if(error.message === invaliduser)
       {
+        document.getElementById('logincontainer').style.animation = "shake 0.82s"
          document.getElementById('error').innerHTML = "Invalid Username";
          setTimeout(deletetext,5000);
       }
       else if(error.message === taken)
       {
+        document.getElementById('logincontainer').style.animation = "shake 0.82s"
          document.getElementById('error').innerHTML = "Username Already Taken";
          setTimeout(deletetext,5000);
       }
       else if(error.message === passwordlength || passwordlen)
       {
+        document.getElementById('logincontainer').style.animation = "shake 0.82s"
          document.getElementById('error').innerHTML = "Password Too Short";
          setTimeout(deletetext,5000);
       }
@@ -178,6 +184,7 @@ function redirect(){
 function deletetext()
 {
     document.getElementById('error').innerHTML = '';
+    document.getElementById('logincontainer').style.animation = "none";
 }
 
 $(function() {
