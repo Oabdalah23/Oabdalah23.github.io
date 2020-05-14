@@ -119,8 +119,6 @@ nav navwidth {
 	font-size: 3vw;
 	font-weight: 50;
 	border-radius: 0rem;
-	overflow: hidden;
-	white-space: nowrap;
   text-shadow: 2px 3px #0095ff;
   -webkit-transition: font-size .5s ease;
   -moz-transition: font-size .5s ease;
@@ -138,7 +136,7 @@ nav navwidth {
 
 #buttons02 .button:hover {
   font-weight: bold;
-  font-size: 3.75vw;
+  font-size: 3.5vw;
 }
 
 
