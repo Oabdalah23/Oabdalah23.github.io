@@ -133,7 +133,7 @@ nav navwidth {
 #buttons02 .button:hover {
 	color: #d1d1d1 !important;
   font-weight: bold;
-  text-shadow: 2px 3px #2270a8;
+  text-shadow: 4px 5px #0095ff;
 }
 
 #buttons02 .button:active{
