@@ -75,6 +75,10 @@ nav navwidth {
   nav navwidth { display: inline-block; }
 }
 
+@media (max-width: 1300px) {
+	#buttons02 a{font-size: 2.8vw;}
+  }
+
 .navig{
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -95,6 +99,8 @@ nav navwidth {
     width:100%;
   }
 }
+
+
 
 #buttons02 {
   width: 100%;
