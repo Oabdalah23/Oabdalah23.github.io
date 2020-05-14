@@ -39,8 +39,8 @@ if (JSON.parse(localStorage.getItem("savedscore3")) > 0) {
   score = 0;
 }
 
-if (JSON.parse(localStorage.getItem("savedcoin3")) > 0) {
-  coins = JSON.parse(localStorage.getItem("savedcoin3"));
+if (JSON.parse(localStorage.getItem("savedcoin")) > 0) {
+  coins = JSON.parse(localStorage.getItem("savedcoin"));
 } else {
   coins = 0;
 }
@@ -202,7 +202,7 @@ if (operation == "+") {
 
 function game() {
   coins = coins - 1;
-  localStorage.setItem("savedcoin3", JSON.stringify(coins));
+  localStorage.setItem("savedcoin", JSON.stringify(coins));
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
 }
@@ -218,7 +218,7 @@ function newquestion() {
   } else {
     document.getElementById("game").style.display = "none";
   }
-  localStorage.setItem("savedcoin3", JSON.stringify(coins));
+  localStorage.setItem("savedcoin", JSON.stringify(coins));
   document.getElementById("textbox").style.color = "white";
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
