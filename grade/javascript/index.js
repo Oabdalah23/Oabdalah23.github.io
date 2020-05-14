@@ -66,7 +66,7 @@ function help() {
 
 const Toast = Swal.mixin({
   toast: true,
-  position: "top-end",
+  position: "top-start",
   showConfirmButton: false,
   timer: 3000,
   timerProgressBar: true,
@@ -94,8 +94,8 @@ const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = ["KidKalc", "The Future", "Perfection"];
-const typingDelay = 200;
-const erasingDelay = 100;
+const typingDelay = 250;
+const erasingDelay = 180;
 const newTextDelay = 2500; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
