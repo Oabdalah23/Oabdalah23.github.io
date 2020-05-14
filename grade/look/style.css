@@ -111,11 +111,11 @@ nav navwidth {
   text-decoration: none;
   position: relative;
   top: 1vh;
-  right: 1.6%;
+  right: 1.7%;
   transform: translateX(-50%);
   margin: 0.75rem;
 	line-height: 3.125rem;
-	padding: 0 2rem;
+	padding: 0 1.8rem;
 	font-size: 3vw;
 	font-weight: 50;
 	border-radius: 0rem;
