@@ -1,4 +1,3 @@
-// Initialize Firebase
 var config = {
   apiKey: "AIzaSyCSY_guUTymv77PDeCi9A8K11bmAystFX8",
   authDomain: "kidkalc.firebaseapp.com",
@@ -6,8 +5,11 @@ var config = {
   projectId: "kidkalc",
   storageBucket: "kidkalc.appspot.com",
   messagingSenderId: "363718905093",
+  appId: "1:363718905093:web:72636a6498d6d86a00fb6c",
+  measurementId: "G-NNTSP3W22H"
 };
 firebase.initializeApp(config);
+firebase.analytics();
 
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow2");

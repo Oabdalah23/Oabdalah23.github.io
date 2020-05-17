@@ -5,8 +5,11 @@ var config = {
   projectId: "kidkalc",
   storageBucket: "kidkalc.appspot.com",
   messagingSenderId: "363718905093",
+  appId: "1:363718905093:web:72636a6498d6d86a00fb6c",
+  measurementId: "G-NNTSP3W22H"
 };
 firebase.initializeApp(config);
+firebase.analytics();
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
