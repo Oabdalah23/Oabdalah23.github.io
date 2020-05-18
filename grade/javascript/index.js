@@ -1,6 +1,6 @@
 var config = {
   apiKey: "AIzaSyCSY_guUTymv77PDeCi9A8K11bmAystFX8",
-  authDomain: "kidkalc.firebaseapp.com",
+  authDomain: "kidkalc.com",
   databaseURL: "https://kidkalc.firebaseio.com",
   projectId: "kidkalc",
   storageBucket: "kidkalc.appspot.com",
