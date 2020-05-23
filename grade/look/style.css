@@ -124,10 +124,6 @@ nav navwidth {
 	font-weight: 50;
 	border-radius: 0rem;
   text-shadow: 2px 3px #0095ff;
-  -webkit-transition: font-size .5s ease;
-  -moz-transition: font-size .5s ease;
-  -o-transition: font-size .5s ease;
-  transition: font-size .5s ease;
   cursor: pointer;
 }
  
@@ -141,7 +137,8 @@ nav navwidth {
 
 #buttons02 .button:hover {
   font-weight: bold;
-  font-size: 3.5vw;
+  color: #9e9e9e;
+  text-shadow: 2px 3px #ffc77d;
 }
 
 
