@@ -407,7 +407,7 @@ nav navwidth {
 	width: 100%;
 	text-align: center;
 	color: red !important;
-	font-size: 100%;
+	font-size: 75%;
 	text-decoration: underline !important;
 	cursor: pointer;
 }
