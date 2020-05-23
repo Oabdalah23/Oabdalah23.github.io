@@ -13,7 +13,6 @@ firebase.analytics();
 
 var user;
 
-
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
@@ -149,9 +148,4 @@ function logout() {
     .setAttribute("onClick", "location.href='account';");
   document.getElementById("account").style.animation = "moema 2s infinite";
   signoutsuccess();
-}
-
-function deleteaccount() {
-  location.reload();
-  return false;
 }
