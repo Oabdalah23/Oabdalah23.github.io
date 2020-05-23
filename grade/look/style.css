@@ -401,3 +401,12 @@ nav navwidth {
 .middlecontent h1 span.typed-text::selection {
 	text-shadow: 0.3vw 0.3vw #ffbc69;
 }
+
+.deleteaccount{
+	font-family: 'Averia Sans Libre';
+	width: 100%;
+	text-align: center;
+	color: red !important;
+	font-size: 50%;
+	text-decoration: underline !important;
+}
