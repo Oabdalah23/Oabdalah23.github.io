@@ -152,6 +152,6 @@ function logout() {
 }
 
 function deleteaccount() {
-  user.delete();
   location.reload();
+  return false;
 }
