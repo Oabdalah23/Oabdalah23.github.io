@@ -11,11 +11,14 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
+var user;
+
+
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
 
-    var user = firebase.auth().currentUser;
+    user = firebase.auth().currentUser;
 
     document
       .getElementById("account")
@@ -146,4 +149,9 @@ function logout() {
     .setAttribute("onClick", "location.href='account';");
   document.getElementById("account").style.animation = "moema 2s infinite";
   signoutsuccess();
+}
+
+function deleteaccount() {
+  user.delete();
+  location.reload();
 }

@@ -407,6 +407,9 @@ nav navwidth {
 	width: 100%;
 	text-align: center;
 	color: red !important;
-	font-size: 50%;
+	font-size: 100%;
 	text-decoration: underline !important;
+}
+.deleteaccount:hover {
+	color: grey !important;	
 }
