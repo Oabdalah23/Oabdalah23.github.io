@@ -15,7 +15,7 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 var useruid;
 var username;
-var Stats = {};
+var Grade3 = {};
 var ref;
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -242,11 +242,11 @@ function game() {
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
   if (username != "NotSignedIn") {
-    Stats.Grade3Score = score;
-    Stats.Grade3Total = total;
-    Stats.CoinsFirebase = coins;
-    myFBref.child(useruid).set({
-      Stats
+    Grade3.Grade3Score = score;
+    Grade3.Grade3Total = total;
+    Grade3.CoinsFirebase = coins;
+    myFBref.child(useruid).update({
+      Grade3
     })
   }
 }
@@ -267,11 +267,11 @@ function newquestion() {
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
   if (username != "NotSignedIn") {
-    Stats.Grade3Score = score;
-    Stats.Grade3Total = total;
-    Stats.CoinsFirebase = coins;
-    myFBref.child(useruid).set({
-      Stats
+    Grade3.Grade3Score = score;
+    Grade3.Grade3Total = total;
+    Grade3.CoinsFirebase = coins;
+    myFBref.child(useruid).update({
+      Grade3
     })
   }
 

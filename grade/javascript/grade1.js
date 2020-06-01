@@ -15,7 +15,7 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 var useruid;
 var username;
-var Stats = {};
+var Grade1 = {};
 var ref;
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     useruid = user.uid;
     database = firebase.database();
     ref = database.ref(useruid);
-    ref.on('value', gotData, errData)
+    ref.on('value', gotData)
   } else {
     username = "NotSignedIn"
   }
@@ -209,11 +209,11 @@ function game() {
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
   if (username != "NotSignedIn") {
-    Stats.Grade1Score = score;
-    Stats.Grade1Total = total;
-    Stats.CoinsFirebase = coins;
-    myFBref.child(useruid).set({
-      Stats
+    Grade1.Grade1Score = score;
+    Grade1.Grade1Total = total;
+    Grade1.CoinsFirebase = coins;
+    myFBref.child(useruid).update({
+      Grade1
     })
   }
 }
@@ -234,11 +234,11 @@ function newquestion() {
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
   if (username != "NotSignedIn") {
-    Stats.Grade1Score = score;
-    Stats.Grade1Total = total;
-    Stats.CoinsFirebase = coins;
-    myFBref.child(useruid).set({
-      Stats
+    Grade1.Grade1Score = score;
+    Grade1.Grade1Total = total;
+    Grade1.CoinsFirebase = coins;
+    myFBref.child(useruid).update({
+      Grade1
     })
   }
 
