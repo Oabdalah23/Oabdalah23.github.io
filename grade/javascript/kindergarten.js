@@ -25,7 +25,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     useruid = user.uid;
     database = firebase.database();
     ref = database.ref(useruid);
-    ref.on('value', gotData, errData)
+    ref.on('value', gotData)
   } else {
     username = "NotSignedIn"
   }
