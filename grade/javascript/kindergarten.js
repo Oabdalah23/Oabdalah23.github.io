@@ -22,42 +22,18 @@ var coins = 0;
 var total = 1;
 var d;
 
-if (JSON.parse(localStorage.getItem("savedscore")) > 0) {
-  score = JSON.parse(localStorage.getItem("savedscore"));
-  document.getElementById("finprompt").innerHTML = "Score\n" + score;
-  document.getElementById("dropdownscore").innerHTML = "Score: " + score;
-} else {
-  score = 0;
-}
-
-if (JSON.parse(localStorage.getItem("savedcoin")) > 0) {
-  coins = JSON.parse(localStorage.getItem("savedcoin"));
-} else {
-  coins = 0;
-}
-
-if (JSON.parse(localStorage.getItem("savedtotal")) > 0) {
-  total = JSON.parse(localStorage.getItem("savedtotal"));
-  document.getElementById("coins").innerHTML = "Total\n" + total;
-  document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
-} else {
-  total = 1;
-}
-
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     username = user;
     useruid = user.uid;
-    Stats.KindergartenScore = score;
-    Stats.KindergartenTotal = total;
-    Stats.KindergartenCoins = coins;
-    myFBref.child(useruid).set({
-      Stats
-    })
     myFBref.once("value", function(data) {
       childScore = data.val();
-      localStorage.setItem("savedscore", JSON.stringify(childScore.KindergartenScore)); 
+      localStorage.setItem("savedscore", JSON.stringify(childScore.KindergartenScore));
+      document.getElementById("finprompt").innerHTML = "Score\n" + score;
+      document.getElementById("dropdownscore").innerHTML = "Score: " + score; 
       localStorage.setItem("savedtotal", JSON.stringify(childScore.KindergartenTotal));
+      document.getElementById("coins").innerHTML = "Total\n" + total;
+      document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
       localStorage.setItem("savedcoin", JSON.stringify(childScore.KindergartenCoins));
     });
   } else {
