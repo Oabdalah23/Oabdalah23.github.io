@@ -20,20 +20,12 @@ var Stats = {};
 var score = 0;
 var coins = 0;
 var total = 1;
-var d;
+var d; 
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     username = user;
     useruid = user.uid;
-    Stats.KindergartenScore = '0';
-    Stats.KindergartenTotal = '0';
-    Stats.KindergartenCoins = '0';
-    myFBref.child(useruid).set({
-      Stats
-    })
-    document.getElementById("dropdowncoins").innerHTML = "Total: " + Stats.KindergartenTotal;
-
   } else {
     username = "NotSignedIn"
   }
