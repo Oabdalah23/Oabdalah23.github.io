@@ -11,17 +11,11 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
-var uid;
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    uid = user.uid;
-  } else {
-    console.log("u suck")
-  }
-});
+var user = firebase.auth().currentUser;
+var uid;
 
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow1");
@@ -114,13 +108,16 @@ function game() {
 }
 
 function newquestion() {
-  var newScore = {};
-  newScore.KindergartenScore = score;
-  newScore.KindergartenTotal = total;
-  newScore.KindergartenCoins = coins;
-  myFBref.child(uid).set({
-    newScore
-  })
+  var Stats = {};
+  if (user != null) {
+    uid = user.uid;
+    Stats.KindergartenScore = score;
+    Stats.KindergartenTotal = total;
+    Stats.KindergartenCoins = coins;
+    myFBref.child(uid).set({
+      Stats
+    })
+  }
   localStorage.setItem("savedtotal", JSON.stringify(total));
   localStorage.setItem("savedscore", JSON.stringify(score));
   if (total % 15 == 0 && total != 0) {
