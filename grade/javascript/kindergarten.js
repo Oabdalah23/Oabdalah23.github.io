@@ -39,7 +39,7 @@ function gotData(data) {
     var k = keys[i];
     var scorefirebase = stats[k].KindergartenScore;
     var totalfirebase = stats[k].KindergartenTotal;
-    var coinfirebase = stats[k].KindergartenTotal
+    var coinfirebase = stats[k].KindergartenCoins;
     localStorage.setItem("savedtotal", JSON.stringify(totalfirebase));
     localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
     localStorage.setItem("savedscore", JSON.stringify(scorefirebase));
