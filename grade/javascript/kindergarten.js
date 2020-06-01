@@ -38,8 +38,8 @@ function gotData(data) {
   for (var i = 0; i < keys.length; i++)
   {
     var k = keys[i];
-    var scorefirebase = stats[k].scorefirebase;
-    var totalfirebase = stats[k].totalfirebase;
+    var scorefirebase = stats[k].KindergartenScore;
+    var totalfirebase = stats[k].KindergartenTotal;
     console.log(scorefirebase,totalfirebase);
   }
 }
