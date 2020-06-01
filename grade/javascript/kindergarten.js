@@ -14,11 +14,15 @@ firebase.analytics();
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
+var useruid;
+var username;
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    console.log(user)
+    username = user;
+    useruid = user.uid;
   } else {
-    // No user is signed in.
+    username = "NotSignedIn"
   }
 });
 
@@ -115,8 +119,7 @@ function game() {
 
 function newquestion() {
   var Stats = {};
-  if (user != null) {
-    uid = user.uid;
+  if (username != "NotSignedIn") {
     Stats.KindergartenScore = score;
     Stats.KindergartenTotal = total;
     Stats.KindergartenCoins = coins;
