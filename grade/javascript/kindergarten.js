@@ -11,7 +11,7 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
-var myFBref = new Firebase ("https://kidkalc.firebaseio.com/");
+var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow1");
