@@ -34,13 +34,16 @@ firebase.auth().onAuthStateChanged(function(user) {
 function gotData(data) {
   var stats = data.val();
   var keys = Object.keys(stats);
-  console.log(keys);
   for (var i = 0; i < keys.length; i++)
   {
     var k = keys[i];
     var scorefirebase = stats[k].KindergartenScore;
     var totalfirebase = stats[k].KindergartenTotal;
-    console.log(scorefirebase,totalfirebase);
+    var coinfirebase = stats[k].KindergartenTotal
+    document.getElementById("finprompt").innerHTML = "Score\n" + scorefirebase;
+    document.getElementById("dropdownscore").innerHTML = "Score: " + scorefirebase;
+    document.getElementById("coins").innerHTML = "Total\n" + totalfirebase;
+    document.getElementById("dropdowncoins").innerHTML = "Total: " + totalfirebase;
   }
 }
 
