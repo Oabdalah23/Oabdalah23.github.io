@@ -32,7 +32,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function gotData(data) {
-  console.log(data);
+  console.log(data.val());
 }
 
 function errData(data) {
