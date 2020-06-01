@@ -16,7 +16,7 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 var useruid;
 var username;
-var Kindergarten = {};
+var Stats = {};
 var ref;
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -39,7 +39,7 @@ function gotData(data) {
     var k = keys[i];
     var scorefirebase = stats[k].KindergartenScore;
     var totalfirebase = stats[k].KindergartenTotal;
-    var coinfirebase = stats[k].CoinsFirebase;
+    var coinfirebase = stats[k].KindergartenCoins;
     localStorage.setItem("savedtotal", JSON.stringify(totalfirebase));
     localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
     localStorage.setItem("savedscore", JSON.stringify(scorefirebase));
@@ -135,11 +135,11 @@ function game() {
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
   if (username != "NotSignedIn") {
-    Kindergarten.KindergartenScore = score;
-    Kindergarten.KindergartenTotal = total;
-    Kindergarten.CoinsFirebase = coins;
+    Stats.KindergartenScore = score;
+    Stats.KindergartenTotal = total;
+    Stats.KindergartenCoins = coins;
     myFBref.child(useruid).set({
-      Kindergarten
+      Stats
     })
   }
 }
@@ -160,11 +160,11 @@ function newquestion() {
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
   if (username != "NotSignedIn") {
-    Kindergarten.KindergartenScore = score;
-    Kindergarten.KindergartenTotal = total;
-    Kindergarten.CoinsFirebase = coins;
+    Stats.KindergartenScore = score;
+    Stats.KindergartenTotal = total;
+    Stats.KindergartenCoins = coins;
     myFBref.child(useruid).set({
-      Kindergarten
+      Stats
     })
   }
 
