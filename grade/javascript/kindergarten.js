@@ -10,13 +10,16 @@ var config = {
 };
 firebase.initializeApp(config);
 firebase.analytics();
-firebase.auth();
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
-var user = firebase.auth().currentUser;
-console.log(user);
-var uid = user.uid;
+irebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log(user);
+  } else {
+    console.log("u suck")
+  }
+});
 
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow1");
