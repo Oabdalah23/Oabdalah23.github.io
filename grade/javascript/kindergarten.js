@@ -11,11 +11,13 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
+var uid;
+
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    console.log(user);
+    uid = user.uid;
   } else {
     console.log("u suck")
   }
