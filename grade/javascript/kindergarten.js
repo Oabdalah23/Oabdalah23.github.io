@@ -48,12 +48,12 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     username = user;
     useruid = user.uid;
-      Stats.KindergartenScore;
-      Stats.KindergartenTotal;
-      Stats.KindergartenCoins;
-      myFBref.child(useruid).set({
-        Stats
-      })
+    Stats.KindergartenScore = score;
+    Stats.KindergartenTotal = total;
+    Stats.KindergartenCoins = coins;
+    myFBref.child(useruid).set({
+      Stats
+    })
     myFBref.once("value", function(data) {
       childScore = data.val();
       localStorage.setItem("savedscore", JSON.stringify(childScore.KindergartenScore)); 
