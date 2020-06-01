@@ -10,6 +10,7 @@ var config = {
 };
 firebase.initializeApp(config);
 firebase.analytics();
+firebase.auth();
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
