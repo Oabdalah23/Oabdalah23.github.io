@@ -16,6 +16,7 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 var useruid;
 var username;
 var Grade4 = {};
+var TotalCoins = {};
 var ref;
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -294,11 +295,9 @@ function game() {
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
   if (username != "NotSignedIn") {
-    Grade4.Grade4Score = score;
-    Grade4.Grade4Total = total;
-    Grade4.CoinsFirebase = coins;
+    TotalCoins.CoinsFirebase = coins;
     myFBref.child(useruid).update({
-      Grade4
+      TotalCoins
     })
   }
 }
@@ -321,9 +320,14 @@ function newquestion() {
   if (username != "NotSignedIn") {
     Grade4.Grade4Score = score;
     Grade4.Grade4Total = total;
-    Grade4.CoinsFirebase = coins;
     myFBref.child(useruid).update({
       Grade4
+    })
+  }
+  if (username != "NotSignedIn") {
+    TotalCoins.CoinsFirebase = coins;
+    myFBref.child(useruid).update({
+      TotalCoins
     })
   }
 
