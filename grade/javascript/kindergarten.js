@@ -23,6 +23,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     username = user;
     useruid = user.uid;
+    database = firebase.database();
     ref = database.ref();
     ref.on('value', gotData, errData)
   } else {
