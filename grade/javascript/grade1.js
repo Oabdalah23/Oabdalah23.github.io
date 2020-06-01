@@ -11,6 +11,40 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
+var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
+
+var useruid;
+var username;
+var Stats = {};
+var ref;
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    username = user;
+    useruid = user.uid;
+    database = firebase.database();
+    ref = database.ref(useruid);
+    ref.on('value', gotData, errData)
+  } else {
+    username = "NotSignedIn"
+  }
+});
+
+function gotData(data) {
+  var stats = data.val();
+  var keys = Object.keys(stats);
+  for (var i = 0; i < keys.length; i++)
+  {
+    var k = keys[i];
+    var scorefirebase = stats[k].Grade1Score;
+    var totalfirebase = stats[k].Grade1Total;
+    var coinfirebase = stats[k].CoinsFirebase;
+    localStorage.setItem("savedtotal1", JSON.stringify(totalfirebase));
+    localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
+    localStorage.setItem("savedscore1", JSON.stringify(scorefirebase));
+  }
+}
+
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshowg1");
   if (isshow == null) {
@@ -177,6 +211,14 @@ function game() {
   localStorage.setItem("savedcoin", JSON.stringify(coins));
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
+  if (username != "NotSignedIn") {
+    Stats.Grade1Score = score;
+    Stats.Grade1Total = total;
+    Stats.CoinsFirebase = coins;
+    myFBref.child(useruid).set({
+      Stats
+    })
+  }
 }
 
 function newquestion() {
@@ -194,6 +236,14 @@ function newquestion() {
   document.getElementById("textbox").style.color = "white";
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
+  if (username != "NotSignedIn") {
+    Stats.Grade1Score = score;
+    Stats.Grade1Total = total;
+    Stats.CoinsFirebase = coins;
+    myFBref.child(useruid).set({
+      Stats
+    })
+  }
 
   function setCaretPosition(ctrl, pos) {
     if (ctrl.setSelectionRange) {

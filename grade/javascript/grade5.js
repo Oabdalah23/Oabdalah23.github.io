@@ -11,6 +11,40 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
+var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
+
+var useruid;
+var username;
+var Stats = {};
+var ref;
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    username = user;
+    useruid = user.uid;
+    database = firebase.database();
+    ref = database.ref(useruid);
+    ref.on('value', gotData, errData)
+  } else {
+    username = "NotSignedIn"
+  }
+});
+
+function gotData(data) {
+  var stats = data.val();
+  var keys = Object.keys(stats);
+  for (var i = 0; i < keys.length; i++)
+  {
+    var k = keys[i];
+    var scorefirebase = stats[k].Grade5Score;
+    var totalfirebase = stats[k].Grade5Total;
+    var coinfirebase = stats[k].CoinsFirebase;
+    localStorage.setItem("savedtotal5", JSON.stringify(totalfirebase));
+    localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
+    localStorage.setItem("savedscore5", JSON.stringify(scorefirebase));
+  }
+}
+
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow5");
   if (isshow == null) {
@@ -249,6 +283,14 @@ function game() {
   localStorage.setItem("savedcoin", JSON.stringify(coins));
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
+  if (username != "NotSignedIn") {
+    Stats.Grade5Score = score;
+    Stats.Grade5Total = total;
+    Stats.CoinsFirebase = coins;
+    myFBref.child(useruid).set({
+      Stats
+    })
+  }
 }
 
 function newquestion() {
@@ -266,6 +308,14 @@ function newquestion() {
   document.getElementById("textbox").style.color = "white";
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
+  if (username != "NotSignedIn") {
+    Stats.Grade5Score = score;
+    Stats.Grade5Total = total;
+    Stats.CoinsFirebase = coins;
+    myFBref.child(useruid).set({
+      Stats
+    })
+  }
 
   function setCaretPosition(ctrl, pos) {
     if (ctrl.setSelectionRange) {

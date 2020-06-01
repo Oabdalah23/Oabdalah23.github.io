@@ -39,15 +39,11 @@ function gotData(data) {
     var k = keys[i];
     var scorefirebase = stats[k].KindergartenScore;
     var totalfirebase = stats[k].KindergartenTotal;
-    var coinfirebase = stats[k].KindergartenCoins;
+    var coinfirebase = stats[k].CoinsFirebase;
     localStorage.setItem("savedtotal", JSON.stringify(totalfirebase));
     localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
     localStorage.setItem("savedscore", JSON.stringify(scorefirebase));
   }
-}
-
-function errData(data) {
-  console.log(err);
 }
 
 $(document).ready(function () {
@@ -141,7 +137,7 @@ function game() {
   if (username != "NotSignedIn") {
     Stats.KindergartenScore = score;
     Stats.KindergartenTotal = total;
-    Stats.KindergartenCoins = coins;
+    Stats.CoinsFirebase = coins;
     myFBref.child(useruid).set({
       Stats
     })
@@ -166,7 +162,7 @@ function newquestion() {
   if (username != "NotSignedIn") {
     Stats.KindergartenScore = score;
     Stats.KindergartenTotal = total;
-    Stats.KindergartenCoins = coins;
+    Stats.CoinsFirebase = coins;
     myFBref.child(useruid).set({
       Stats
     })
