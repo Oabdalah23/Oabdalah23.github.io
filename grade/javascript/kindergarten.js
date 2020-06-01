@@ -16,11 +16,50 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 var useruid;
 var username;
+var Stats = {};
+var score = 0;
+var coins = 0;
+var total = 1;
+var d;
+
+if (JSON.parse(localStorage.getItem("savedscore")) > 0) {
+  score = JSON.parse(localStorage.getItem("savedscore"));
+  document.getElementById("finprompt").innerHTML = "Score\n" + score;
+  document.getElementById("dropdownscore").innerHTML = "Score: " + score;
+} else {
+  score = 0;
+}
+
+if (JSON.parse(localStorage.getItem("savedcoin")) > 0) {
+  coins = JSON.parse(localStorage.getItem("savedcoin"));
+} else {
+  coins = 0;
+}
+
+if (JSON.parse(localStorage.getItem("savedtotal")) > 0) {
+  total = JSON.parse(localStorage.getItem("savedtotal"));
+  document.getElementById("coins").innerHTML = "Total\n" + total;
+  document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
+} else {
+  total = 1;
+}
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     username = user;
     useruid = user.uid;
+    Stats.KindergartenScore = score;
+    Stats.KindergartenTotal = total;
+    Stats.KindergartenCoins = coins;
+    myFBref.child(useruid).set({
+      Stats
+    })
+    myFBref.once("value", function(data) {
+      childScore = data.val();
+      JSON.parse(localStorage.getItem("savedscore")) = childScore.KindergartenScore;
+      JSON.parse(localStorage.getItem("savedcoin")) = childScore.KindergartenCoins;
+      JSON.parse(localStorage.getItem("savedtotal")) = childScore.KindergartenTotal;
+    });
   } else {
     username = "NotSignedIn"
   }
@@ -40,11 +79,6 @@ $(document).ready(function () {
 function help() {
   $("#myModal").modal("show");
 }
-
-var score = 0;
-var coins = 0;
-var total = 1;
-var d;
 
 if (JSON.parse(localStorage.getItem("savedscore")) > 0) {
   score = JSON.parse(localStorage.getItem("savedscore"));
@@ -115,10 +149,6 @@ function game() {
   localStorage.setItem("savedcoin", JSON.stringify(coins));
   window.location.href = "/game";
   document.getElementById("game").style.display = "none";
-}
-
-function newquestion() {
-  var Stats = {};
   if (username != "NotSignedIn") {
     Stats.KindergartenScore = score;
     Stats.KindergartenTotal = total;
@@ -127,6 +157,9 @@ function newquestion() {
       Stats
     })
   }
+}
+
+function newquestion() {
   localStorage.setItem("savedtotal", JSON.stringify(total));
   localStorage.setItem("savedscore", JSON.stringify(score));
   if (total % 15 == 0 && total != 0) {
@@ -141,6 +174,14 @@ function newquestion() {
   document.getElementById("textbox").style.color = "white";
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
+  if (username != "NotSignedIn") {
+    Stats.KindergartenScore = score;
+    Stats.KindergartenTotal = total;
+    Stats.KindergartenCoins = coins;
+    myFBref.child(useruid).set({
+      Stats
+    })
+  }
 
   function setCaretPosition(ctrl, pos) {
     if (ctrl.setSelectionRange) {
