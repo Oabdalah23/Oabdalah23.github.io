@@ -62,9 +62,6 @@ function help() {
 var score = 0;
 var coins = 0;
 var total = 1;
-var totalfire2 = JSON.parse(JSON.stringify(total));
-var scorefire2 = JSON.parse(JSON.stringify(score));
-var coinsfire2 = JSON.parse(JSON.stringify(coins));
 var d;
 
 if (JSON.parse(localStorage.getItem("savedscore2")) > 0) {
