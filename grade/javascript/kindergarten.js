@@ -35,6 +35,13 @@ function gotData(data) {
   var stats = data.val();
   var keys = Object.keys(stats);
   console.log(keys);
+  for (var i = 0; i < keys.length; i++)
+  {
+    var k = keys[i];
+    var scorefirebase = stats[k].scorefirebase;
+    var totalfirebase = stats[k].totalfirebase;
+    console.log(scorefirebase,totalfirebase);
+  }
 }
 
 function errData(data) {
