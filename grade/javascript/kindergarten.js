@@ -56,9 +56,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     })
     myFBref.once("value", function(data) {
       childScore = data.val();
-      JSON.parse(localStorage.getItem("savedscore")) = childScore.KindergartenScore;
-      JSON.parse(localStorage.getItem("savedcoin")) = childScore.KindergartenCoins;
-      JSON.parse(localStorage.getItem("savedtotal")) = childScore.KindergartenTotal;
+      localStorage.setItem("savedscore", JSON.stringify(childScore.KindergartenScore)); 
+      localStorage.setItem("savedtotal", JSON.stringify(childScore.KindergartenTotal));
+      localStorage.setItem("savedcoin", JSON.stringify(childScore.KindergartenCoins));
     });
   } else {
     username = "NotSignedIn"
