@@ -31,11 +31,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-function gotData() {
+function gotData(data) {
   console.log(data);
 }
 
-function errData() {
+function errData(data) {
   console.log(err);
 }
 
