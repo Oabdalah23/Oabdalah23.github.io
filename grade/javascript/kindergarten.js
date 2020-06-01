@@ -26,6 +26,12 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     username = user;
     useruid = user.uid;
+    Stats.KindergartenScore = '0';
+    Stats.KindergartenTotal = '0';
+    Stats.KindergartenCoins = '0';
+    myFBref.child(useruid).set({
+      Stats
+    })
     myFBref.once("value", function(data) {
       childScore = data.val();
       document.getElementById("finprompt").innerHTML = "Score\n" + childScore.KindergartenScore;
