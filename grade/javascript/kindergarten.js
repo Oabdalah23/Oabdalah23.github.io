@@ -14,6 +14,7 @@ firebase.analytics();
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 var user = firebase.auth().currentUser;
+console.log(user);
 var uid = user.uid;
 
 $(document).ready(function () {
