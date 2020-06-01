@@ -123,7 +123,7 @@ function newquestion() {
     Stats.KindergartenScore = score;
     Stats.KindergartenTotal = total;
     Stats.KindergartenCoins = coins;
-    myFBref.child(uid).set({
+    myFBref.child(useruid).set({
       Stats
     })
   }
