@@ -13,7 +13,7 @@ firebase.analytics();
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
-irebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log(user);
   } else {
