@@ -39,9 +39,15 @@ function gotData(data) {
     var scorefirebase = stats[k].Grade1Score;
     var totalfirebase = stats[k].Grade1Total;
     var coinfirebase = stats[k].CoinsFirebase;
-    localStorage.setItem("savedtotal1", JSON.stringify(totalfirebase));
-    localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
-    localStorage.setItem("savedscore1", JSON.stringify(scorefirebase));
+    if (totalfirebase != undefined) {
+      localStorage.setItem("savedtotal1", JSON.stringify(totalfirebase));
+    }
+    if (coinfirebase != undefined){
+      localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
+    }
+    if (scorefirebase != undefined){
+      localStorage.setItem("savedscore1", JSON.stringify(scorefirebase));
+    }
   }
 }
 
