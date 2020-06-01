@@ -17,10 +17,6 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 var useruid;
 var username;
 var Stats = {};
-var score = 0;
-var coins = 0;
-var total = 1;
-var d; 
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -45,6 +41,11 @@ $(document).ready(function () {
 function help() {
   $("#myModal").modal("show");
 }
+
+var score = 0;
+var coins = 0;
+var total = 1;
+var d;
 
 if (JSON.parse(localStorage.getItem("savedscore")) > 0) {
   score = JSON.parse(localStorage.getItem("savedscore"));
