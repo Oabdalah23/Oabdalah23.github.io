@@ -40,10 +40,9 @@ function gotData(data) {
     var scorefirebase = stats[k].KindergartenScore;
     var totalfirebase = stats[k].KindergartenTotal;
     var coinfirebase = stats[k].KindergartenTotal
-    document.getElementById("finprompt").innerHTML = "Score\n" + scorefirebase;
-    document.getElementById("dropdownscore").innerHTML = "Score: " + scorefirebase;
-    document.getElementById("coins").innerHTML = "Total\n" + totalfirebase;
-    document.getElementById("dropdowncoins").innerHTML = "Total: " + totalfirebase;
+    localStorage.setItem("savedtotal", JSON.stringify(totalfirebase));
+    localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
+    localStorage.setItem("savedscore", JSON.stringify(scorefirebase));
   }
 }
 
