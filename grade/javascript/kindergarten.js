@@ -11,6 +11,8 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
+var myFBref = new Firebase ("https://kidkalc.firebaseio.com/");
+
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow1");
   if (isshow == null) {
@@ -102,6 +104,10 @@ function game() {
 }
 
 function newquestion() {
+  var newScore = {};
+  newScore.name = score;
+  newScore.score = total;
+  myFBref.set(newScore);
   localStorage.setItem("savedtotal", JSON.stringify(total));
   localStorage.setItem("savedscore", JSON.stringify(score));
   if (total % 15 == 0 && total != 0) {
