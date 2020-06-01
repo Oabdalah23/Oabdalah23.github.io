@@ -16,6 +16,7 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 var user = firebase.auth().currentUser;
 var uid;
+console.log(user);
 
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow1");
