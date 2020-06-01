@@ -28,13 +28,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     useruid = user.uid;
     myFBref.once("value", function(data) {
       childScore = data.val();
-      localStorage.setItem("savedscore", JSON.stringify(childScore.KindergartenScore));
-      document.getElementById("finprompt").innerHTML = "Score\n" + score;
-      document.getElementById("dropdownscore").innerHTML = "Score: " + score; 
-      localStorage.setItem("savedtotal", JSON.stringify(childScore.KindergartenTotal));
-      document.getElementById("coins").innerHTML = "Total\n" + total;
-      document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
-      localStorage.setItem("savedcoin", JSON.stringify(childScore.KindergartenCoins));
+      document.getElementById("finprompt").innerHTML = "Score\n" + childScore.KindergartenScore;
+      document.getElementById("dropdownscore").innerHTML = "Score: " + childScore.KindergartenScore; 
+      document.getElementById("coins").innerHTML = "Total\n" + childScore.KindergartenTotal;
+      document.getElementById("dropdowncoins").innerHTML = "Total: " + childScore.KindergartenTotal;
     });
   } else {
     username = "NotSignedIn"
