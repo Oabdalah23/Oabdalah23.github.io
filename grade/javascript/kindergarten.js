@@ -17,16 +17,26 @@ var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 var useruid;
 var username;
 var Stats = {};
+var ref;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     username = user;
     useruid = user.uid;
+    ref = database.ref();
+    ref.on('value', gotData, errData)
   } else {
     username = "NotSignedIn"
   }
 });
 
+function gotData() {
+  console.log(data);
+}
+
+function errData() {
+  console.log(err);
+}
 
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow1");
