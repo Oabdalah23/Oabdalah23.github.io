@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     username = user;
     useruid = user.uid;
     database = firebase.database();
-    ref = database.ref('KJ7ilFFORCPbivIvmVhmR5JreUE3');
+    ref = database.ref(useruid);
     ref.on('value', gotData, errData)
   } else {
     username = "NotSignedIn"
@@ -32,7 +32,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function gotData(data) {
-  console.log(data.val());
+  var stats = data.val();
+  var keys = Object.keys(stats);
+  console.log(keys);
 }
 
 function errData(data) {
