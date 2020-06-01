@@ -42,12 +42,18 @@ function gotData(data) {
     var coinfirebase = stats[k].KindergartenCoins;
     if (totalfirebase != undefined) {
       localStorage.setItem("savedtotal", JSON.stringify(totalfirebase));
+      total = totalfirebase;
+      document.getElementById("coins").innerHTML = "Total\n" + total;
+      document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
     }
     if (coinfirebase != undefined){
       localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
     }
     if (scorefirebase != undefined){
       localStorage.setItem("savedscore", JSON.stringify(scorefirebase));
+      score = scorefirebase;
+      document.getElementById("finprompt").innerHTML = "Score\n" + scorefirebase;
+      document.getElementById("dropdownscore").innerHTML = "Score: " + scorefirebase;
     }
   }
 }

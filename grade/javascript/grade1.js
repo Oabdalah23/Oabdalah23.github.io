@@ -41,12 +41,18 @@ function gotData(data) {
     var coinfirebase = stats[k].CoinsFirebase;
     if (totalfirebase != undefined) {
       localStorage.setItem("savedtotal1", JSON.stringify(totalfirebase));
+      total = totalfirebase;
+      document.getElementById("coins").innerHTML = "Total\n" + totalfirebase;
+      document.getElementById("dropdowncoins").innerHTML = "Total: " + totalfirebase;
     }
     if (coinfirebase != undefined){
       localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
     }
     if (scorefirebase != undefined){
       localStorage.setItem("savedscore1", JSON.stringify(scorefirebase));
+      score = scorefirebase;
+      document.getElementById("finprompt").innerHTML = "Score\n" + scorefirebase;
+      document.getElementById("dropdownscore").innerHTML = "Score: " + scorefirebase;
     }
   }
 }
