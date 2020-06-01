@@ -14,9 +14,14 @@ firebase.analytics();
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
-var user = firebase.auth().currentUser;
-var uid;
-console.log(user);
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log(user)
+  } else {
+    // No user is signed in.
+  }
+});
+
 
 $(document).ready(function () {
   var isshow = localStorage.getItem("isshow1");
