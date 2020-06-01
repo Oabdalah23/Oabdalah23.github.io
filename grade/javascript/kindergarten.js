@@ -32,13 +32,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     myFBref.child(useruid).set({
       Stats
     })
-    myFBref.once("value", function(data) {
-      childScore = data.val();
-      document.getElementById("finprompt").innerHTML = "Score\n" + childScore.KindergartenScore;
-      document.getElementById("dropdownscore").innerHTML = "Score: " + childScore.KindergartenScore; 
-      document.getElementById("coins").innerHTML = "Total\n" + childScore.KindergartenTotal;
-      document.getElementById("dropdowncoins").innerHTML = "Total: " + childScore.KindergartenTotal;
-    });
+    document.getElementById("dropdowncoins").innerHTML = "Total: " + Stats.KindergartenTotal;
+
   } else {
     username = "NotSignedIn"
   }
