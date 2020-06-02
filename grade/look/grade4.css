@@ -277,8 +277,10 @@ div divdrop {
   background-color: #a9c8fa;
 }
 
-
-
+.modal-body{
+  max-height: calc(100vh - 205px);
+  overflow-y: auto;
+}
 
 
 
