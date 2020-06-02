@@ -42,8 +42,17 @@ body {
   font-weight: normal;
   color: white;
   text-shadow: 0.3vw 0.3vw #ffc77d ;
-;
 }
+
+@media (max-width: 470px) {
+	.middlecontent h1 span.typed-text {
+		font-weight: normal;
+		color: #ffc77d;
+		text-shadow: 0vw 0vw rgba(161, 211, 255,0) ;
+	  }
+  }
+
+  
 .middlecontent h1 span.cursor {
   display: inline-block;
   background-color: #ccc;
@@ -446,5 +455,3 @@ nav navwidth {
     max-height: calc(100vh - 205px);
     overflow-y: auto;
 }
-  
-  
