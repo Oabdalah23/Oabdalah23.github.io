@@ -20,12 +20,16 @@ var total = 0;
 var score = 0;
 var coins = 0;
 var TotalAccuracy = {};
+var str = '';
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
 
     user = firebase.auth().currentUser;
+    var email_id = user.email;
+    str = email_id.split("@");
+    str.pop();
 
     document
       .getElementById("account")
@@ -40,9 +44,6 @@ firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById("exampleModalLabel").innerHTML =
           "Welcome " + userdisplayname;
       } else {
-        var email_id = user.email;
-        var str = email_id.split("@");
-        str.pop();
 
         document.getElementById("exampleModalLabel").innerHTML =
           "Welcome " + str;
@@ -124,7 +125,9 @@ function gotData(data) {
       coins = coinsfirebase;
     }
   }
+    T
     TotalAccuracy.Accuracy = Math.round(100*(score/total))/100;
+    TotalAccuracy.Name = str;
     document.getElementById('accuracy').innerHTML = Math.round(100*(score/total))/100;
     myFBref.child(useruid).update({
       TotalAccuracy
