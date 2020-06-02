@@ -50,6 +50,9 @@ body {
 		color: #ffc77d;
 		text-shadow: 0vw 0vw rgba(161, 211, 255,0) ;
 	  }
+	.title{
+		text-shadow: 0vw 0vw rgba(161, 211, 255,0) ;
+	}
   }
 
   
