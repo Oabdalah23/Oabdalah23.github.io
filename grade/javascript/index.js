@@ -17,6 +17,7 @@ var useruid;
 var username;
 var total = 0;
 var score = 0;
+var coins = 0;
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -80,6 +81,7 @@ function gotData(data) {
     var score3firebase = stats[k].Grade3Score;
     var score4firebase = stats[k].Grade4Score;
     var score5firebase = stats[k].Grade5Score;
+    var coinsfirebase = stats[k].CoinsFirebase;
     if (total0firebase != undefined){
       total += total0firebase;
     }
@@ -116,9 +118,13 @@ function gotData(data) {
     if (score5firebase != undefined){
       score += score5firebase;
     }
+    if (coinsfirebase != undefined){
+      coins = coinsfirebase;
+    }
   }
   document.getElementById('totalquestions').innerHTML = total;
   document.getElementById('totalscore').innerHTML = score;
+  document.getElementById('totalcoins').innerHTML = coins;
 }
 
 
