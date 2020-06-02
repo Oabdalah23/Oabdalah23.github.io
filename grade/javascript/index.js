@@ -30,6 +30,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     var email_id = user.email;
     str = email_id.split("@");
     str.pop();
+    str = str[0]
 
     document
       .getElementById("account")
@@ -69,6 +70,9 @@ firebase.auth().onAuthStateChanged(function (user) {
 function gotData(data) {
   var stats = data.val();
   var keys = Object.keys(stats);
+  total = 0;
+  score = 0;
+  coins = 0;
   for (var i = 0; i < keys.length; i++)
   {
     var k = keys[i];
@@ -85,9 +89,6 @@ function gotData(data) {
     var score4firebase = stats[k].Grade4Score;
     var score5firebase = stats[k].Grade5Score;
     var coinsfirebase = stats[k].CoinsFirebase;
-    total = 0;
-    score = 0;
-    coins = 0;
     if (total0firebase != undefined){
       total += total0firebase;
     }
@@ -129,8 +130,8 @@ function gotData(data) {
     }
   }
     accuracy = Math.round(100*(score/total))/100;
-    console.log(accuracy);
-    TotalAccuracy.Accuracy = accuracy
+    TotalAccuracy.Accuracy = accuracy;
+    TotalAccuracy.Name = str;
     document.getElementById('accuracy').innerHTML = accuracy;
     myFBref.child(useruid).update({
       TotalAccuracy
