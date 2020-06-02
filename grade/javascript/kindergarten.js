@@ -145,14 +145,14 @@ document.getElementById("question").innerHTML = num1 + " + " + num2;
 function game() {
   coins = coins - 1;
   localStorage.setItem("savedcoin", JSON.stringify(coins));
-  window.location.href = "/game";
   document.getElementById("game").style.display = "none";
   if (username != "NotSignedIn") {
-    TotalCoins.CoinsFirebase = coins;
+    TotalCoins.co = coins;
     myFBref.child(useruid).update({
       TotalCoins
     })
   }
+  window.location.href = "/game";
 }
 
 function newquestion() {

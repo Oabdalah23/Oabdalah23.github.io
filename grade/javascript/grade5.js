@@ -294,7 +294,6 @@ if (operation == "+") {
 function game() {
   coins = coins - 1;
   localStorage.setItem("savedcoin", JSON.stringify(coins));
-  window.location.href = "/game";
   document.getElementById("game").style.display = "none";
   if (username != "NotSignedIn") {
     TotalCoins.CoinsFirebase = coins;
@@ -302,6 +301,7 @@ function game() {
       TotalCoins
     })
   }
+  window.location.href = "/game";
 }
 
 function newquestion() {
