@@ -406,7 +406,7 @@ nav navwidth {
 
 .containertotal {
 	font-size: 20px;
-	width: 98%;
+	width: 99.9%;
   }
   .card {
 	  flex: 1;
@@ -429,8 +429,8 @@ nav navwidth {
 	  color: rgb(69, 69, 69);
 	  text-align: center;
 	  line-height: 1;
-	text-transform: uppercase;
-	font-family: 'Open Sans', sans-serif;
+	  text-transform: uppercase;
+	  font-family: 'Averia Sans Libre';
   }
   
   .card__total {
