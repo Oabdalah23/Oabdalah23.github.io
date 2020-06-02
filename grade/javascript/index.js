@@ -85,6 +85,9 @@ function gotData(data) {
     var score4firebase = stats[k].Grade4Score;
     var score5firebase = stats[k].Grade5Score;
     var coinsfirebase = stats[k].CoinsFirebase;
+    total = 0;
+    score = 0;
+    coins = 0;
     if (total0firebase != undefined){
       total += total0firebase;
     }
