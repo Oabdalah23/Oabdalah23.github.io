@@ -11,6 +11,7 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
+var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 var user;
 var ref;
 var useruid;
@@ -18,6 +19,7 @@ var username;
 var total = 0;
 var score = 0;
 var coins = 0;
+var TotalAccuracy = {};
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -122,6 +124,11 @@ function gotData(data) {
       coins = coinsfirebase;
     }
   }
+    TotalAccuracy.Accuracy = (score/total);
+    document.getElementById('accuracy').innerHTML = (score/total);
+    myFBref.child(useruid).update({
+      TotalAccuracy
+    })
   document.getElementById('totalquestions').innerHTML = total;
   document.getElementById('totalscore').innerHTML = score;
   document.getElementById('totalcoins').innerHTML = coins;
