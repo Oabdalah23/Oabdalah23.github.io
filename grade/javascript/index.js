@@ -12,6 +12,10 @@ firebase.initializeApp(config);
 firebase.analytics();
 
 var user;
+var ref;
+var useruid;
+var username;
+var total = 0;
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -40,8 +44,14 @@ firebase.auth().onAuthStateChanged(function (user) {
           "Welcome " + str;
       }
     }
+    username = user;
+    useruid = user.uid;
+    database = firebase.database();
+    ref = database.ref(useruid);
+    ref.on('value', gotData)
+
   } else {
-    // No user is signed in.
+    username = "NotSignedIn"
 
     document
       .getElementById("account")
@@ -50,6 +60,41 @@ firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("account").style.animation = "moema 2s infinite";
   }
 });
+
+function gotData(data) {
+  var stats = data.val();
+  var keys = Object.keys(stats);
+  for (var i = 0; i < keys.length; i++)
+  {
+    var k = keys[i];
+    var score0firebase = stats[k].KindergartenScore;
+    var score1firebase = stats[k].Grade1Score;
+    var score2firebase = stats[k].Grade2Score;
+    var score3firebase = stats[k].Grade3Score;
+    var score4firebase = stats[k].Grade4Score;
+    var score5firebase = stats[k].Grade5Score;
+    if (score0firebase != undefined){
+      total += score0firebase;
+    }
+    if (score1firebase != undefined){
+      total += score1firebase;
+    }
+    if (score2firebase != undefined){
+      total += score2firebase;
+    }
+    if (score3firebase != undefined){
+      total += score3firebase;
+    }
+    if (score4firebase != undefined){
+      total += score4firebase;
+    }
+    if (score5firebase != undefined){
+      total += score5firebase;
+    }
+  }
+  document.getElementById('totalquestions').innerHTML = total;
+}
+
 
 function showusernamepopup() {
   $("#myusername").modal("show");
