@@ -406,7 +406,9 @@ nav navwidth {
 
 .containertotal {
 	font-size: 20px;
-	width: 90%;
+	width: 98%;
+	left: 50%;
+	transform: translateX(-50%);
   }
   .card {
 	  flex: 1;
