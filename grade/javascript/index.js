@@ -128,8 +128,10 @@ function gotData(data) {
       coins = coinsfirebase;
     }
   }
-    TotalAccuracy.Accuracy = Math.round(100*(score/total))/100;
-    document.getElementById('accuracy').innerHTML = Math.round(100*(score/total))/100;
+    accuracy = Math.round(100*(score/total))/100;
+    console.log(accuracy);
+    TotalAccuracy.Accuracy = accuracy
+    document.getElementById('accuracy').innerHTML = accuracy;
     myFBref.child(useruid).update({
       TotalAccuracy
     })
