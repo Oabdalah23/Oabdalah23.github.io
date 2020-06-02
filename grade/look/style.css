@@ -414,7 +414,8 @@ nav navwidth {
 	  flex-direction: column;
 	  justify-content: center;
 	  align-items: center;
-	  padding: 10% 4%;
+	  padding-top: 10%;
+  	  padding-bottom: 8%;
 	  background-image: linear-gradient(
 		  to left top,
 		  rgba(161, 211, 255) 0%,
@@ -437,7 +438,7 @@ nav navwidth {
 	  font-size: 200%;
 	  font-family: 'Roboto Slab', serif;
 	  line-height: 1;
-	  padding: 3% 0;
+	  padding-top: 7%;
   }
   
   
