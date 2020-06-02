@@ -16,6 +16,7 @@ var ref;
 var useruid;
 var username;
 var total = 0;
+var score = 0;
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -73,6 +74,12 @@ function gotData(data) {
     var total3firebase = stats[k].Grade3Total;
     var total4firebase = stats[k].Grade4Total;
     var total5firebase = stats[k].Grade5Total;
+    var score0firebase = stats[k].KindergartenScore;
+    var score1firebase = stats[k].Grade1Score;
+    var score2firebase = stats[k].Grade2Score;
+    var score3firebase = stats[k].Grade3Score;
+    var score4firebase = stats[k].Grade4Score;
+    var score5firebase = stats[k].Grade5Score;
     if (total0firebase != undefined){
       total += total0firebase;
     }
@@ -91,8 +98,27 @@ function gotData(data) {
     if (total5firebase != undefined){
       total += total5firebase;
     }
+    if (score0firebase != undefined){
+      score += score0firebase;
+    }
+    if (score1firebase != undefined){
+      score += score1firebase;
+    }
+    if (score2firebase != undefined){
+      score += score2firebase;
+    }
+    if (score3firebase != undefined){
+      score += score3firebase;
+    }
+    if (score4firebase != undefined){
+      score += score4firebase;
+    }
+    if (score5firebase != undefined){
+      score += score5firebase;
+    }
   }
   document.getElementById('totalquestions').innerHTML = total;
+  document.getElementById('totalscore').innerHTML = score;
 }
 
 
