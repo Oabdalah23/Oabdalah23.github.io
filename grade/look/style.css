@@ -441,5 +441,10 @@ nav navwidth {
 	  line-height: 1;
 	  padding-top: 7%;
   }
+
+  .modal-body{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
   
   
