@@ -129,7 +129,6 @@ function gotData(data) {
     }
   }
     TotalAccuracy.Accuracy = Math.round(100*(score/total))/100;
-    TotalAccuracy.Name = str;
     document.getElementById('accuracy').innerHTML = Math.round(100*(score/total))/100;
     myFBref.child(useruid).update({
       TotalAccuracy
