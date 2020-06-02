@@ -417,14 +417,18 @@ nav navwidth {
 	  justify-content: center;
 	  align-items: center;
 	  padding: 1.65rem 1rem;
-	  background: rgba(255, 255, 255, 1);
+	  background-image: linear-gradient(
+		  to left top,
+		  rgba(161, 211, 255) 0%,
+		  rgba(255, 181, 190) 100%
+	  );
 	  margin: 0.85rem;
 	  border-radius: 0.25rem;
   }
   
   .card__title {
 	  font-size: 0.8rem;
-	  color: rgba(160, 160, 160, 1);
+	  color: rgb(69, 69, 69);
 	  text-align: center;
 	  line-height: 1;
 	text-transform: uppercase;
