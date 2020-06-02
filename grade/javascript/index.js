@@ -75,31 +75,24 @@ function gotData(data) {
     var score5firebase = stats[k].Grade5Total;
     if (score0firebase != undefined){
       total += score0firebase;
-      console.log(total);
     }
     if (score1firebase != undefined){
       total += score1firebase;
-      console.log(total);
     }
     if (score2firebase != undefined){
       total += score2firebase;
-      console.log(total);
     }
     if (score3firebase != undefined){
       total += score3firebase;
-      console.log(total);
     }
     if (score4firebase != undefined){
       total += score4firebase;
-      console.log(total);
     }
     if (score5firebase != undefined){
       total += score5firebase;
-      console.log(total);
     }
   }
   document.getElementById('totalquestions').innerHTML = total;
-  console.log(total);
 }
 
 
