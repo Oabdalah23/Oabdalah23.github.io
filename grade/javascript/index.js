@@ -67,29 +67,29 @@ function gotData(data) {
   for (var i = 0; i < keys.length; i++)
   {
     var k = keys[i];
-    var score0firebase = stats[k].KindergartenTotal;
-    var score1firebase = stats[k].Grade1Total;
-    var score2firebase = stats[k].Grade2Total;
-    var score3firebase = stats[k].Grade3Total;
-    var score4firebase = stats[k].Grade4Total;
-    var score5firebase = stats[k].Grade5Total;
-    if (score0firebase != undefined){
-      total += score0firebase;
+    var total0firebase = stats[k].KindergartenTotal;
+    var total1firebase = stats[k].Grade1Total;
+    var total2firebase = stats[k].Grade2Total;
+    var total3firebase = stats[k].Grade3Total;
+    var total4firebase = stats[k].Grade4Total;
+    var total5firebase = stats[k].Grade5Total;
+    if (total0firebase != undefined){
+      total += total0firebase;
     }
-    if (score1firebase != undefined){
-      total += score1firebase;
+    if (total1firebase != undefined){
+      total += total1firebase;
     }
-    if (score2firebase != undefined){
-      total += score2firebase;
+    if (total2firebase != undefined){
+      total += total2firebase;
     }
-    if (score3firebase != undefined){
-      total += score3firebase;
+    if (total3firebase != undefined){
+      total += total3firebase;
     }
-    if (score4firebase != undefined){
-      total += score4firebase;
+    if (total4firebase != undefined){
+      total += total4firebase;
     }
-    if (score5firebase != undefined){
-      total += score5firebase;
+    if (total5firebase != undefined){
+      total += total5firebase;
     }
   }
   document.getElementById('totalquestions').innerHTML = total;
