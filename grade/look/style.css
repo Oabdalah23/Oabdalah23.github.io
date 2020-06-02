@@ -407,8 +407,6 @@ nav navwidth {
 .containertotal {
 	font-size: 20px;
 	width: 98%;
-	left: 50%;
-	transform: translateX(-50%);
   }
   .card {
 	  flex: 1;
@@ -427,7 +425,7 @@ nav navwidth {
   }
   
   .card__title {
-	  font-size: 60%;
+	  font-size: 50%;
 	  color: rgb(69, 69, 69);
 	  text-align: center;
 	  line-height: 1;
