@@ -27,7 +27,6 @@ firebase.auth().onAuthStateChanged(function (user) {
     // User is signed in.
 
     user = firebase.auth().currentUser;
-    console.log(user);
     var email_id = user.email;
     str = email_id.split("@");
     str.pop();
