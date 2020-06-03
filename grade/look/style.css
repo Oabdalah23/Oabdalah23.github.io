@@ -463,7 +463,7 @@ nav navwidth {
 	font-family: 'Chela One';
 	position: fixed;
 	left: 10px;
-	bottom: 93.5%;
+	top: -15px;
 	font-size: 250%;
 	color: transparent;
 	text-transform: uppercase;
