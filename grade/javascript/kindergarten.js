@@ -147,7 +147,7 @@ function game() {
   localStorage.setItem("savedcoin", JSON.stringify(coins));
   document.getElementById("game").style.display = "none";
   if (username != "NotSignedIn") {
-    TotalCoins.co = coins;
+    TotalCoins.CoinsFirebase = coins;
     myFBref.child(useruid).update({
       TotalCoins
     })
