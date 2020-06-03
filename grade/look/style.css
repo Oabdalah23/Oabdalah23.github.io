@@ -137,7 +137,7 @@ nav navwidth {
 	font-size: 3vw;
 	font-weight: 50;
 	border-radius: 0rem;
-  text-shadow: 2px 3px #0095ff;
+	text-shadow: 0 0.5px 0 #70c4ff, 0 1px 0 #66c0ff, 0 1.5px 0 #54b9ff, 0 2px 0 #42b2ff, 0 2.5px 0 #29a8ff, 0 3px 0 #19a2ff, 0 3.5px 0 #0098ff, 0 4px 0 #028eed;
   cursor: pointer;
 }
  
@@ -457,4 +457,37 @@ nav navwidth {
   .modal-body{
     max-height: calc(100vh - 205px);
     overflow-y: auto;
+}
+
+.topleftitle{
+	font-family: 'Chela One';
+	position: fixed;
+	left: 10px;
+	bottom: 93.5%;
+	font-size: 250%;
+	color: transparent;
+	text-transform: uppercase;
+	background-image: linear-gradient(to right , #ff7a7a, #ffff73, #78ffff, #85ff85, #7878ff);
+	background-clip: text;
+  	-webkit-background-clip: text;
+	animation: animate 20s linear infinite;
+	-webkit-animation: animate 20s linear infinite;
+	-moz-animation: animate 20s linear infinite;
+	background-size: 1000%;
+}
+
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0% 100%;
+	}
+	50%
+	{
+		background-position: 100% 0%;
+	}
+	100%
+	{
+		background-position: 0% 100%;
+	}
 }
