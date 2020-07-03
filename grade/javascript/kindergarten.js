@@ -6,11 +6,10 @@ var config = {
   storageBucket: "kidkalc.appspot.com",
   messagingSenderId: "363718905093",
   appId: "1:363718905093:web:72636a6498d6d86a00fb6c",
-  measurementId: "G-NNTSP3W22H"
+  measurementId: "G-NNTSP3W22H",
 };
 firebase.initializeApp(config);
 firebase.analytics();
-
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
@@ -20,23 +19,22 @@ var Kindergarten = {};
 var TotalCoins = {};
 var ref;
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     username = user;
     useruid = user.uid;
     database = firebase.database();
     ref = database.ref(useruid);
-    ref.on('value', gotData)
+    ref.on("value", gotData);
   } else {
-    username = "NotSignedIn"
+    username = "NotSignedIn";
   }
 });
 
 function gotData(data) {
   var stats = data.val();
   var keys = Object.keys(stats);
-  for (var i = 0; i < keys.length; i++)
-  {
+  for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
     var scorefirebase = stats[k].KindergartenScore;
     var totalfirebase = stats[k].KindergartenTotal;
@@ -47,14 +45,16 @@ function gotData(data) {
       document.getElementById("coins").innerHTML = "Total\n" + total;
       document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
     }
-    if (coinfirebase != undefined){
+    if (coinfirebase != undefined) {
       localStorage.setItem("savedcoin", JSON.stringify(coinfirebase));
     }
-    if (scorefirebase != undefined){
+    if (scorefirebase != undefined) {
       localStorage.setItem("savedscore", JSON.stringify(scorefirebase));
       score = scorefirebase;
-      document.getElementById("finprompt").innerHTML = "Score\n" + scorefirebase;
-      document.getElementById("dropdownscore").innerHTML = "Score: " + scorefirebase;
+      document.getElementById("finprompt").innerHTML =
+        "Score\n" + scorefirebase;
+      document.getElementById("dropdownscore").innerHTML =
+        "Score: " + scorefirebase;
     }
   }
 }
@@ -86,24 +86,12 @@ if (JSON.parse(localStorage.getItem("savedscore")) > 0) {
   score = 0;
 }
 
-if (JSON.parse(localStorage.getItem("savedcoin")) > 0) {
-  coins = JSON.parse(localStorage.getItem("savedcoin"));
-} else {
-  coins = 0;
-}
-
 if (JSON.parse(localStorage.getItem("savedtotal")) > 0) {
   total = JSON.parse(localStorage.getItem("savedtotal"));
   document.getElementById("coins").innerHTML = "Total\n" + total;
   document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
 } else {
   total = 1;
-}
-
-if (coins > 0) {
-  document.getElementById("game").style.display = "block";
-} else {
-  document.getElementById("game").style.display = "none";
 }
 
 num1 = 500;
@@ -142,31 +130,9 @@ while (accans > 10) {
 
 document.getElementById("question").innerHTML = num1 + " + " + num2;
 
-function game() {
-  coins = coins - 1;
-  localStorage.setItem("savedcoin", JSON.stringify(coins));
-  document.getElementById("game").style.display = "none";
-  if (username != "NotSignedIn") {
-    TotalCoins.CoinsFirebase = coins;
-    myFBref.child(useruid).update({
-      TotalCoins
-    })
-  }
-  window.location.href = "/game";
-}
-
 function newquestion() {
   localStorage.setItem("savedtotal", JSON.stringify(total));
   localStorage.setItem("savedscore", JSON.stringify(score));
-  if (total % 15 == 0 && total != 0) {
-    coins = coins + 1;
-  }
-  if (coins > 0) {
-    document.getElementById("game").style.display = "block";
-  } else {
-    document.getElementById("game").style.display = "none";
-  }
-  localStorage.setItem("savedcoin", JSON.stringify(coins));
   document.getElementById("textbox").style.color = "white";
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
@@ -174,14 +140,14 @@ function newquestion() {
     Kindergarten.KindergartenScore = score;
     Kindergarten.KindergartenTotal = total;
     myFBref.child(useruid).update({
-      Kindergarten
-    })
+      Kindergarten,
+    });
   }
   if (username != "NotSignedIn") {
     TotalCoins.CoinsFirebase = coins;
     myFBref.child(useruid).update({
-      TotalCoins
-    })
+      TotalCoins,
+    });
   }
 
   function setCaretPosition(ctrl, pos) {

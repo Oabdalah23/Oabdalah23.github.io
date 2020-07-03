@@ -85,24 +85,12 @@ if (JSON.parse(localStorage.getItem("savedscore4")) > 0) {
   score = 0;
 }
 
-if (JSON.parse(localStorage.getItem("savedcoin")) > 0) {
-  coins = JSON.parse(localStorage.getItem("savedcoin"));
-} else {
-  coins = 0;
-}
-
 if (JSON.parse(localStorage.getItem("savedtotal4")) > 0) {
   total = JSON.parse(localStorage.getItem("savedtotal4"));
   document.getElementById("coins").innerHTML = "Total\n" + total;
   document.getElementById("dropdowncoins").innerHTML = "Total: " + total;
 } else {
   total = 1;
-}
-
-if (coins > 0) {
-  document.getElementById("game").style.display = "block";
-} else {
-  document.getElementById("game").style.display = "none";
 }
 
 operations = ["+", "-", "*", "/"];
@@ -289,31 +277,9 @@ if (operation == "+") {
   }
 }
 
-function game() {
-  coins = coins - 1;
-  localStorage.setItem("savedcoin", JSON.stringify(coins));
-  document.getElementById("game").style.display = "none";
-  if (username != "NotSignedIn") {
-    TotalCoins.CoinsFirebase = coins;
-    myFBref.child(useruid).update({
-      TotalCoins
-    })
-  }
-  window.location.href = "/game";
-}
-
 function newquestion() {
   localStorage.setItem("savedtotal4", JSON.stringify(total));
   localStorage.setItem("savedscore4", JSON.stringify(score));
-  if (total % 15 == 0 && total != 0) {
-    coins = coins + 1;
-  }
-  if (coins > 0) {
-    document.getElementById("game").style.display = "block";
-  } else {
-    document.getElementById("game").style.display = "none";
-  }
-  localStorage.setItem("savedcoin", JSON.stringify(coins));
   document.getElementById("textbox").style.color = "white";
   document.getElementById("textbox").style.textShadow = "0.3vw 0.3vw #0095ff";
   document.getElementById("textbox").readOnly = false;
