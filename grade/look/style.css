@@ -296,10 +296,13 @@ nav navwidth {
 	 background-color: #55acee;
 }
  .menushare .submenu li a:hover.envelope i.fa {
-	 background-color: green;
+	 background-color: #87e887;
 }
  .menushare .submenu li a:hover.instagram i.fa {
 	 background-color: #e4405f;
+}
+.menushare .submenu li a:hover.facebook i.fa {
+	background-color: #ce87e8;
 }
  .menushare .submenu li:nth-child(1) {
 	 transform: rotateX(45deg);
