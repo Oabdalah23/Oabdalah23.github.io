@@ -76,33 +76,6 @@ body {
 
 }
 
-.Games {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 80%;
-  font-family: 'Averia Sans Libre';
-  text-decoration: none;
-	padding: 0;
-	letter-spacing: 0;
-  color: #ebebeb;
-  font-size: 3em;
-  background-color: transparent;
-  border-color: transparent;
-  outline: none;
-  cursor: pointer;
-  
-  
-}
-
-.Games:hover{
-
-  color: lightgray !important;
-  font-weight: bold;
-	text-shadow: 0 0.5px 0 #70c4ff, 0 1px 0 #66c0ff, 0 1.5px 0 #54b9ff, 0 2px 0 #42b2ff, 0 2.5px 0 #29a8ff, 0 3px 0 #19a2ff, 0 3.5px 0 #0098ff, 0 4px 0 #028eed;
-
-}
-
 .check{
 
   background-color: transparent;
