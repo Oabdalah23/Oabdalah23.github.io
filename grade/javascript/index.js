@@ -20,6 +20,9 @@ var total = 0;
 var score = 0;
 var coins = 0;
 var TotalAccuracy = {};
+var first = {};
+var second = {};
+var third = {};
 var str = '';
 
 firebase.auth().onAuthStateChanged(function (user) {
@@ -54,8 +57,9 @@ firebase.auth().onAuthStateChanged(function (user) {
     useruid = user.uid;
     database = firebase.database();
     ref = database.ref('stats/'+useruid);
-    ref.on('value', gotData)
-
+    ref.on('value', gotData);
+    leaderboardref = database.ref('stats/leaderboard')
+    leaderboardref.on('value', gotLeaderboardData);
   } else {
     username = "NotSignedIn"
 
@@ -66,6 +70,13 @@ firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("account").style.animation = "moema 2s infinite";
   }
 });
+
+var firstname;
+var firstaccuracy;
+var secondname;
+var secondaccuracy;
+var thirdname;
+var thirdaccuracy;
 
 function gotData(data) {
   var stats = data.val();
@@ -141,6 +152,43 @@ function gotData(data) {
   document.getElementById('totalcoins').innerHTML = coins;
 }
 
+function gotLeaderboardData(data) {
+  var stats = data.val();
+  firstname = stats['first'].Name;
+  firstaccuracy = stats['first'].Accuracy
+  secondname = stats['second'].Name;
+  secondaccuracy = stats['second'].Accuracy
+  thirdname = stats['third'].Name;
+  thirdaccuracy = stats['third'].Accuracy;
+  if(accuracy > firstaccuracy){
+    first.Name = str;
+    first.Accuracy = accuracy;
+    second.Name = firstname;
+    second.Accuracy = firstaccuracy;
+    third.Name = secondname;
+    third.Accuracy = secondaccuracy;
+    console.log(first, second, third);
+    myFBref.child('stats/leaderboard').update({
+      first, second, third
+    })
+  }
+  else if((accuracy > secondaccuracy) && (str !==firstname)){
+    second.Name = str;
+    second.Accuracy = accuracy;
+    third.Name = secondaccuracy;
+    third.Accuracy = secondaccuracy;
+    myFBref.child('stats/leaderboard').update({
+      second, third
+    })
+  }
+  else if((accuracy > thirdaccuracy) && (str !==firstname) && (str !==secondname)) {
+    third.Name = str;
+    third.Accuracy = accuracy;
+    myFBref.child('stats/leaderboard').update({
+      third
+    })
+  }
+}
 
 function showusernamepopup() {
   $("#myusername").modal("show");

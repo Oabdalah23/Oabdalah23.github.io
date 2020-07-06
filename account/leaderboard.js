@@ -33,28 +33,31 @@ firebase.auth().onAuthStateChanged(function (user) {
     username = user;
     useruid = user.uid;
     database = firebase.database();
-    ref = database.ref('stats');
+    ref = database.ref("stats/leaderboard");
     ref.on("value", gotData);
   } else {
     username = "NotSignedIn";
   }
 });
 
-
 function gotData(data) {
   var stats = data.val();
-  var keys = Object.keys(stats);
-  for (var i = 0; i < keys.length; i++) {
-    var k = keys[i];
-    var TotalAccuracy = stats[k].TotalAccuracy;
-    var accuracy = TotalAccuracy.Accuracy;
-    var name = TotalAccuracy.Name;
-    document.getElementById('usernamescore'+[i+1]).innerHTML = name;
-    document.getElementById('score'+[i+1]).innerHTML = accuracy;
-    var dateSpan = document.createElement('span')
+  firstname = stats['first'].Name;
+  firstaccuracy = stats['first'].Accuracy
+  secondname = stats['second'].Name;
+  secondaccuracy = stats['second'].Accuracy
+  thirdname = stats['third'].Name;
+  thirdaccuracy = stats['third'].Accuracy;
+  document.getElementById("usernamescore1").innerHTML = firstname;
+  document.getElementById("score1").innerHTML = firstaccuracy;
+  document.getElementById("usernamescore2").innerHTML = secondname;
+  document.getElementById("score2").innerHTML = secondaccuracy;
+  document.getElementById("usernamescore3").innerHTML = thirdname;
+  document.getElementById("score3").innerHTML = thirdaccuracy;
+  for (var i = 0; i < 3; i++) {
+    var dateSpan = document.createElement("span");
     dateSpan.innerHTML = "Accuracy";
-    var span = document.getElementById('score'+[i+1]);
+    var span = document.getElementById("score" + [i + 1]);
     span.appendChild(dateSpan);
-
   }
 }
