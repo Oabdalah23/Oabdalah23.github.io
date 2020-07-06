@@ -53,7 +53,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     username = user;
     useruid = user.uid;
     database = firebase.database();
-    ref = database.ref(useruid);
+    ref = database.ref('stats/'+useruid);
     ref.on('value', gotData)
 
   } else {
@@ -133,7 +133,7 @@ function gotData(data) {
     TotalAccuracy.Accuracy = accuracy;
     TotalAccuracy.Name = str;
     document.getElementById('accuracy').innerHTML = accuracy;
-    myFBref.child(useruid).update({
+    myFBref.child('stats/'+useruid).update({
       TotalAccuracy
     })
   document.getElementById('totalquestions').innerHTML = total;

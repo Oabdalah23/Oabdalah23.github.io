@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     username = user;
     useruid = user.uid;
     database = firebase.database();
-    ref = database.ref(useruid);
+    ref = database.ref('stats/'+useruid);
     ref.on('value', gotData)
   } else {
     username = "NotSignedIn"
@@ -286,13 +286,13 @@ function newquestion() {
   if (username != "NotSignedIn") {
     Grade4.Grade4Score = score;
     Grade4.Grade4Total = total;
-    myFBref.child(useruid).update({
+    myFBref.child('stats/'+useruid).update({
       Grade4
     })
   }
   if (username != "NotSignedIn") {
     TotalCoins.CoinsFirebase = coins;
-    myFBref.child(useruid).update({
+    myFBref.child('stats/'+useruid).update({
       TotalCoins
     })
   }
