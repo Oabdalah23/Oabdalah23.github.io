@@ -40,15 +40,21 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+
 function gotData(data) {
   var stats = data.val();
   var keys = Object.keys(stats);
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
-    console.log(keys[0])
     var TotalAccuracy = stats[k].TotalAccuracy;
     var accuracy = TotalAccuracy.Accuracy;
     var name = TotalAccuracy.Name;
-    console.log(name, accuracy);
+    document.getElementById('usernamescore'+[i+1]).innerHTML = name;
+    document.getElementById('score'+[i+1]).innerHTML = accuracy;
+    var dateSpan = document.createElement('span')
+    dateSpan.innerHTML = "Accuracy";
+    var span = document.getElementById('score'+[i+1]);
+    span.appendChild(dateSpan);
+
   }
 }
