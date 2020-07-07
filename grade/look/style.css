@@ -200,7 +200,39 @@ nav navwidth {
   background-color: red !important;
   border-color: black !important;
   font-size: 12px;
+  outline: transparent;
 }
+#button:hover {
+	font-family: 'Averia Sans Libre';
+	background-color: darkred !important;
+	border-color: black !important;
+	font-size: 12px;
+	outline: transparent;
+  }
+#buttonleaderboard {
+	display: block;
+	font-family: 'Averia Sans Libre';
+	background-color: #0095ff !important;
+	border-color: black !important;
+	font-size: 20px;
+	outline: transparent;
+}
+#buttonleaderboard:hover {
+	font-family: 'Averia Sans Libre';
+	background-color: #2270a8 !important;
+	border-color: black !important;
+	font-size: 20px;
+	outline: transparent;
+}
+
+@media (max-width: 550px) {
+	#buttonleaderboard {
+	  display: none !important;
+	}
+	.new1 {
+		display: none !important;
+	}
+  }
 
 #myModal:before {
   content: '';
