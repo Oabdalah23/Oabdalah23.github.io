@@ -4,6 +4,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap);
 
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url('../fontssignup/montserrat/Montserrat-SemiBold.ttf');
+}
+
 
 body {
     background-image: url("/grade/look/bgg.jpg");
@@ -66,6 +71,51 @@ body {
     top: 50%;
     left: var(--start);
     transform: translate(-50%, -50%);
+}
+
+.wrapper {
+    font-size: 1.3rem;
+}
+
+button {
+    font-family: Montserrat-SemiBold;
+    background-color: #c9deff;
+    border: 0;
+    border-radius: 0.2em;
+    display: inline-block;
+    color: black;
+    font-size: 18px;
+    line-height: 1em;
+    margin: 0 2em 1em 0;
+    padding: 0.5em 1em;
+    position: absolute;
+    bottom: 2px;
+    left: 30px;
+    transition: all 0.25s ease-out;
+    vertical-align: bottom;
+}
+
+button:hover {
+    background-color: #a9c8fa;
+    cursor: pointer;
+}
+
+button:hover.arrow-left:after {
+    border-right-color: #a9c8fa;
+}
+
+button:after {
+    border: 0.75em solid transparent;
+    content: "";
+    position: absolute;
+    transition: all 0.25s ease;
+}
+
+button.arrow-left:after {
+    border-right-color: #c9deff;
+    top: 50%;
+    left: 0%;
+    transform: translate(-90%, -50%);
 }
 
 .leaderboard__profiles {

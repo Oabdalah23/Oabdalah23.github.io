@@ -98,3 +98,8 @@ function gotData(data) {
     document.getElementById('third').style.backgroundColor = "#0e1642";
   }
 }
+
+function back()
+{
+    setTimeout(redirect,1)
+}
