@@ -19,6 +19,7 @@ body {
     top: 9%;
     transform: translate(-50%);
 }
+
 .leaderboard header {
     --start: 15%;
     height: 130px;
@@ -28,6 +29,7 @@ body {
     border-radius: 12px 12px 0 0;
     overflow: hidden;
 }
+
 .leaderboard header .leaderboard__title {
     position: absolute;
     z-index: 2;
@@ -37,14 +39,17 @@ body {
     text-transform: uppercase;
     margin: 0;
 }
+
 .leaderboard header .leaderboard__title span {
     display: block;
 }
+
 .leaderboard header .leaderboard__title--top {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 6.5px;
 }
+
 .leaderboard header .leaderboard__title--bottom {
     font-size: 13px;
     font-weight: 500;
@@ -52,6 +57,7 @@ body {
     opacity: 0.65;
     transform: translateY(-2px);
 }
+
 .leaderboard header .leaderboard__icon {
     fill: #fff;
     opacity: 0.35;
@@ -61,6 +67,7 @@ body {
     left: var(--start);
     transform: translate(-50%, -50%);
 }
+
 .leaderboard__profiles {
     background-color: #e4f2f7;
     border-radius: 0 0 12px 12px;
@@ -70,10 +77,17 @@ body {
     height: 500px;
     object-fit: none;
     overflow: scroll;
-    overflow: -moz-scrollbars-vertical; 
-
-
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
+
+.leaderboard__profiles::-webkit-scrollbar {
+    display: none;
+}
+
 .leaderboard__profile {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -86,7 +100,16 @@ body {
     transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98), box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
     background-color: #fff;
 }
-#second, #third, #fourth, #fifth, #sixth, #seventh, #eighth, #ninth, #tenth{
+
+#second,
+#third,
+#fourth,
+#fifth,
+#sixth,
+#seventh,
+#eighth,
+#ninth,
+#tenth {
     margin-top: 15px;
 }
 
@@ -102,18 +125,21 @@ body {
     letter-spacing: 0.64px;
     margin-left: 12px;
 }
+
 .leaderboard__value {
     color: #ffc77d;
     font-weight: 700;
     font-size: 34px;
     text-align: right;
 }
-.leaderboard__value > span {
+
+.leaderboard__value>span {
     opacity: 0.8;
     font-weight: 600;
     font-size: 13px;
     margin-left: 3px;
 }
+
 body {
     margin-left: 20px;
     margin-right: 20px;
@@ -122,6 +148,7 @@ body {
     place-items: center;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 .leaderboard {
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
 }
