@@ -93,11 +93,13 @@ button {
     left: 30px;
     transition: all 0.25s ease-out;
     vertical-align: bottom;
+    outline: none;
 }
 
 button:hover {
     background-color: #a9c8fa;
     cursor: pointer;
+    outline: none;
 }
 
 button:hover.arrow-left:after {
