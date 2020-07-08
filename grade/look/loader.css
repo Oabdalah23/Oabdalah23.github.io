@@ -76,3 +76,14 @@
 *:after {
     box-sizing: border-box;
 }
+
+@media (max-width: 500px) {
+    .loader {
+        --sz: 70px;
+        width: calc(var(--sz) * 2);
+        height: var(--sz);
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
