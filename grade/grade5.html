@@ -1,107 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164613225-1"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
 
-         gtag('config', 'UA-164613225-1');
-      </script>      
-      <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <script src="https://kit.fontawesome.com/b9a77079b2.js" crossorigin="anonymous"></script> 
-      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
-      <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
-      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-      <link rel="manifest" href="favicon/site.webmanifest">
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width", initial-scale=1>
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Grade 5 - KidKalc</title>
-      <link rel="stylesheet" href="look/grade5.css">
-      <meta name="description" content="KidKalc is the best website for grade 5 kids to learn math, in a fun, futuristic way!" />
-      <meta name="keywords" content="KidKalc, Math, Math Quiz, Quiz, Elementary, School, Math Games, Games, Questions, Mathematics, Math For Kids, Kids">
-   </head>
-   <body>
-      <div class="dropdown">
-         <divdrop>
-            <span>Total & Score</span>
-            <div class="dropdown-content">
-               <p id="dropdowncoins">Total: 1</p>
-               <p id="dropdownscore">Score: 0</p>
-            </div>
-         </divdrop>
+<head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164613225-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164613225-1');
+   </script>
+   <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/b9a77079b2.js" crossorigin="anonymous"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+   <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="manifest" href="favicon/site.webmanifest">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width" , initial-scale=1>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Grade 5 - KidKalc</title>
+   <link rel="stylesheet" href="look/grade5.css">
+   <link rel="stylesheet" href="/grade/look/loader.css">
+   <meta name="description"
+      content="KidKalc is the best website for grade 5 kids to learn math, in a fun, futuristic way!" />
+   <meta name="keywords"
+      content="KidKalc, Math, Math Quiz, Quiz, Elementary, School, Math Games, Games, Questions, Mathematics, Math For Kids, Kids">
+</head>
+
+<body>
+
+   <div class="loader__wrap" id="loader" role="alertdialog" aria-busy="true" aria-live="polite" aria-label="Loading…">
+      <div class="loader" aria-hidden="true">
+         <div class="loader__sq"></div>
+         <div class="loader__sq"></div>
       </div>
-      <div class="container">
-         <!-- The Modal -->
-         <div class="modal fade" id="myModal">
-            <div class="modal-dialog modal-dialog-centered vcenter">
-               <div class="modal-content">
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                     <h2 type="header" class="modal-title w-100 text-center">
-                        Scoring System
-                     </h2>
-                  </div>
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                     <img src="easy.png" width="200">
-                     <br>
-                     If either the shadow of the word "difficulty", or the shadow of the actual question turns a light green. This indicates a easy difficulty question. Easy questions are worth 1 point.
-                     <hr>
-                     <img src="medium.png" width="200">
-                     <br>
-                     If either the shadow of the word "difficulty", or the shadow of the actual question turns yellow. This indicates a medium difficulty question. Mediocre questions are worth 2 points.
-                     <hr>
-                     <img src="hard.png" width="200">
-                     <br>
-                     If either the shadow of the word "difficulty", or the shadow of the actual question turns a light red. This indicates a hard difficulty question. Hard questions are worth 3 points.
-                     <hr>
-                     <b>
+   </div>
+
+   <div class="dropdown">
+      <divdrop>
+         <span>Total & Score</span>
+         <div class="dropdown-content">
+            <p id="dropdowncoins">Total: 1</p>
+            <p id="dropdownscore">Score: 0</p>
+         </div>
+      </divdrop>
+   </div>
+   <div class="container">
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal">
+         <div class="modal-dialog modal-dialog-centered vcenter">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h2 type="header" class="modal-title w-100 text-center">
+                     Scoring System
+                  </h2>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <img src="easy.png" width="200">
+                  <br>
+                  If either the shadow of the word "difficulty", or the shadow of the actual question turns a light
+                  green. This indicates a easy difficulty question. Easy questions are worth 1 point.
+                  <hr>
+                  <img src="medium.png" width="200">
+                  <br>
+                  If either the shadow of the word "difficulty", or the shadow of the actual question turns yellow. This
+                  indicates a medium difficulty question. Mediocre questions are worth 2 points.
+                  <hr>
+                  <img src="hard.png" width="200">
+                  <br>
+                  If either the shadow of the word "difficulty", or the shadow of the actual question turns a light red.
+                  This indicates a hard difficulty question. Hard questions are worth 3 points.
+                  <hr>
+                  <b>
                      You will also lose 2 points for every incorrect answer regardless of question difficulty.
-                     </b>
-                  </div>
-                  <!-- Modal footer -->
-                  <div class="modal-footer" style="text-align:center;">
-                     <button type="button" class="btn btn-primary" style="margin:auto;display:block;" data-dismiss="modal">Understood</button>
-                  </div>
+                  </b>
+               </div>
+               <!-- Modal footer -->
+               <div class="modal-footer" style="text-align:center;">
+                  <button type="button" class="btn btn-primary" style="margin:auto;display:block;"
+                     data-dismiss="modal">Understood</button>
                </div>
             </div>
          </div>
       </div>
-      <div class="middlecontent">
-         <h1 class="title" id="question"></h1>
-         <ul class="sc">
-            <p id="finprompt" class="solution">
-               Score<br />0
-            </p>
-            <p id="coins" class="coins">
-               Total<br />1
-            </p>
-         </ul>
-         <p id="difficulty" class="diff">
-            Difficulty
+   </div>
+   <div class="middlecontent">
+      <h1 class="title" id="question"></h1>
+      <ul class="sc">
+         <p id="finprompt" class="solution">
+            Score<br />0
          </p>
-      </div>
-      <input autocomplete="off" id="textbox" name="name" class="textinput" type="text" value=""> 
-      <button id="check" type="button" class="check" onclick="outputname()" ></button>
-      <id="buttons02" class="buttons">
+         <p id="coins" class="coins">
+            Total<br />1
+         </p>
+      </ul>
+      <p id="difficulty" class="diff">
+         Difficulty
+      </p>
+   </div>
+   <input autocomplete="off" id="textbox" name="name" class="textinput" type="text" value="">
+   <button id="check" type="button" class="check" onclick="outputname()"></button>
+   <id="buttons02" class="buttons">
       <a href="https://kidkalc.com" class="button">Back</a>
       <ul class="help">
          <li class="menubottom bottomright">
             <i onclick="help()" class="fa fa-question"></i>
       </ul>
-   </body>
-   <script src="javascript/grade5.js"></script>
+</body>
+<script src="javascript/grade5.js"></script>
+
 </html>

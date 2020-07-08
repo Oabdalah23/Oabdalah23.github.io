@@ -11,6 +11,7 @@
 
     gtag('config', 'UA-164613225-1');
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
@@ -25,12 +26,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Leaderboard - KidKalc</title>
   <link rel="stylesheet" href="leaderboard.css">
+  <link rel="stylesheet" href="/grade/look/loader.css">
 </head>
 
 <body>
   <h1 class="topleftitle" id="topleftitle">K i d K a l c</h1>
   <div class="wrapper">
     <button onclick="back()" class="arrow-left">Back</button>
+  </div>
+
+  <div class="loader__wrap" id="loader" role="alertdialog" aria-busy="true" aria-live="polite" aria-label="Loading…">
+    <div class="loader" aria-hidden="true">
+      <div class="loader__sq"></div>
+      <div class="loader__sq"></div>
+    </div>
   </div>
 
   <article class="leaderboard">

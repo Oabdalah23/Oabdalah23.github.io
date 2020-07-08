@@ -57,6 +57,7 @@ function gotData(data) {
         "Score: " + scorefirebase;
     }
   }
+  $("#loader").fadeOut();
 }
 
 $(document).ready(function () {

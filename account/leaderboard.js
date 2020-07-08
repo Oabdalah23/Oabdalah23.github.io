@@ -97,6 +97,7 @@ function gotData(data) {
   else if(thirdname == str){
     document.getElementById('third').style.backgroundColor = "#0e1642";
   }
+  $("#loader").fadeOut();
 }
 
 function back()

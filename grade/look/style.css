@@ -552,7 +552,6 @@ nav navwidth {
 .card {
     border: 1.5px solid black;
     flex: 1;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -565,7 +564,11 @@ nav navwidth {
 }
 
 #onecard, #twocard, #thirdcard {
-	margin: 7%;
+    margin: 7%;
+    display: none;
+}
+#card {
+    display: none;
 }
 
 .card__title {
@@ -619,3 +622,36 @@ nav navwidth {
         background-position: 0% 100%;
     }
 }
+
+
+.loader {
+    position: absolute;
+    border: 6px solid black;
+    border-radius: 50%;
+    border-top: 6px solid #0095ff;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+    top: 22%;
+    left: 28%;
+  }
+
+  /* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loaderbkg {
+      position: absolute;
+      width: 90%;
+      height:90%;
+      background-color: white;
+      display: block;
+  }

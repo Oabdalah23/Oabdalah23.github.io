@@ -56,6 +56,7 @@ function gotData(data) {
       document.getElementById("dropdownscore").innerHTML = "Score: " + scorefirebase;
     }
   }
+  $("#loader").fadeOut();
 }
 
 $(document).ready(function () {

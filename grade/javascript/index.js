@@ -6,7 +6,7 @@ var config = {
   storageBucket: "kidkalc.appspot.com",
   messagingSenderId: "363718905093",
   appId: "1:363718905093:web:72636a6498d6d86a00fb6c",
-  measurementId: "G-NNTSP3W22H"
+  measurementId: "G-NNTSP3W22H",
 };
 firebase.initializeApp(config);
 firebase.analytics();
@@ -23,7 +23,7 @@ var TotalAccuracy = {};
 var first = {};
 var second = {};
 var third = {};
-var str = '';
+var str = "";
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -33,7 +33,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     var email_id = user.email;
     str = email_id.split("@");
     str.pop();
-    str = str[0]
+    str = str[0];
 
     document
       .getElementById("account")
@@ -48,7 +48,6 @@ firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById("exampleModalLabel").innerHTML =
           "Welcome " + userdisplayname;
       } else {
-
         document.getElementById("exampleModalLabel").innerHTML =
           "Welcome " + str;
       }
@@ -56,12 +55,12 @@ firebase.auth().onAuthStateChanged(function (user) {
     username = user;
     useruid = user.uid;
     database = firebase.database();
-    ref = database.ref('stats/'+useruid);
-    ref.on('value', gotData);
-    leaderboardref = database.ref('stats/leaderboard')
-    leaderboardref.on('value', gotLeaderboardData);
+    ref = database.ref("stats/" + useruid);
+    ref.on("value", gotData);
+    leaderboardref = database.ref("stats/leaderboard");
+    leaderboardref.on("value", gotLeaderboardData);
   } else {
-    username = "NotSignedIn"
+    username = "NotSignedIn";
 
     document
       .getElementById("account")
@@ -98,8 +97,7 @@ function gotData(data) {
   total = 0;
   score = 0;
   coins = 0;
-  for (var i = 0; i < keys.length; i++)
-  {
+  for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
     var total0firebase = stats[k].KindergartenTotal;
     var total1firebase = stats[k].Grade1Total;
@@ -114,81 +112,87 @@ function gotData(data) {
     var score4firebase = stats[k].Grade4Score;
     var score5firebase = stats[k].Grade5Score;
     var coinsfirebase = stats[k].CoinsFirebase;
-    if (total0firebase != undefined){
+    if (total0firebase != undefined) {
       total += total0firebase;
     }
-    if (total1firebase != undefined){
+    if (total1firebase != undefined) {
       total += total1firebase;
     }
-    if (total2firebase != undefined){
+    if (total2firebase != undefined) {
       total += total2firebase;
     }
-    if (total3firebase != undefined){
+    if (total3firebase != undefined) {
       total += total3firebase;
     }
-    if (total4firebase != undefined){
+    if (total4firebase != undefined) {
       total += total4firebase;
     }
-    if (total5firebase != undefined){
+    if (total5firebase != undefined) {
       total += total5firebase;
     }
-    if (score0firebase != undefined){
+    if (score0firebase != undefined) {
       score += score0firebase;
     }
-    if (score1firebase != undefined){
+    if (score1firebase != undefined) {
       score += score1firebase;
     }
-    if (score2firebase != undefined){
+    if (score2firebase != undefined) {
       score += score2firebase;
     }
-    if (score3firebase != undefined){
+    if (score3firebase != undefined) {
       score += score3firebase;
     }
-    if (score4firebase != undefined){
+    if (score4firebase != undefined) {
       score += score4firebase;
     }
-    if (score5firebase != undefined){
+    if (score5firebase != undefined) {
       score += score5firebase;
     }
-    if (coinsfirebase != undefined){
+    if (coinsfirebase != undefined) {
       coins = coinsfirebase;
     }
   }
-    accuracy = Math.round(100*(score/total))/100;
-    TotalAccuracy.Accuracy = accuracy;
-    TotalAccuracy.Name = str;
-    document.getElementById('accuracy').innerHTML = accuracy;
-    myFBref.child('stats/'+useruid).update({
-      TotalAccuracy
-    })
-  document.getElementById('totalquestions').innerHTML = total;
-  document.getElementById('totalscore').innerHTML = score;
-  document.getElementById('totalcoins').innerHTML = coins;
+  accuracy = Math.round(100 * (score / total)) / 100;
+  TotalAccuracy.Accuracy = accuracy;
+  TotalAccuracy.Name = str;
+  document.getElementById("accuracy").innerHTML = accuracy;
+  myFBref.child("stats/" + useruid).update({
+    TotalAccuracy,
+  });
+  document.getElementById("totalquestions").innerHTML = total;
+  document.getElementById("totalscore").innerHTML = score;
+  document.getElementById("totalcoins").innerHTML = coins;
+  $("#loader").fadeOut();
+  document.getElementById('card').style.display = "flex";
+  document.getElementById('onecard').style.display = "flex";
+  document.getElementById('twocard').style.display = "flex";
+  document.getElementById('thirdcard').style.display = "flex";
+
 }
 
 function gotLeaderboardData(data) {
   var stats = data.val();
-  firstname = stats['first'].Name;
-  firstaccuracy = stats['first'].Accuracy
-  secondname = stats['second'].Name;
-  secondaccuracy = stats['second'].Accuracy
-  thirdname = stats['third'].Name;
-  thirdaccuracy = stats['third'].Accuracy;
-  fourthname = stats['fourth'].Name;
-  fourthaccuracy = stats['fourth'].Accuracy;
-  fifthname = stats['fifth'].Name;
-  fifthaccuracy = stats['fifth'].Accuracy;
-  sixthname = stats['sixth'].Name;
-  sixthaccuracy = stats['sixth'].Accuracy;
-  seventhname = stats['seventh'].Name;
-  seventhaccuracy = stats['seventh'].Accuracy;
-  eighthname = stats['eighth'].Name;
-  eighthaccuracy = stats['eighth'].Accuracy;
-  ninthname = stats['ninth'].Name;
-  ninthaccuracy = stats['ninth'].Accuracy;
-  tenthname = stats['tenth'].Name;
-  tenthaccuracy = stats['tenth'].Accuracy;
-  if(accuracy > firstaccuracy){
+  firstname = stats["first"].Name;
+  firstaccuracy = stats["first"].Accuracy;
+  secondname = stats["second"].Name;
+  secondaccuracy = stats["second"].Accuracy;
+  thirdname = stats["third"].Name;
+  thirdaccuracy = stats["third"].Accuracy;
+  fourthname = stats["fourth"].Name;
+  fourthaccuracy = stats["fourth"].Accuracy;
+  fifthname = stats["fifth"].Name;
+  fifthaccuracy = stats["fifth"].Accuracy;
+  sixthname = stats["sixth"].Name;
+  sixthaccuracy = stats["sixth"].Accuracy;
+  seventhname = stats["seventh"].Name;
+  seventhaccuracy = stats["seventh"].Accuracy;
+  eighthname = stats["eighth"].Name;
+  eighthaccuracy = stats["eighth"].Accuracy;
+  ninthname = stats["ninth"].Name;
+  ninthaccuracy = stats["ninth"].Accuracy;
+  tenthname = stats["tenth"].Name;
+  tenthaccuracy = stats["tenth"].Accuracy;
+  if (accuracy > firstaccuracy) {
     first.Name = str;
     first.Accuracy = accuracy;
     second.Name = firstname;
@@ -202,18 +206,26 @@ function gotLeaderboardData(data) {
     sixth.Name = fifthname;
     sixth.Accuracy = fifthaccuracy;
     seventh.Name = sixthname;
-    seventh.Accuracy =  sixthaccuracy;
+    seventh.Accuracy = sixthaccuracy;
     eighth.Name = seventhname;
     eighth.Accuracy = seventhaccuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > secondaccuracy) && (str !==firstname)){
+    myFBref.child("stats/leaderboard").update({
+      first,
+      second,
+      third,
+      fourth,
+      fifth,
+      sixth,
+      seventh,
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (accuracy > secondaccuracy && str !== firstname) {
     second.Name = str;
     second.Accuracy = accuracy;
     third.Name = secondaccuracy;
@@ -225,18 +237,29 @@ function gotLeaderboardData(data) {
     sixth.Name = fifthname;
     sixth.Accuracy = fifthaccuracy;
     seventh.Name = sixthname;
-    seventh.Accuracy =  sixthaccuracy;
+    seventh.Accuracy = sixthaccuracy;
     eighth.Name = seventhname;
     eighth.Accuracy = seventhaccuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > thirdaccuracy) && (str !==firstname) && (str !==secondname)) {
+    myFBref.child("stats/leaderboard").update({
+      second,
+      third,
+      fourth,
+      fifth,
+      sixth,
+      seventh,
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > thirdaccuracy &&
+    str !== firstname &&
+    str !== secondname
+  ) {
     third.Name = str;
     third.Accuracy = accuracy;
     fourth.Name = thirdname;
@@ -246,18 +269,29 @@ function gotLeaderboardData(data) {
     sixth.Name = fifthname;
     sixth.Accuracy = fifthaccuracy;
     seventh.Name = sixthname;
-    seventh.Accuracy =  sixthaccuracy;
+    seventh.Accuracy = sixthaccuracy;
     eighth.Name = seventhname;
     eighth.Accuracy = seventhaccuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      third, fourth, fifth, sixth, seventh, eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > fourthaccuracy) && (str !==firstname) && (str !==secondname) && (str !==thirdname)) {
+    myFBref.child("stats/leaderboard").update({
+      third,
+      fourth,
+      fifth,
+      sixth,
+      seventh,
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > fourthaccuracy &&
+    str !== firstname &&
+    str !== secondname &&
+    str !== thirdname
+  ) {
     fourth.Name = str;
     fourth.Accuracy = accuracy;
     fifth.Name = fourthname;
@@ -265,88 +299,154 @@ function gotLeaderboardData(data) {
     sixth.Name = fifthname;
     sixth.Accuracy = fifthaccuracy;
     seventh.Name = sixthname;
-    seventh.Accuracy =  sixthaccuracy;
+    seventh.Accuracy = sixthaccuracy;
     eighth.Name = seventhname;
     eighth.Accuracy = seventhaccuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      fourth, fifth, sixth, seventh, eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > fifthaccuracy) && (str !==firstname) && (str !==secondname) && (str !==thirdname) && (str !==fourthname)) {
+    myFBref.child("stats/leaderboard").update({
+      fourth,
+      fifth,
+      sixth,
+      seventh,
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > fifthaccuracy &&
+    str !== firstname &&
+    str !== secondname &&
+    str !== thirdname &&
+    str !== fourthname
+  ) {
     fifth.Name = str;
     fifth.Accuracy = accuracy;
     sixth.Name = fifthname;
     sixth.Accuracy = fifthaccuracy;
     seventh.Name = sixthname;
-    seventh.Accuracy =  sixthaccuracy;
+    seventh.Accuracy = sixthaccuracy;
     eighth.Name = seventhname;
     eighth.Accuracy = seventhaccuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      fifth, sixth, seventh, eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > sixthaccuracy) && (str !==firstname) && (str !==secondname) && (str !==thirdname) && (str !==fourthname) && (str !==fifthname)) {
+    myFBref.child("stats/leaderboard").update({
+      fifth,
+      sixth,
+      seventh,
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > sixthaccuracy &&
+    str !== firstname &&
+    str !== secondname &&
+    str !== thirdname &&
+    str !== fourthname &&
+    str !== fifthname
+  ) {
     sixth.Name = str;
     sixth.Accuracy = accuracy;
     seventh.Name = sixthname;
-    seventh.Accuracy =  sixthaccuracy;
+    seventh.Accuracy = sixthaccuracy;
     eighth.Name = seventhname;
     eighth.Accuracy = seventhaccuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      sixth, seventh, eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > seventhaccuracy) && (str !==firstname) && (str !==secondname) && (str !==thirdname) && (str !==fourthname) && (str !==fifthname) && (str !==sixthname)) {
+    myFBref.child("stats/leaderboard").update({
+      sixth,
+      seventh,
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > seventhaccuracy &&
+    str !== firstname &&
+    str !== secondname &&
+    str !== thirdname &&
+    str !== fourthname &&
+    str !== fifthname &&
+    str !== sixthname
+  ) {
     seventh.Name = str;
-    seventh.Accuracy =  accuracy;
+    seventh.Accuracy = accuracy;
     eighth.Name = seventhname;
     eighth.Accuracy = seventhaccuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      seventh, eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > eighthaccuracy) && (str !==firstname) && (str !==secondname) && (str !==thirdname) && (str !==fourthname) && (str !==fifthname) && (str !==sixthname) && (str !==seventhname)) {
+    myFBref.child("stats/leaderboard").update({
+      seventh,
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > eighthaccuracy &&
+    str !== firstname &&
+    str !== secondname &&
+    str !== thirdname &&
+    str !== fourthname &&
+    str !== fifthname &&
+    str !== sixthname &&
+    str !== seventhname
+  ) {
     eighth.Name = str;
     eighth.Accuracy = accuracy;
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      eighth, ninth, tenth
-    })
-  }
-  else if((accuracy > ninthaccuracy) && (str !==firstname) && (str !==secondname) && (str !==thirdname) && (str !==fourthname) && (str !==fifthname) && (str !==sixthname) && (str !==seventhname) && (str !==eighthname)) {
+    myFBref.child("stats/leaderboard").update({
+      eighth,
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > ninthaccuracy &&
+    str !== firstname &&
+    str !== secondname &&
+    str !== thirdname &&
+    str !== fourthname &&
+    str !== fifthname &&
+    str !== sixthname &&
+    str !== seventhname &&
+    str !== eighthname
+  ) {
     ninth.Name = str;
     ninth.Accuracy = accuracy;
     tenth.Name = ninthname;
     ten.Accuracy = ninthaccuracy;
-    myFBref.child('stats/leaderboard').update({
-      ninth, tenth
-    })
-  }
-  else if((accuracy > tenthaccuracy) && (str !==firstname) && (str !==secondname) && (str !==thirdname) && (str !==fourthname) && (str !==fifthname) && (str !==sixthname) && (str !==seventhname) && (str !==eighthname) && (str !==ninthname)) {
+    myFBref.child("stats/leaderboard").update({
+      ninth,
+      tenth,
+    });
+  } else if (
+    accuracy > tenthaccuracy &&
+    str !== firstname &&
+    str !== secondname &&
+    str !== thirdname &&
+    str !== fourthname &&
+    str !== fifthname &&
+    str !== sixthname &&
+    str !== seventhname &&
+    str !== eighthname &&
+    str !== ninthname
+  ) {
     tenth.Name = str;
     ten.Accuracy = accuracy;
-    myFBref.child('stats/leaderboard').update({
-      tenth
-    })
+    myFBref.child("stats/leaderboard").update({
+      tenth,
+    });
   }
 }
 

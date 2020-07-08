@@ -1,173 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164613225-1"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
 
-         gtag('config', 'UA-164613225-1');
-      </script>
-      <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <script src="https://kit.fontawesome.com/b9a77079b2.js" crossorigin="anonymous"></script> 
-      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
-      <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
-      <link rel="apple-touch-icon" sizes="180x180" href="/grade/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/grade/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/grade/favicon/favicon-16x16.png">
-      <link rel="manifest" href="/grade/favicon/site.webmanifest">
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width", initial-scale=1>
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>KidKalc</title>
-      <link rel="stylesheet" href="grade/look/style.css">
-      <meta name="description" content="KidKalc is the best website for elementary kids to learn math, in a fun, futuristic way!" />
-   </head>
-   <body>
-      <h1 class="topleftitle" id="topleftitle">K i d K a l c</h1>
-      <div class="modalusername">
-         <!-- Modal -->
-         <div class="modal fade" id="myusername" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modaluser-dialog" role="document">
-               <div id="modaluser" class="modal-content">
-                  <div class="modal-header">
-                     <h2 class="modal-title  w-100 text-center " id="exampleModalLabel">Welcome </h2>
+<head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164613225-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164613225-1');
+   </script>
+   <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/b9a77079b2.js" crossorigin="anonymous"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+   <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
+   <link rel="apple-touch-icon" sizes="180x180" href="/grade/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/grade/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/grade/favicon/favicon-16x16.png">
+   <link rel="manifest" href="/grade/favicon/site.webmanifest">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width" , initial-scale=1>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>KidKalc</title>
+   <link rel="stylesheet" href="grade/look/style.css">
+   <meta name="description"
+      content="KidKalc is the best website for elementary kids to learn math, in a fun, futuristic way!" />
+</head>
+
+<body>
+   <h1 class="topleftitle" id="topleftitle">K i d K a l c</h1>
+   <div class="modalusername">
+      <!-- Modal -->
+      <div class="modal fade" id="myusername" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+         <div class="modaluser-dialog" role="document">
+            <div id="modaluser" class="modal-content">
+               <div class="modal-header">
+                  <h2 class="modal-title  w-100 text-center " id="exampleModalLabel">Welcome </h2>
+               </div>
+               <div class="modal-body">
+                  <div class="loaderbkg" id="loader">
+                     <div class="loader"></div>
                   </div>
-                  <div class="modal-body">
-                     <main class="containertotal">
-                        <div class="card">
-                          <span class="card__title">Total Questions Answered</span>
-                          <span class="card__total" id="totalquestions">0</span>
-                        </div>
-                    </main>
-                    <hr>
-                    <main class="containertotal">
+
+                  <main class="containertotal">
+                     <div class="card" id="card">
+                        <span class="card__title">Total Questions Answered</span>
+                        <span class="card__total" id="totalquestions">0</span>
+                     </div>
+                  </main>
+                  <hr>
+                  <main class="containertotal">
                      <div class="card" id="onecard">
-                       <span class="card__title">Total Score</span>
-                       <span class="card__total" id="totalscore">0</span>
+                        <span class="card__title">Total Score</span>
+                        <span class="card__total" id="totalscore">0</span>
                      </div>
-                    </main>
-                    <hr>
-                    <main class="containertotal">
+                  </main>
+                  <hr>
+                  <main class="containertotal">
                      <div class="card" id="twocard">
-                       <span class="card__title">Accuracy</span>
-                       <span class="card__total" id="accuracy">0</span>
+                        <span class="card__title">Accuracy</span>
+                        <span class="card__total" id="accuracy">0</span>
                      </div>
-                    </main>
-                    <hr>
-                    <main class="containertotal">
+                  </main>
+                  <hr>
+                  <main class="containertotal">
                      <div class="card" id="thirdcard">
-                       <span class="card__title">Total Coins</span>
-                       <span class="card__total" id="totalcoins">0</span>
+                        <span class="card__title">Total Coins</span>
+                        <span class="card__total" id="totalcoins">0</span>
                      </div>
-                    </main>
-                    <hr class="new1">
-                    <button onclick="leaderboard()" type="button1" id="buttonleaderboard" class="btn btn-primary" style="margin:auto;display:block;" data-dismiss="modal" >Leaderboard</button>
-                  </div>
-                  <div class="modal-footer">
-                     <button onclick="logout()" type="button1" id="button" class="btn btn-primary" style="margin:auto;display:block;" data-dismiss="modal" >Sign Out</button>
-                  </div>
+                  </main>
+                  <hr class="new1">
+                  <button onclick="leaderboard()" type="button1" id="buttonleaderboard" class="btn btn-primary"
+                     style="margin:auto;display:block;" data-dismiss="modal">Leaderboard</button>
+               </div>
+               <div class="modal-footer">
+                  <button onclick="logout()" type="button1" id="button" class="btn btn-primary"
+                     style="margin:auto;display:block;" data-dismiss="modal">Sign Out</button>
                </div>
             </div>
          </div>
       </div>
-      <div class="container">
-         <!-- The Modal -->
-         <div class="modal fade" id="myModal">
-            <div class="modal-dialog modal-dialog-centered vcenter">
-               <div class="modal-content">
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                     <h2 type="header" id="infopopup" class="modal-title w-100 text-center">
-                        Welcome To KidKalc
-                     </h2>
-                  </div>
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                     Our goal at <b>KidKalc</b> is for any kid to have fun while learning. So, we created this fun, fast and engaging website for kids to test their mathematical skills.
-                     <hr>
-                     First, choose your desired grade, and simply start answering the randomly generated questions to earn points.
-                     <hr>
-                     Once you have answered 15 questions, you will get one try at our game. The game is a fun, skill-based tetris-like game.
-                     <hr>
-                     Your scores will be saved locally if you don't sign in/up. However, if you do <a class="signinhypercolour" href="account"><b>sign in/up</b></a>, you will be able to access your scores and achievements from any device.
-                     <hr>
-                     <b>
+   </div>
+   <div class="container">
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal">
+         <div class="modal-dialog modal-dialog-centered vcenter">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h2 type="header" id="infopopup" class="modal-title w-100 text-center">
+                     Welcome To KidKalc
+                  </h2>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  Our goal at <b>KidKalc</b> is for any kid to have fun while learning. So, we created this fun, fast
+                  and engaging website for kids to test their mathematical skills.
+                  <hr>
+                  First, choose your desired grade, and simply start answering the randomly generated questions to earn
+                  points.
+                  <hr>
+                  Once you have answered 15 questions, you will get one try at our game. The game is a fun, skill-based
+                  tetris-like game.
+                  <hr>
+                  Your scores will be saved locally if you don't sign in/up. However, if you do <a
+                     class="signinhypercolour" href="account"><b>sign in/up</b></a>, you will be able to access your
+                  scores and achievements from any device.
+                  <hr>
+                  <b>
                      Are You Ready To Improve Your Math Skills?
-                     </b>
-                  </div>
-                  <!-- Modal footer -->
-                  <div class="modal-footer" style="text-align:center;">
-                     <button type="button" class="btn btn-primary" style="margin:auto;display:block;" data-dismiss="modal" onclick="topleftpopup()" >I'm Ready</button>
-                  </div>
+                  </b>
+               </div>
+               <!-- Modal footer -->
+               <div class="modal-footer" style="text-align:center;">
+                  <button type="button" class="btn btn-primary" style="margin:auto;display:block;" data-dismiss="modal"
+                     onclick="topleftpopup()">I'm Ready</button>
                </div>
             </div>
          </div>
       </div>
-      <div class="middlecontent">
-         <h1 class="title"> Welcome To <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
-      </div>
-      <main class="navig">
-         <nav>
-            <ul id="buttons02" class="buttons">
-               <a id="kinderbtn" href="grade/kindergarten" class="button n01">Kindergarten</a>
-               <a id="grade1btn" href="grade/grade1" class="button n02">Grade 1</a>
-               <a id="grade2btn" href="grade/grade2" class="button n03">Grade 2</a>
-               <a id="grade3btn" href="grade/grade3" class="button n04">Grade 3</a>
-               <a id="grade4btn" href="grade/grade4" class="button n05">Grade 4</a>
-               <a hid="grade5btn" href="grade/grade5" class="button n06">Grade 5</a>
-            </ul>
-            <navwidth>
-               <div class="position-absolute mid-center">
-                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">Select A Grade
+   </div>
+   <div class="middlecontent">
+      <h1 class="title"> Welcome To <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+   </div>
+   <main class="navig">
+      <nav>
+         <ul id="buttons02" class="buttons">
+            <a id="kinderbtn" href="grade/kindergarten" class="button n01">Kindergarten</a>
+            <a id="grade1btn" href="grade/grade1" class="button n02">Grade 1</a>
+            <a id="grade2btn" href="grade/grade2" class="button n03">Grade 2</a>
+            <a id="grade3btn" href="grade/grade3" class="button n04">Grade 3</a>
+            <a id="grade4btn" href="grade/grade4" class="button n05">Grade 4</a>
+            <a hid="grade5btn" href="grade/grade5" class="button n06">Grade 5</a>
+         </ul>
+         <navwidth>
+            <div class="position-absolute mid-center">
+               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Select A Grade
                   <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/kindergarten">Kindergarten</a></li>
-                     <li role="presentation" class="divider"></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade1">Grade 1</a></li>
-                     <li role="presentation" class="divider"></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade2">Grade 2</a></li>
-                     <li role="presentation" class="divider"></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade3">Grade 3</a></li>
-                     <li role="presentation" class="divider"></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade4">Grade 4</a></li>
-                     <li role="presentation" class="divider"></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade5">Grade 5</a></li>
-                  </ul>
-               </div>
-            </navwidth>
-         </nav>
-      </main>
-      <ul class="help">
-         <li class="menubottom bottomright">
-            <i onclick="help()" class="fa fa-question"></i>
-      </ul>
-      <ul  class="account">
-         <li id="account" onclick=""  class="account">
-            <a  class="fa fa-user" ></a>
-      </ul>
-      <ul class="menushare bottomLeft">
-         <li class="share top">
-            <i class="fa fa-paper-plane"></i>
-            <ul class="submenu">
-               <li><a href="https://www.twitter.com/KidKalc/" class="twitter"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="https://www.facebook.com/KidKalc/" class="facebook"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="https://www.instagram.com/kidkalc/" class="instagram"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="mailto:kidkalcdevelopers@gmail.com" class="envelope"><i class="fa fa-envelope"></i></a></li>
-            </ul>
-         </li>
-      </ul>
-   </body>
-   <script src="grade/javascript/index.js"></script>
+               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/kindergarten">Kindergarten</a>
+                  </li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade1">Grade 1</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade2">Grade 2</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade3">Grade 3</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade4">Grade 4</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="grade/grade5">Grade 5</a></li>
+               </ul>
+            </div>
+         </navwidth>
+      </nav>
+   </main>
+   <ul class="help">
+      <li class="menubottom bottomright">
+         <i onclick="help()" class="fa fa-question"></i>
+   </ul>
+   <ul class="account">
+      <li id="account" onclick="" class="account">
+         <a class="fa fa-user"></a>
+   </ul>
+   <ul class="menushare bottomLeft">
+      <li class="share top">
+         <i class="fa fa-paper-plane"></i>
+         <ul class="submenu">
+            <li><a href="https://www.twitter.com/KidKalc/" class="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/KidKalc/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/kidkalc/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="mailto:kidkalcdevelopers@gmail.com" class="envelope"><i class="fa fa-envelope"></i></a></li>
+         </ul>
+      </li>
+   </ul>
+</body>
+<script src="grade/javascript/index.js"></script>
+
 </html>
