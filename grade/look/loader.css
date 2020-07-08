@@ -6,9 +6,8 @@
     height: 100%;
     display: flex;
     z-index: 100000000;
-    background: linear-gradient(-45deg, #16465e, #574014);
+    background-image: linear-gradient(to left, #09203f 0%, #537895 100%);
 }
-
 .loader {
     --sz: 110px;
     width: calc(var(--sz) * 2);
