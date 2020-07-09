@@ -12,6 +12,7 @@
 
 body {
     background-image: url("/grade/look/bgg.jpg");
+    overflow: hidden;
 }
 
 
@@ -21,8 +22,8 @@ body {
     width: 100%;
     border-radius: 12px;
     left: 50%;
-    top: 9%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
+    top: 11%;
 }
 
 .leaderboard header {
@@ -236,4 +237,17 @@ body {
     100% {
         background-position: 0% 100%;
     }
+}
+
+.fas {
+    color: white !important;
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.fas:hover {
+    color: lightgray !important;
 }

@@ -104,3 +104,7 @@ function back()
 {
     setTimeout(redirect,1)
 }
+
+function redirect(){
+  location.replace("https://KidKalc.com")
+}
