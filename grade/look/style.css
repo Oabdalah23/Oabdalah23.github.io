@@ -28,23 +28,27 @@ body {
     height: 12px;
     max-height: 12px;
     background-color: white;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: #ffc77d;
     border: solid 2px #252c33;
     border-radius: 100px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 199, 125, 0.8);
-  }
-  ::-webkit-scrollbar-thumb:active {
+}
+
+::-webkit-scrollbar-thumb:active {
     background: rgba(255, 199, 125, 0.5);
-  }
-  ::-webkit-scrollbar-button {
+}
+
+::-webkit-scrollbar-button {
     display: none;
     height: 0px;
-  }
-  
+}
+
 .middlecontent {
     position: relative;
     height: 55%;
@@ -273,7 +277,7 @@ nav navwidth {
     background-color: #0095ff !important;
     border-color: black !important;
     font-size: 20px;
-	outline: transparent;
+    outline: transparent;
 }
 
 #buttonleaderboard:hover {
@@ -563,10 +567,13 @@ nav navwidth {
     border-radius: 3%;
 }
 
-#onecard, #twocard, #thirdcard {
+#onecard,
+#twocard,
+#thirdcard {
     margin: 7%;
     display: none;
 }
+
 #card {
     display: none;
 }
@@ -631,27 +638,49 @@ nav navwidth {
     border-top: 6px solid #0095ff;
     width: 80px;
     height: 80px;
-    -webkit-animation: spin 1s linear infinite; /* Safari */
+    -webkit-animation: spin 1s linear infinite;
+    /* Safari */
     animation: spin 1s linear infinite;
     top: 22%;
     left: 28%;
-  }
+}
 
-  /* Safari */
+/* Safari */
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
 
-  .loaderbkg {
-      position: absolute;
-      width: 90%;
-      height:90%;
-      background-color: white;
-      display: block;
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loaderbkg {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    display: block;
+}
+
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
