@@ -23,6 +23,14 @@ var TotalAccuracy = {};
 var first = {};
 var second = {};
 var third = {};
+var fourth = {};
+var fifth = {};
+var sixth = {};
+var seventh = {};
+var eighth = {};
+var ninth = {};
+var tenth = {};
+
 var str = "";
 
 firebase.auth().onAuthStateChanged(function (user) {
