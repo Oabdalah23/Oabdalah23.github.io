@@ -28,6 +28,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     ref.on("value", gotData);
   } else {
     username = "NotSignedIn";
+    setTimeout(loaderout, 1000);
   }
 });
 
@@ -57,7 +58,7 @@ function gotData(data) {
         "Score: " + scorefirebase;
     }
   }
-  $("#loader").fadeOut();
+  loaderout();
 }
 
 $(document).ready(function () {
@@ -403,3 +404,7 @@ function setInputFilter(textbox, inputFilter) {
 setInputFilter(document.getElementById("textbox"), function (value) {
   return /^-?\d*$/.test(value);
 });
+
+function loaderout() {
+  $("#loader").fadeOut();
+}

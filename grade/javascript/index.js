@@ -162,12 +162,6 @@ function gotData(data) {
   document.getElementById("totalquestions").innerHTML = total;
   document.getElementById("totalscore").innerHTML = score;
   document.getElementById("totalcoins").innerHTML = coins;
-  $("#loader").fadeOut();
-  document.getElementById('card').style.display = "flex";
-  document.getElementById('onecard').style.display = "flex";
-  document.getElementById('twocard').style.display = "flex";
-  document.getElementById('thirdcard').style.display = "flex";
-
 }
 
 function gotLeaderboardData(data) {
