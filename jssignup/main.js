@@ -25,9 +25,8 @@ function signupchange () {
     document.getElementById("title").innerHTML = "Sign Up";
     document.getElementById('or').style.display = "none";
     document.getElementById("title").className = "login100-form-title p-b-20"; 
-
-
 }
+
 
 function signin () {
     deletetext();

@@ -34,6 +34,10 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 function gotData(data) {
   var stats = data.val();
+  if (stats == undefined)
+  {
+    loaderout();
+  }
   var keys = Object.keys(stats);
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
