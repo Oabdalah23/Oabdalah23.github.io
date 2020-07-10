@@ -214,7 +214,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       first,
       second,
@@ -245,7 +245,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       second,
       third,
@@ -277,7 +277,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       third,
       fourth,
@@ -307,7 +307,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       fourth,
       fifth,
@@ -335,7 +335,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       fifth,
       sixth,
@@ -361,7 +361,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       sixth,
       seventh,
@@ -385,7 +385,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       seventh,
       eighth,
@@ -407,7 +407,7 @@ function gotLeaderboardData(data) {
     ninth.Name = eighthname;
     ninth.Accuracy = eighthaccuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       eighth,
       ninth,
@@ -427,7 +427,7 @@ function gotLeaderboardData(data) {
     ninth.Name = str;
     ninth.Accuracy = accuracy;
     tenth.Name = ninthname;
-    ten.Accuracy = ninthaccuracy;
+    tenth.Accuracy = ninthaccuracy;
     myFBref.child("stats/leaderboard").update({
       ninth,
       tenth,
@@ -445,7 +445,7 @@ function gotLeaderboardData(data) {
     str !== ninthname
   ) {
     tenth.Name = str;
-    ten.Accuracy = accuracy;
+    tenth.Accuracy = accuracy;
     myFBref.child("stats/leaderboard").update({
       tenth,
     });
