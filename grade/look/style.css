@@ -134,7 +134,7 @@ nav navwidth {
     display: none;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1130px) {
     nav ul {
         display: none;
     }
