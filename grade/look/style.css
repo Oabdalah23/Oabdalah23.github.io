@@ -278,6 +278,7 @@ nav navwidth {
     border-color: black !important;
     font-size: 20px;
     outline: transparent;
+    margin-bottom: 3px !important;
 }
 
 #buttonleaderboard:hover {

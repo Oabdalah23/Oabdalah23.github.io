@@ -169,7 +169,7 @@ function gotData(data) {
   });
   document.getElementById("totalquestions").innerHTML = total;
   document.getElementById("totalscore").innerHTML = score;
-  document.getElementById("totalcoins").innerHTML = coins;
+  //document.getElementById("totalcoins").innerHTML = coins;
 }
 
 function gotLeaderboardData(data) {
