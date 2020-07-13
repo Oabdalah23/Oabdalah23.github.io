@@ -12,6 +12,8 @@
 	</script>
 	<title>Log In - KidKalc</title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
@@ -117,9 +119,10 @@
 						</a>
 					</div>
                 
-                    <div class="wrapper">
-						<button onclick="back()" class="arrow-left">Back</button>
-					</div>
+                    <ul class="back">
+						<li id="back" onclick="back()" class="back">
+						  <a class="fas fa-home"></a>
+					  </ul>
 				
 				</form>
 			</div>

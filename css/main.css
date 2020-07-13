@@ -717,3 +717,35 @@ button.arrow-left:after {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+.back {
+  z-index: 999;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  cursor: pointer;
+  top: 5px;
+  left: 5px;
+
+}
+
+.back .back {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #c9deff;
+  border-radius: 6px;
+}
+
+.back .back:hover {
+  background-color: #a9c8fa;
+}
+
+.fas {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color: black;
+}
