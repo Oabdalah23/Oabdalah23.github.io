@@ -620,8 +620,8 @@ nav navwidth {
     color: transparent !important;
     margin-left: 3px;
     margin-right: 3px;
-    font-size: 28px;
-    vertical-align: 7.5%;
+    font-size: 26px;
+    vertical-align: 9%;
 }
 
 @keyframes animate {
