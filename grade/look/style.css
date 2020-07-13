@@ -334,7 +334,7 @@ nav navwidth {
     text-align: center;
     line-height: 50px;
     background-color: #c9deff;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .menushare .share:hover.top .submenu li:nth-child(1) {
@@ -342,7 +342,6 @@ nav navwidth {
     top: -51px;
     transition-delay: 0.08s;
     transform: rotateY(0deg);
-    border-bottom: 1px dashed #d9d9d9;
 }
 
 .menushare .share:hover.top .submenu li:nth-child(2) {
@@ -350,7 +349,6 @@ nav navwidth {
     top: -102px;
     transition-delay: 0.16s;
     transform: rotateY(0deg);
-    border-bottom: 1px dashed #d9d9d9;
 }
 
 .menushare .share:hover.top .submenu li:nth-child(3) {
@@ -358,7 +356,6 @@ nav navwidth {
     top: -153px;
     transition-delay: 0.24s;
     transform: rotateY(0deg);
-    border-bottom: 1px dashed #d9d9d9;
 }
 
 .menushare .share:hover.top .submenu li:nth-child(4) {
@@ -366,7 +363,6 @@ nav navwidth {
     top: -204px;
     transition-delay: 0.32s;
     transform: rotateY(0deg);
-    border-bottom: 1px dashed #d9d9d9;
 }
 
 .menushare .share:hover.top .submenu li:nth-child(5) {
@@ -374,7 +370,6 @@ nav navwidth {
     top: -255px;
     transition-delay: 0.4s;
     transform: rotateY(0deg);
-    border-bottom: 1px dashed #d9d9d9;
 }
 
 .menushare .submenu {
@@ -390,10 +385,13 @@ nav navwidth {
     left: 0;
     z-index: -1;
     opacity: 0;
+    border-radius: 2px;
+
 }
 
 .menushare .submenu li a {
     color: #212121;
+    
 }
 
 .menushare .submenu li a:hover i.fa {
@@ -454,7 +452,7 @@ nav navwidth {
     text-align: center;
     line-height: 50px;
     background-color: #c9deff;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .help .menubottom i.fa:hover {
@@ -488,7 +486,7 @@ nav navwidth {
     text-align: center;
     line-height: 50px;
     background-color: #c9deff;
-    border-radius: 2px;
+    border-radius: 6px;
     animation: none;
 }
 
