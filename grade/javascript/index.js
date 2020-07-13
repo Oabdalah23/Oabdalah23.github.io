@@ -217,6 +217,7 @@ function gotLeaderboardData(data) {
       ninthname ||
       tenthname
     ) {
+      console.log("yeet");
       first.Name = str;
       first.Accuracy = score;
       second.Name = firstname;
