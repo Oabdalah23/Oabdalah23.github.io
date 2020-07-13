@@ -207,7 +207,7 @@ function gotLeaderboardData(data) {
       });
     }
     else if (
-      str !== secondname &&
+      str !== (secondname &&
       thirdname &&
       fourthname &&
       fifthname &&
@@ -215,7 +215,7 @@ function gotLeaderboardData(data) {
       seventhname &&
       eighthname &&
       ninthname &&
-      tenthname
+      tenthname)
     ) {
       console.log("yeet");
       first.Name = str;
