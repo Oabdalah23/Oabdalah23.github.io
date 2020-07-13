@@ -199,7 +199,14 @@ function gotLeaderboardData(data) {
   eleventhname = stats["eleventh"].Name;
   eleventhaccuracy = stats["eleventh"].Accuracy;
   if (score > firstaccuracy) {
-    if (
+    if(str == firstname) {
+      first.Name = str;
+      first.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        first,
+      });
+    }
+    else if (
       str != secondname ||
       thirdname ||
       fourthname ||
@@ -433,7 +440,14 @@ function gotLeaderboardData(data) {
       });
     }
   } else if (score > secondaccuracy && str !== firstname) {
-    if (
+    if(str == secondname) {
+      second.Name = str;
+      second.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        second,
+      });
+    }
+    else if (
       str != thirdname ||
       fourthname ||
       fifthname ||
@@ -630,7 +644,14 @@ function gotLeaderboardData(data) {
       });
     }
   } else if (score > thirdaccuracy && str !== firstname && str !== secondname) {
-    if (
+    if(str == thirdname) {
+      third.Name = str;
+      third.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        third,
+      });
+    }
+    else if (
       str != fourthname ||
       fifthname ||
       sixthname ||
@@ -798,7 +819,14 @@ function gotLeaderboardData(data) {
     str !== secondname &&
     str !== thirdname
   ) {
-    if (
+    if(str == fourthname) {
+      fourth.Name = str;
+      fourth.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        fourth,
+      });
+    }
+    else if (
       str != fifthname ||
       sixthname ||
       seventhname ||
@@ -936,7 +964,14 @@ function gotLeaderboardData(data) {
     str !== thirdname &&
     str !== fourthname
   ) {
-    if (
+    if(str == fifthname) {
+      fifth.Name = str;
+      fifth.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        fifth,
+      });
+    }
+    else if (
       str != sixthname ||
       seventhname ||
       eighthname ||
@@ -1047,7 +1082,14 @@ function gotLeaderboardData(data) {
     str !== fourthname &&
     str !== fifthname
   ) {
-    if (str != seventhname || eighthname || ninthname || tenthname) {
+    if(str == sixthname) {
+      sixth.Name = str;
+      sixth.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        sixth,
+      });
+    }
+    else if (str != seventhname || eighthname || ninthname || tenthname) {
       sixth.Name = str;
       sixth.Accuracy = score;
       seventh.Name = sixthname;
@@ -1129,7 +1171,14 @@ function gotLeaderboardData(data) {
     str !== fifthname &&
     str !== sixthname
   ) {
-    if (str != eighthname || ninthname || tenthname) {
+    if(str == seventhname) {
+      seventh.Name = str;
+      seventh.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        seventh,
+      });
+    }
+    else if (str != eighthname || ninthname || tenthname) {
       seventh.Name = str;
       seventh.Accuracy = score;
       eighth.Name = seventhname;
@@ -1191,6 +1240,13 @@ function gotLeaderboardData(data) {
     str !== sixthname &&
     str !== seventhname
   ) {
+    if(str == eighthname) {
+      eighth.Name = str;
+      eighth.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        eighth,
+      });
+    }
     if (str != ninthname || tenthname) {
       eighth.Name = str;
       eighth.Accuracy = score;
@@ -1236,14 +1292,23 @@ function gotLeaderboardData(data) {
     str !== seventhname &&
     str !== eighthname
   ) {
-    ninth.Name = str;
-    ninth.Accuracy = score;
-    tenth.Name = ninthname;
-    tenth.Accuracy = ninthaccuracy;
-    myFBref.child("stats/leaderboard").update({
-      ninth,
-      tenth,
-    });
+    if(str == ninthname) {
+      ninth.Name = str;
+      ninth.Accuracy = score;
+      myFBref.child("stats/leaderboard").update({
+        ninth,
+      });
+    }
+    else {
+      ninth.Name = str;
+      ninth.Accuracy = score;
+      tenth.Name = ninthname;
+      tenth.Accuracy = ninthaccuracy;
+      myFBref.child("stats/leaderboard").update({
+        ninth,
+        tenth,
+      });
+    }
   } else if (
     score > tenthaccuracy &&
     str !== firstname &&
