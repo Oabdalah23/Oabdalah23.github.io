@@ -209,13 +209,13 @@ nav navwidth {
 
 #buttons02 .button:hover {
     font-weight: bold;
-    color: #9e9e9e;
-    text-shadow: 2px 3px #ffc77d;
+    color: #8ba398;
+    text-shadow: 0 0.5px 0 #ffcc87, 0 1px 0 #ffc87d, 0 1.5px 0 #ffc370, 0 2px 0 #ffbd61, 0 2.5px 0 #ffb64f, 0 3px 0 #ffae3b, 0 3.5px 0 #ffa82b, 0 4px 0 #ffa119;
 }
 
 
 #buttons02 .button:active {
-    text-shadow: 0px 0px #2270a8;
+    text-shadow: 0 0.5px 0 #70c4ff, 0 1px 0 #66c0ff, 0 1.5px 0 #54b9ff, 0 2px 0 #42b2ff;
 }
 
 .mid-center {
@@ -409,7 +409,7 @@ nav navwidth {
 }
 
 .menushare .submenu li a:hover.instagram i.fa {
-    background-color: #e4405f;
+    background-color: #e38d8d;
 }
 
 .menushare .submenu li a:hover.facebook i.fa {
@@ -615,6 +615,12 @@ nav navwidth {
     -webkit-animation: animate 20s linear infinite;
     -moz-animation: animate 20s linear infinite;
     background-size: 1000%;
+    letter-spacing: 4px !important;
+}
+.fa-dice-d6{
+    background-clip: content-box;
+    color: transparent !important;
+    margin-left: 3px;
 }
 
 @keyframes animate {

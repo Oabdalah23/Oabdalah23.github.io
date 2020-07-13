@@ -84,7 +84,7 @@ function gotData(data) {
   document.getElementById("score10").innerHTML = tenthaccuracy;
   for (var i = 0; i < 10; i++) {
     var dateSpan = document.createElement("span");
-    dateSpan.innerHTML = "Accuracy";
+    dateSpan.innerHTML = "Points";
     var span = document.getElementById("score" + [i + 1]);
     span.appendChild(dateSpan);
   }

@@ -44,6 +44,7 @@ body {
     transform: translateY(-50%);
     text-transform: uppercase;
     margin: 0;
+    font-family: 'Chela One';
 }
 
 .leaderboard header .leaderboard__title span {
@@ -51,13 +52,13 @@ body {
 }
 
 .leaderboard header .leaderboard__title--top {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 700;
     letter-spacing: 6.5px;
 }
 
 .leaderboard header .leaderboard__title--bottom {
-    font-size: 13px;
+    font-size: 24px;
     font-weight: 500;
     letter-spacing: 3.55px;
     opacity: 0.65;
@@ -76,49 +77,6 @@ body {
 
 .wrapper {
     font-size: 1.3rem;
-}
-
-button {
-    font-family: Montserrat-SemiBold;
-    background-color: #c9deff;
-    border: 0;
-    border-radius: 0.2em;
-    display: inline-block;
-    color: black;
-    font-size: 18px;
-    line-height: 1em;
-    margin: 0 2em 1em 0;
-    padding: 0.5em 1em;
-    position: absolute;
-    bottom: 2px;
-    left: 30px;
-    transition: all 0.25s ease-out;
-    vertical-align: bottom;
-    outline: none;
-}
-
-button:hover {
-    background-color: #a9c8fa;
-    cursor: pointer;
-    outline: none;
-}
-
-button:hover.arrow-left:after {
-    border-right-color: #a9c8fa;
-}
-
-button:after {
-    border: 0.75em solid transparent;
-    content: "";
-    position: absolute;
-    transition: all 0.25s ease;
-}
-
-button.arrow-left:after {
-    border-right-color: #c9deff;
-    top: 50%;
-    left: 0%;
-    transform: translate(-90%, -50%);
 }
 
 .leaderboard__profiles {
@@ -208,6 +166,7 @@ body {
 
 
 
+
 .topleftitle {
     font-family: 'Chela One';
     position: fixed;
@@ -223,6 +182,12 @@ body {
     -webkit-animation: animate 20s linear infinite;
     -moz-animation: animate 20s linear infinite;
     background-size: 1000%;
+    letter-spacing: 4px !important;
+}
+.fa-dice-d6{
+    background-clip: content-box;
+    color: transparent !important;
+    margin-left: 3px;
 }
 
 @keyframes animate {
@@ -239,15 +204,51 @@ body {
     }
 }
 
-.fas {
-    color: white !important;
-    position: absolute;
-    right: 13px;
-    top: 5px;
-    font-size: 35px;
+
+.back {
+    z-index: 999;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
     cursor: pointer;
+    bottom: 10px;
+    left: 10px;
+
 }
 
-.fas:hover {
-    color: lightgray !important;
+.back .back {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #c9deff;
+    border-radius: 2px;
 }
+
+.back .back:hover {
+    background-color: #a9c8fa;
+}
+
+.fas {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+#ten{
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-32%);
+    -ms-transform: translateX(-32%);
+    transform: translateX(-32%);
+}
+
+#nine, #eight, #seven, #six, #five, #four {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-38%);
+    -ms-transform: translateX(-38%);
+    transform: translateX(-38%);
+}
+
+
