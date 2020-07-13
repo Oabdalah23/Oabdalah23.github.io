@@ -207,7 +207,7 @@ function gotLeaderboardData(data) {
       });
     }
     else if (
-      str != secondname ||
+      str !== secondname ||
       thirdname ||
       fourthname ||
       fifthname ||
