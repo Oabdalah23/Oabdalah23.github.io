@@ -230,7 +230,7 @@ function gotLeaderboardData(data) {
   } else if (score > secondaccuracy && str !== firstname) {
     second.Name = str;
     second.Accuracy = score;
-    third.Name = secondaccuracy;
+    third.Name = secondname;
     third.Accuracy = secondaccuracy;
     fourth.Name = thirdname;
     fourth.Accuracy = thirdaccuracy;
