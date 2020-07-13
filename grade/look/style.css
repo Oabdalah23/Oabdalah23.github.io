@@ -619,6 +619,9 @@ nav navwidth {
     background-clip: content-box;
     color: transparent !important;
     margin-left: 3px;
+    margin-right: 3px;
+    font-size: 27px;
+    vertical-align: 9%;
 }
 
 @keyframes animate {

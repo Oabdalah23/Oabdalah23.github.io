@@ -97,6 +97,27 @@ function gotData(data) {
   else if(thirdname == str){
     document.getElementById('third').style.backgroundColor = "#0e1642";
   }
+  else if(fourthname == str){
+    document.getElementById('fourth').style.backgroundColor = "#0e1642";
+  }
+  else if(fifthname == str){
+    document.getElementById('fifth').style.backgroundColor = "#0e1642";
+  }
+  else if(sixthname == str){
+    document.getElementById('sixth').style.backgroundColor = "#0e1642";
+  }
+  else if(seventhname == str){
+    document.getElementById('seventh').style.backgroundColor = "#0e1642";
+  }
+  else if(eighthname == str){
+    document.getElementById('eighth').style.backgroundColor = "#0e1642";
+  }
+  else if(ninthname == str){
+    document.getElementById('ninth').style.backgroundColor = "#0e1642";
+  }
+  else if(tenthname == str){
+    document.getElementById('tenth').style.backgroundColor = "#0e1642";
+  }
   $("#loader").fadeOut();
 }
 
