@@ -207,14 +207,14 @@ function gotLeaderboardData(data) {
       });
     }
     else if (
-      str !== secondname ||
-      thirdname ||
-      fourthname ||
-      fifthname ||
-      sixthname ||
-      seventhname ||
-      eighthname ||
-      ninthname ||
+      str !== secondname &&
+      thirdname &&
+      fourthname &&
+      fifthname &&
+      sixthname &&
+      seventhname &&
+      eighthname &&
+      ninthname &&
       tenthname
     ) {
       console.log("yeet");
@@ -449,13 +449,13 @@ function gotLeaderboardData(data) {
       });
     }
     else if (
-      str != thirdname ||
-      fourthname ||
-      fifthname ||
-      sixthname ||
-      seventhname ||
-      eighthname ||
-      ninthname ||
+      str !== thirdname &&
+      fourthname &&
+      fifthname &&
+      sixthname &&
+      seventhname &&
+      eighthname &&
+      ninthname &&
       tenthname
     ) {
       second.Name = str;
@@ -653,12 +653,12 @@ function gotLeaderboardData(data) {
       });
     }
     else if (
-      str != fourthname ||
-      fifthname ||
-      sixthname ||
-      seventhname ||
-      eighthname ||
-      ninthname ||
+      str !== fourthname &&
+      fifthname &&
+      sixthname &&
+      seventhname &&
+      eighthname &&
+      ninthname &&
       tenthname
     ) {
       third.Name = str;
@@ -828,11 +828,11 @@ function gotLeaderboardData(data) {
       });
     }
     else if (
-      str != fifthname ||
-      sixthname ||
-      seventhname ||
-      eighthname ||
-      ninthname ||
+      str !== fifthname &&
+      sixthname &&
+      seventhname &&
+      eighthname &&
+      ninthname &&
       tenthname
     ) {
       fourth.Name = str;
@@ -973,10 +973,10 @@ function gotLeaderboardData(data) {
       });
     }
     else if (
-      str != sixthname ||
-      seventhname ||
-      eighthname ||
-      ninthname ||
+      str !== sixthname &&
+      seventhname &&
+      eighthname &&
+      ninthname &&
       tenthname
     ) {
       fifth.Name = str;
@@ -1090,7 +1090,7 @@ function gotLeaderboardData(data) {
         sixth,
       });
     }
-    else if (str != seventhname || eighthname || ninthname || tenthname) {
+    else if (str !== seventhname && eighthname && ninthname && tenthname) {
       sixth.Name = str;
       sixth.Accuracy = score;
       seventh.Name = sixthname;
@@ -1179,7 +1179,7 @@ function gotLeaderboardData(data) {
         seventh,
       });
     }
-    else if (str != eighthname || ninthname || tenthname) {
+    else if (str !== eighthname && ninthname && tenthname) {
       seventh.Name = str;
       seventh.Accuracy = score;
       eighth.Name = seventhname;
@@ -1248,7 +1248,7 @@ function gotLeaderboardData(data) {
         eighth,
       });
     }
-    if (str != ninthname || tenthname) {
+    if (str !== ninthname && tenthname) {
       eighth.Name = str;
       eighth.Accuracy = score;
       ninth.Name = eighthname;
