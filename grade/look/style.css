@@ -334,7 +334,7 @@ nav navwidth {
     text-align: center;
     line-height: 50px;
     background-color: #c9deff;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .menushare .share:hover.top .submenu li:nth-child(1) {
@@ -454,7 +454,7 @@ nav navwidth {
     text-align: center;
     line-height: 50px;
     background-color: #c9deff;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .help .menubottom i.fa:hover {
