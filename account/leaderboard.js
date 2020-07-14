@@ -129,3 +129,26 @@ function back()
 function redirect(){
   location.replace("https://KidKalc.com")
 }
+
+var season1 = new Date("Aug 1, 2020").getTime();
+
+var seasoninterval = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = season1 - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("time").innerHTML = days;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("time").innerHTML = "EXPIRED";
+  }
+}, 1000);

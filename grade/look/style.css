@@ -208,8 +208,6 @@ nav navwidth {
 }
 
 #buttons02 .button:hover {
-    font-weight: bold;
-    color: #8ba398;
     text-shadow: 0 0.5px 0 #ffcc87, 0 1px 0 #ffc87d, 0 1.5px 0 #ffc370, 0 2px 0 #ffbd61, 0 2.5px 0 #ffb64f, 0 3px 0 #ffae3b, 0 3.5px 0 #ffa82b, 0 4px 0 #ffa119;
 }
 
@@ -287,6 +285,10 @@ nav navwidth {
     border-color: black !important;
     font-size: 20px;
     outline: transparent;
+}
+
+#buttonleaderboard:disabled {
+    background-color: #4f64ab !important;
 }
 
 @media (max-width: 550px) {
@@ -606,7 +608,7 @@ nav navwidth {
     font-size: 250%;
     color: transparent;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, #ff7a7a, #ffff73, #78ffff, #85ff85, #7878ff);
+    background-image: linear-gradient(to right, #fff, #ffc77d, #0095ff, #000);
     background-clip: text;
     -webkit-background-clip: text;
     animation: animate 20s linear infinite;
@@ -647,4 +649,25 @@ nav navwidth {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+}
+
+.season {
+    position: absolute;
+    font-family: 'Averia Sans Libre';
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    color: #0095ff;
+    text-align: center;
+}
+
+.time {
+    color: #ffc77d;
+}
+
+@media (max-width: 463px) {
+    .season {
+        bottom: 2px;
+    }
 }
