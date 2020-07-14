@@ -289,6 +289,7 @@ nav navwidth {
 
 #buttonleaderboard:disabled {
     background-color: #4f64ab !important;
+    font-size: 15px;
 }
 
 @media (max-width: 550px) {
