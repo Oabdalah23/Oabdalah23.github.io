@@ -608,7 +608,7 @@ nav navwidth {
     font-size: 250%;
     color: transparent;
     text-transform: uppercase;
-    background-image: linear-gradient(to right,#ffc77d, #fff, #0095ff);
+    background-image: linear-gradient(to right, #ff7a7a, #ffff73, #78ffff, #85ff85, #7878ff);
     background-clip: text;
     -webkit-background-clip: text;
     animation: animate 20s linear infinite;
