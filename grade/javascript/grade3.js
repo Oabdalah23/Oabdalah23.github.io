@@ -621,3 +621,7 @@ setInputFilter(document.getElementById("textbox"), function (value) {
 function loaderout() {
   $("#loader").fadeOut();
 }
+
+function back() {
+  window.location.href = "https://kidkalc.com";
+}

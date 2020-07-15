@@ -276,7 +276,7 @@ div divdrop {
   list-style-type: none;
   cursor: pointer;
   bottom: 10px;
-  left: 10px;
+  right: 10px;
 }
 
 .help .menubottom i.fa {
@@ -295,4 +295,29 @@ div divdrop {
 .modal-body {
   max-height: calc(100vh - 205px);
   overflow-y: auto;
+}
+
+.home {
+  z-index: 999;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  cursor: pointer;
+  bottom: 10px;
+  left: 10px;
+}
+
+.home .menubottom i.fa {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #c9deff;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.home .menubottom i.fa:hover {
+  background-color: #a9c8fa;
 }
