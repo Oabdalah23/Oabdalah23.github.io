@@ -1471,3 +1471,22 @@ var seasoninterval = setInterval(function() {
     season1 = new Date("Sep 1, 2020").getTime();
   }
 }, 1000);
+
+
+iOS();
+
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform);
+}
+
+if(iOS()) {
+  $("#icon").remove();
+  document.getElementById('topleftitle').innerHTML  = "KidKalc";
+}
