@@ -1450,6 +1450,7 @@ ninth.Accuracy = eighthaccuracy;
 tenth.Name = ninthname;
 tenth.Accuracy = ninthaccuracy;
 
+/*
 var season1 = new Date("Aug 1, 2020").getTime();
 
 var seasoninterval = setInterval(function() {
@@ -1471,4 +1472,5 @@ var seasoninterval = setInterval(function() {
     season1 = new Date("Sep 1, 2020").getTime();
   }
 }, 1000);
+*/
 
