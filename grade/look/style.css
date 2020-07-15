@@ -653,7 +653,7 @@ nav navwidth {
 }
 
 .season {
-    position: absolute;
+    position: fixed;
     font-family: 'Averia Sans Libre';
     font-size: 20px;
     left: 50%;
