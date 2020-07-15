@@ -18,6 +18,7 @@ var username;
 var Kindergarten = {};
 var TotalCoins = {};
 var ref;
+var notenter = 0;
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -137,6 +138,7 @@ while (accans > 10) {
 document.getElementById("question").innerHTML = num1 + " + " + num2;
 
 function newquestion() {
+  notenter = notenter - 1;
   localStorage.setItem("savedtotal", JSON.stringify(total));
   localStorage.setItem("savedscore", JSON.stringify(score));
   document.getElementById("textbox").style.color = "white";
@@ -356,9 +358,14 @@ function outputname() {
 var input = document.getElementById("textbox");
 input.addEventListener("keyup", function (e) {
   if (e.keyCode === 13) {
-    e.preventDefault();
-    document.getElementById("check").click();
-    setTimeout(newquestion, 2250);
+    if(document.getElementById("textbox").value != ""){
+      if(notenter ==  0){
+        notenter = notenter + 1;
+        e.preventDefault();
+        document.getElementById("check").click();
+        setTimeout(newquestion, 2250);
+      }
+    }
   }
 });
 
