@@ -120,7 +120,7 @@ function redirect() {
   location.replace("https://KidKalc.com");
 }
 
-var end = new Date("08/1/2020 12:1 AM");
+var end = new Date("08/1/2020 12:1 AM EST");
 
 var _second = 1000;
 var _minute = _second * 60;
@@ -128,19 +128,24 @@ var _hour = _minute * 60;
 var _day = _hour * 24;
 var timer;
 
-function showRemaining() {
-  var now = new Date();
-  var distance = end - now;
-  if (distance < 0) {
-    clearInterval(timer);
-    document.getElementById("countdown").innerHTML = "EXPIRED!";
+function getESTOffset() {
 
-    return;
-  }
-  var days = Math.floor(distance / _day);
-
-  document.getElementById("time").innerHTML = days;
+    return new Date().getTimezoneOffset() - (end.getTimezoneOffset())
 }
+
+function showRemaining() {
+    var now = new Date();
+    var distance = end - now - getESTOffset() * _hour;
+    if (distance < 0) {
+
+        clearInterval(timer);
+
+        return;
+    }
+    var days = Math.floor(distance / _day);
+
+    document.getElementById('time').innerHTML = days;
+  }
 
 timer = setInterval(showRemaining, 1000);
 
