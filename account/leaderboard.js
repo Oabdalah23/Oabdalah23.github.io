@@ -42,26 +42,26 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 function gotData(data) {
   var stats = data.val();
-  firstname = stats['first'].Name;
-  firstaccuracy = stats['first'].Accuracy
-  secondname = stats['second'].Name;
-  secondaccuracy = stats['second'].Accuracy
-  thirdname = stats['third'].Name;
-  thirdaccuracy = stats['third'].Accuracy;
-  fourthname = stats['fourth'].Name;
-  fourthaccuracy = stats['fourth'].Accuracy;
-  fifthname = stats['fifth'].Name;
-  fifthaccuracy = stats['fifth'].Accuracy;
-  sixthname = stats['sixth'].Name;
-  sixthaccuracy = stats['sixth'].Accuracy;
-  seventhname = stats['seventh'].Name;
-  seventhaccuracy = stats['seventh'].Accuracy;
-  eighthname = stats['eighth'].Name;
-  eighthaccuracy = stats['eighth'].Accuracy;
-  ninthname = stats['ninth'].Name;
-  ninthaccuracy = stats['ninth'].Accuracy;
-  tenthname = stats['tenth'].Name;
-  tenthaccuracy = stats['tenth'].Accuracy;
+  firstname = stats["first"].Name;
+  firstaccuracy = stats["first"].Accuracy;
+  secondname = stats["second"].Name;
+  secondaccuracy = stats["second"].Accuracy;
+  thirdname = stats["third"].Name;
+  thirdaccuracy = stats["third"].Accuracy;
+  fourthname = stats["fourth"].Name;
+  fourthaccuracy = stats["fourth"].Accuracy;
+  fifthname = stats["fifth"].Name;
+  fifthaccuracy = stats["fifth"].Accuracy;
+  sixthname = stats["sixth"].Name;
+  sixthaccuracy = stats["sixth"].Accuracy;
+  seventhname = stats["seventh"].Name;
+  seventhaccuracy = stats["seventh"].Accuracy;
+  eighthname = stats["eighth"].Name;
+  eighthaccuracy = stats["eighth"].Accuracy;
+  ninthname = stats["ninth"].Name;
+  ninthaccuracy = stats["ninth"].Accuracy;
+  tenthname = stats["tenth"].Name;
+  tenthaccuracy = stats["tenth"].Accuracy;
   document.getElementById("usernamescore1").innerHTML = firstname;
   document.getElementById("score1").innerHTML = firstaccuracy;
   document.getElementById("usernamescore2").innerHTML = secondname;
@@ -88,71 +88,61 @@ function gotData(data) {
     var span = document.getElementById("score" + [i + 1]);
     span.appendChild(dateSpan);
   }
-  if(firstname == str){
-    document.getElementById('first').style.backgroundColor = "#0e1642";
-  }
-  else if(secondname == str){
-    document.getElementById('second').style.backgroundColor = "#0e1642";
-  }
-  else if(thirdname == str){
-    document.getElementById('third').style.backgroundColor = "#0e1642";
-  }
-  else if(fourthname == str){
-    document.getElementById('fourth').style.backgroundColor = "#0e1642";
-  }
-  else if(fifthname == str){
-    document.getElementById('fifth').style.backgroundColor = "#0e1642";
-  }
-  else if(sixthname == str){
-    document.getElementById('sixth').style.backgroundColor = "#0e1642";
-  }
-  else if(seventhname == str){
-    document.getElementById('seventh').style.backgroundColor = "#0e1642";
-  }
-  else if(eighthname == str){
-    document.getElementById('eighth').style.backgroundColor = "#0e1642";
-  }
-  else if(ninthname == str){
-    document.getElementById('ninth').style.backgroundColor = "#0e1642";
-  }
-  else if(tenthname == str){
-    document.getElementById('tenth').style.backgroundColor = "#0e1642";
+  if (firstname == str) {
+    document.getElementById("first").style.backgroundColor = "#0e1642";
+  } else if (secondname == str) {
+    document.getElementById("second").style.backgroundColor = "#0e1642";
+  } else if (thirdname == str) {
+    document.getElementById("third").style.backgroundColor = "#0e1642";
+  } else if (fourthname == str) {
+    document.getElementById("fourth").style.backgroundColor = "#0e1642";
+  } else if (fifthname == str) {
+    document.getElementById("fifth").style.backgroundColor = "#0e1642";
+  } else if (sixthname == str) {
+    document.getElementById("sixth").style.backgroundColor = "#0e1642";
+  } else if (seventhname == str) {
+    document.getElementById("seventh").style.backgroundColor = "#0e1642";
+  } else if (eighthname == str) {
+    document.getElementById("eighth").style.backgroundColor = "#0e1642";
+  } else if (ninthname == str) {
+    document.getElementById("ninth").style.backgroundColor = "#0e1642";
+  } else if (tenthname == str) {
+    document.getElementById("tenth").style.backgroundColor = "#0e1642";
   }
   $("#loader").fadeOut();
 }
 
-
-function back()
-{
-    setTimeout(redirect,1)
+function back() {
+  setTimeout(redirect, 1);
 }
 
-function redirect(){
-  location.replace("https://KidKalc.com")
+function redirect() {
+  location.replace("https://KidKalc.com");
 }
 
-var season1 = new Date("Aug 1, 2020").getTime();
+var end = new Date("08/1/2020 12:1 AM");
 
-var seasoninterval = setInterval(function() {
+var _second = 1000;
+var _minute = _second * 60;
+var _hour = _minute * 60;
+var _day = _hour * 24;
+var timer;
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = season1 - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("time").innerHTML = days;
-    
-  // If the count down is over, write some text 
+function showRemaining() {
+  var now = new Date();
+  var distance = end - now;
   if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("time").innerHTML = "EXPIRED";
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "EXPIRED!";
+
+    return;
   }
-}, 1000);
+  var days = Math.floor(distance / _day);
+
+  document.getElementById("time").innerHTML = days;
+}
+
+timer = setInterval(showRemaining, 1000);
 
 var isSafari =
   navigator.vendor &&
@@ -161,9 +151,9 @@ var isSafari =
   navigator.userAgent.indexOf("CriOS") == -1 &&
   navigator.userAgent.indexOf("FxiOS") == -1;
 
-if(isSafari === true) {
+if (isSafari === true) {
   $("#icon").remove();
-  document.getElementById('topleftitle').innerHTML = "KidKalc";
+  document.getElementById("topleftitle").innerHTML = "KidKalc";
 }
 
 var isSafari =
@@ -173,7 +163,7 @@ var isSafari =
   navigator.userAgent.indexOf("CriOS") == -1 &&
   navigator.userAgent.indexOf("FxiOS") == -1;
 
-if(isSafari === true) {
+if (isSafari === true) {
   $("#icon").remove();
-  document.getElementById('spana').innerHTML = "A";
+  document.getElementById("spana").innerHTML = "A";
 }

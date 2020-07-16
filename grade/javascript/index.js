@@ -1450,29 +1450,29 @@ ninth.Accuracy = eighthaccuracy;
 tenth.Name = ninthname;
 tenth.Accuracy = ninthaccuracy;
 
-/*
-var season1 = new Date("Aug 1, 2020").getTime();
+var end = new Date("08/1/2020 12:1 AM");
 
-var seasoninterval = setInterval(function() {
+var _second = 1000;
+var _minute = _second * 60;
+var _hour = _minute * 60;
+var _day = _hour * 24;
+var timer;
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = season1 - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("time").innerHTML = days;
-    
-  // If the count down is over, write some text 
+function showRemaining() {
+  var now = new Date();
+  var distance = end - now;
   if (distance < 0) {
-    season1 = new Date("Sep 1, 2020").getTime();
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "EXPIRED!";
+
+    return;
   }
-}, 1000);
-*/
+  var days = Math.floor(distance / _day);
+
+  document.getElementById("time").innerHTML = days;
+}
+
+timer = setInterval(showRemaining, 1000);
 
 var isSafari =
   navigator.vendor &&
