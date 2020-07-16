@@ -121,6 +121,7 @@ function gotData(data) {
   $("#loader").fadeOut();
 }
 
+
 function back()
 {
     setTimeout(redirect,1)
@@ -152,3 +153,27 @@ var seasoninterval = setInterval(function() {
     document.getElementById("time").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+var isSafari =
+  navigator.vendor &&
+  navigator.vendor.indexOf("Apple") > -1 &&
+  navigator.userAgent &&
+  navigator.userAgent.indexOf("CriOS") == -1 &&
+  navigator.userAgent.indexOf("FxiOS") == -1;
+
+if(isSafari === true) {
+  $("#icon").remove();
+  document.getElementById('topleftitle').innerHTML = "KidKalc";
+}
+
+var isSafari =
+  navigator.vendor &&
+  navigator.vendor.indexOf("Apple") > -1 &&
+  navigator.userAgent &&
+  navigator.userAgent.indexOf("CriOS") == -1 &&
+  navigator.userAgent.indexOf("FxiOS") == -1;
+
+if(isSafari === true) {
+  $("#icon").remove();
+  document.getElementById('spana').innerHTML = "A";
+}

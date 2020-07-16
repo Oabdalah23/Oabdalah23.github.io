@@ -1474,3 +1474,14 @@ var seasoninterval = setInterval(function() {
 }, 1000);
 */
 
+var isSafari =
+  navigator.vendor &&
+  navigator.vendor.indexOf("Apple") > -1 &&
+  navigator.userAgent &&
+  navigator.userAgent.indexOf("CriOS") == -1 &&
+  navigator.userAgent.indexOf("FxiOS") == -1;
+
+if(isSafari === true) {
+  $("#icon").remove();
+  document.getElementById('topleftitle').innerHTML = "KidKalc";
+}
