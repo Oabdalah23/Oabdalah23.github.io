@@ -121,7 +121,7 @@ body {
   text-decoration: none;
   padding: 0;
   letter-spacing: 0;
-  color: #ebebeb;
+  color: #ebebeb  !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
