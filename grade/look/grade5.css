@@ -122,7 +122,10 @@ body {
   text-decoration: none;
   padding: 0;
   letter-spacing: 0;
-  color: #ebebeb;
+  color: #ebebeb  !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   text-shadow: 0.3vw 0.3vw #0095ff;
   background-color: transparent;
   font-size: 10vw;
@@ -130,14 +133,15 @@ body {
   width: 50vw;
   height: 15vw;
   outline: none;
+  border-radius: 0px;
   border-top: hidden;
   border-left: hidden;
   border-right: hidden;
   border-left-color: transparent;
   border-top-color: transparent;
   border-right-color: transparent;
-  border-bottom-color: 2px 2px white;
-  box-shadow: 0px 2px #0095ff;
+  border-bottom-color: 2px 2px white !important;
+  box-shadow: 0px 2px 0px -0.2px #0095ff;
 }
 
 .solution {
