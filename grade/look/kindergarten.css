@@ -132,6 +132,7 @@ body {
   width: 50vw;
   height: 15vw;
   outline: none;
+  border-radius: 0px;
   border-top: hidden;
   border-left: hidden;
   border-right: hidden;
