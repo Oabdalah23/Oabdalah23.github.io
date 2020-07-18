@@ -6,6 +6,8 @@ body {
   background-image: url("bgg.jpg");
 }
 
+
+
 html,
 body {
   height: 100%;
@@ -63,7 +65,7 @@ body {
   font-family: 'Chela One';
   position: absolute;
   font-size: 20vw;
-  width: 100vw;
+  width: auto;
   text-align: center;
   text-shadow: 3px 3px #0095ff;
   color: #ebebeb;
@@ -78,8 +80,6 @@ body {
   user-select: none;
 
 }
-
-
 
 
 .button {
@@ -121,7 +121,7 @@ body {
   text-decoration: none;
   padding: 0;
   letter-spacing: 0;
-  color: #ebebeb  !important;
+  color: white  !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -139,7 +139,7 @@ body {
   border-left-color: transparent;
   border-top-color: transparent;
   border-right-color: transparent;
-  border-bottom-color:white !important;
+  border-bottom-color: white !important;
   box-shadow: 0px 2px 0px -0.2px #0095ff;
 }
 
