@@ -65,7 +65,7 @@ body {
   font-family: 'Chela One';
   position: absolute;
   font-size: 20vw;
-  width: auto;
+  width: 100vw;
   text-align: center;
   text-shadow: 3px 3px #0095ff;
   color: #ebebeb;
