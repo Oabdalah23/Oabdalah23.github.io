@@ -1,5 +1,3 @@
-Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} .
-RewriteCond %{HTTP_HOST} !^kidkalc.com.com
-RewriteRule (.*) https://kidkalc.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.kidkalc.com [NC]
+RewriteRule ^(.*)$ https://kidkalc.com/$1 [L,R=301,NC] 
