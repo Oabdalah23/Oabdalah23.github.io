@@ -1,2 +1,2 @@
-RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} ^http://www.kidkalc.com [NC] RewriteRule ^(.*)$ 
+RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} ^https://www.kidkalc.com [NC] RewriteRule ^(.*)$ 
 https://kidkalc.com/$1 [L,R=301]
