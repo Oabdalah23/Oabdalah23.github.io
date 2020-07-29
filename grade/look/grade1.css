@@ -287,6 +287,7 @@ div divdrop {
   width: 50px;
   text-align: center;
   line-height: 50px;
+  color: black;
   background-color: #c9deff;
   border-radius: 6px;
 }
@@ -319,6 +320,7 @@ div divdrop {
   background-color: #c9deff;
   border-radius: 6px;
   font-size: 17.5px;
+  color: black;
 }
 
 .home .menubottom i.fa:hover {
