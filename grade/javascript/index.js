@@ -1513,7 +1513,18 @@ ninth.Accuracy = eighthaccuracy;
 tenth.Name = ninthname;
 tenth.Accuracy = ninthaccuracy;
 
-var end = new Date("08/1/2020 12:1 AM EST");
+var datecount = 0;
+
+var dates = [
+  "08/1/2020 12:1 AM EST",
+  "09/1/2020 12:1 AM EST",
+  "10/1/2020 12:1 AM EST",
+  "11/1/2020 12:1 AM EST",
+  "12/1/2020 12:1 AM EST",
+  "01/1/2021 12:1 AM EST",
+];
+
+var end = new Date(dates[datecount]);
 
 var _second = 1000;
 var _minute = _second * 60;
@@ -1529,9 +1540,7 @@ function showRemaining() {
   var now = new Date();
   var distance = end - now - getESTOffset() * _hour;
   if (distance < 0) {
-    clearInterval(timer);
-
-    return;
+    datecount++;
   }
   var days = Math.floor(distance / _day);
 
