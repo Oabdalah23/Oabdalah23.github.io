@@ -254,21 +254,6 @@ body {
     transform: translateX(-38%);
 }
 
-.season {
-    position: absolute;
-    font-family: 'Averia Sans Libre';
-    font-size: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 6px;
-    color: #0095ff;
-    text-align: center;
-}
-
-.time {
-    color: #ffc77d;
-}
-
 @media (max-width: 463px) {
     .season {
         bottom: 2px;
