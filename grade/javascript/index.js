@@ -2005,7 +2005,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } /*else if (
+    } else if (
       (str == firstname ||
         str == secondname ||
         str == thirdname ||
@@ -2224,7 +2224,9 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    }*/
+    } else {
+      console.log("u  got played");
+    }
   }
 }
 
