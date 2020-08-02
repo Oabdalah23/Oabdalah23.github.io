@@ -174,6 +174,7 @@ function gotData(data) {
   //document.getElementById("totalcoins").innerHTML = coins;
 }
 
+/*
 function gotLeaderboardData(data) {
   var stats = data.val();
   firstname = stats["first"].Name;
@@ -2213,6 +2214,7 @@ function gotLeaderboardData(data) {
     }
   }
 }
+*/
 
 function showusernamepopup() {
   $("#myusername").modal("show");
