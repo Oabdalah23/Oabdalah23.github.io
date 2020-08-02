@@ -2204,7 +2204,7 @@ function gotLeaderboardData(data) {
           tenth,
         });
         break;
-      } else if (str == tenthaccuracy) {
+      } else if (str == tenthname) {
         tenth.Name = str;
         tenth.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
