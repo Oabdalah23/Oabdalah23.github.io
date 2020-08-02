@@ -196,8 +196,6 @@ function gotLeaderboardData(data) {
   ninthaccuracy = stats["ninth"].Accuracy;
   tenthname = stats["tenth"].Name;
   tenthaccuracy = stats["tenth"].Accuracy;
-  eleventhname = stats["eleventh"].Name;
-  eleventhaccuracy = stats["eleventh"].Accuracy;
   while (1 === 1) {
     if (score > firstaccuracy) {
       if (str == firstname) {
