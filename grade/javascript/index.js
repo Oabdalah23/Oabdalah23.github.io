@@ -2016,7 +2016,6 @@ function gotLeaderboardData(data) {
         str == eighthname ||
         str == ninthname ||
         str == tenthname) &&
-
       score < tenthaccuracy
     ) {
       if (str == firstname) {
