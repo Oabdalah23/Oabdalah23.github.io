@@ -174,7 +174,6 @@ function gotData(data) {
   //document.getElementById("totalcoins").innerHTML = coins;
 }
 
-/*
 function gotLeaderboardData(data) {
   var stats = data.val();
   firstname = stats["first"].Name;
@@ -2006,6 +2005,8 @@ function gotLeaderboardData(data) {
         });
         break;
       }
+    } else if (score == tenthaccuracy) {
+      break;
     } else if (str == firstname && score < tenthaccuracy) {
       first.Name = secondname;
       first.Accuracy = secondaccuracy;
@@ -2214,7 +2215,6 @@ function gotLeaderboardData(data) {
     }
   }
 }
-*/
 
 function showusernamepopup() {
   $("#myusername").modal("show");
