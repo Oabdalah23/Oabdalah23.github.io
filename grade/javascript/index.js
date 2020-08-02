@@ -1370,7 +1370,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = str;
-        sixth.Score = score;
+        sixth.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
           first,
           second,
@@ -1390,7 +1390,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = str;
-        sixth.Score = score;
+        sixth.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
           second,
           third,
@@ -1407,7 +1407,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = str;
-        sixth.Score = score;
+        sixth.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
           third,
           fourth,
@@ -1421,7 +1421,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = str;
-        sixth.Score = score;
+        sixth.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
           fourth,
           fifth,
@@ -1432,7 +1432,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = str;
-        sixth.Score = score;
+        sixth.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
           fifth,
           sixth,
@@ -1521,7 +1521,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = str;
         seventh.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
@@ -1544,7 +1544,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = str;
         seventh.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
@@ -1564,7 +1564,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = str;
         seventh.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
@@ -1581,7 +1581,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = str;
         seventh.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
@@ -1595,7 +1595,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = str;
         seventh.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
@@ -1606,7 +1606,7 @@ function gotLeaderboardData(data) {
         break;
       } else if (str == sixthname) {
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = str;
         seventh.Accuracy = score;
         myFBref.child("stats/leaderboard").update({
@@ -1679,7 +1679,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = str;
@@ -1705,7 +1705,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = str;
@@ -1728,7 +1728,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = str;
@@ -1748,7 +1748,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = str;
@@ -1765,7 +1765,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = str;
@@ -1779,7 +1779,7 @@ function gotLeaderboardData(data) {
         break;
       } else if (str == sixthname) {
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = str;
@@ -1838,7 +1838,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -1867,7 +1867,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -1893,7 +1893,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -1916,7 +1916,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -1936,7 +1936,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -1953,7 +1953,7 @@ function gotLeaderboardData(data) {
         break;
       } else if (str == sixthname) {
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -2031,7 +2031,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -2063,7 +2063,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -2092,7 +2092,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -2118,7 +2118,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -2141,7 +2141,7 @@ function gotLeaderboardData(data) {
         fifth.Name = sixthname;
         fifth.Accuracy = sixthaccuracy;
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
@@ -2161,7 +2161,7 @@ function gotLeaderboardData(data) {
         break;
       } else if (str == sixthname) {
         sixth.Name = seventhname;
-        sixth.Score = seventhaccuracy;
+        sixth.Accuracy = seventhaccuracy;
         seventh.Name = eighthname;
         seventh.Accuracy = eighthaccuracy;
         eighth.Name = ninthname;
