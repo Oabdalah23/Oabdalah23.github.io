@@ -2005,7 +2005,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score == tenthaccuracy) {
+    } else if (score === tenthaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
