@@ -1,7 +1,8 @@
-RewriteEngine on
+Options +FollowSymlinks
+RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} 
 
-RewriteCond %{ENV:HTTPS} !on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.kidkalc.com [NC]
+RewriteRule ^(.*)$ http://kidkalc.com/$1 [L,R=301] 
