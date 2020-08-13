@@ -684,9 +684,3 @@ nav navwidth {
         bottom: 2px;
     }
 }
-
-@media (max-width: 460px) {
-    .season {
-        visibility: hidden;
-    }
-}
