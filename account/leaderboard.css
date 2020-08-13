@@ -12,7 +12,6 @@
 
 body {
     background-image: url("/grade/look/bgg.jpg");
-    overflow: hidden;
 }
 
 
@@ -135,6 +134,7 @@ body {
     font-size: 20px;
     letter-spacing: 0.64px;
     margin-left: 12px;
+    font-family: 'Source Sans Pro', sans-serif; font-weight:900; font-style:italic;
 }
 
 .leaderboard__value {
@@ -142,6 +142,7 @@ body {
     font-weight: 700;
     font-size: 34px;
     text-align: right;
+    font-family: 'Source Sans Pro', sans-serif; font-weight:900; font-style:italic;
 }
 
 .leaderboard__value>span {
@@ -264,4 +265,41 @@ body {
     .season {
         visibility: hidden;
     }
+}
+
+#Layer_1
+{
+    height: 100%;
+}
+
+#four{
+    height: 100%;
+}
+
+#five{
+    height: 100%;
+}
+
+#six{
+    height: 100%;
+}
+
+#seven{
+    height: 100%;
+}
+
+#eight{
+    height: 100%;
+}
+
+#nine{
+    height: 100%;
+}
+
+#ten{
+    height: 100%;
+}
+
+.leaderboard__profile{
+    height: 23%;
 }
