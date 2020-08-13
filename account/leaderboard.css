@@ -22,8 +22,8 @@ body {
     width: 100%;
     border-radius: 12px;
     left: 50%;
-    transform: translateX(-50%);
-    top: 11%;
+    transform: translate(-50%, -50%);
+    top: 50%;
 }
 
 .leaderboard header {
