@@ -9,7 +9,6 @@ var config = {
   measurementId: "G-NNTSP3W22H"
 };
 firebase.initializeApp(config);
-firebase.analytics();
 
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 

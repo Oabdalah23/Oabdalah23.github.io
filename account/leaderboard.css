@@ -33,6 +33,7 @@ body {
     position: relative;
     border-radius: 12px 12px 0 0;
     overflow: hidden;
+    display: block;
 }
 
 .leaderboard header .leaderboard__title {
@@ -266,6 +267,16 @@ body {
         visibility: hidden;
     }
 }
+
+@media (max-width: 750px) {
+    .leaderboard header {
+        display: none;
+    }
+    .leaderboard__profiles {
+        border-radius: 12px;
+    }
+}
+
 
 #Layer_1
 {

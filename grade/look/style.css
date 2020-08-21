@@ -292,16 +292,6 @@ nav navwidth {
     font-size: 15px;
 }
 
-@media (max-width: 550px) {
-    #buttonleaderboard {
-        display: none !important;
-    }
-
-    .new1 {
-        display: none !important;
-    }
-}
-
 #myModal:before {
     content: '';
     display: inline-block;
