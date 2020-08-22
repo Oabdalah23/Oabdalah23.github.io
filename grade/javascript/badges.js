@@ -52,7 +52,6 @@ function gotData(data) {
       var badge2 = stats[k].BadgeSecondPlace;
       var badge3 = stats[k].BadgeThirdPlace; 
     }
-    console.log(badge100);
     if(badge1000 == true)
     {
         document.getElementById('soul-badge').style.opacity = '1';
