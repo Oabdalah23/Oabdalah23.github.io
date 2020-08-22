@@ -39,11 +39,12 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function gotData(data) {
+    
     var stats = data.val();
     var keys = Object.keys(stats);
     for (var i = 0; i < keys.length; i++)
     {
-      var k = keys[i];
+      var k = 'Badges';
       var badge1000 = stats[k].Badge1000Points;
       var badge10000 = stats[k].Badge10000Points;
       var badge100 = stats[k].Badge100Total;
@@ -51,29 +52,30 @@ function gotData(data) {
       var badge2 = stats[k].BadgeSecondPlace;
       var badge3 = stats[k].BadgeThirdPlace; 
     }
+    console.log(badge100);
     if(badge1000 == true)
     {
-        document.getElementById('soul-badge').style.opacity = '100%';
+        document.getElementById('soul-badge').style.opacity = '1';
     }
     if(badge10000 == true)
     {
-        document.getElementById('volcano-badge').style.opacity = '100%';
+        document.getElementById('volcano-badge').style.opacity = '1';
     }
     if(badge100 == true)
     {
-        document.getElementById('marsh-badge').style.opacity = '100%';
+        document.getElementById('marsh-badge').style.opacity = '1';
     }
     if(badge1 == true)
     {
-        document.getElementById('boulder-badge').style.opacity = '100%';
+        document.getElementById('boulder-badge').style.opacity = '1';
     }
     if(badge2 == true)
     {
-        document.getElementById('cascade-badge').style.opacity = '100%';
+        document.getElementById('cascade-badge').style.opacity = '1';
     }
     if(badge3 == true)
     {
-        document.getElementById('thunder-badge').style.opacity = '100%';
+        document.getElementById('thunder-badge').style.opacity = '1';
     }
     $("#loader").fadeOut();
   }
