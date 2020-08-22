@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Chela+One);
+@import url(https://fonts.googleapis.com/css?family=Averia+Sans+Libre);
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap);
+
+.topleftitle {
+    font-family: 'Chela One';
+    position: fixed;
+    left: 10px;
+    top: -20px;
+    font-size: 218%;
+    color: transparent;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff7a7a, #ffff73, #78ffff, #85ff85, #7878ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: animate 20s linear infinite;
+    -webkit-animation: animate 20s linear infinite;
+    -moz-animation: animate 20s linear infinite;
+    background-size: 1000%;
+    letter-spacing: 4px !important;
+}
+#cube{
+    background-clip: content-box;
+    color: transparent !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 26px;
+    vertical-align: 10%;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.back {
+    z-index: 999;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    cursor: pointer;
+    bottom: 10px;
+    left: 10px;
+
+}
+
+.back .back {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #c9deff;
+    border-radius: 6px;
+}
+
+.back .back:hover {
+    background-color: #a9c8fa;
+}
+
+.fas {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+
+#wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: table;
+    table-layout: fixed;
+    width: 720px;
+    height: 560px;
+    border: 2px solid whitesmoke;
+}
+#boulder-badge, #cascade-badge, #thunder-badge, #soul-badge, #marsh-badge, #volcano-badge {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+    width: 200px;
+    height: 240px;
+    padding: 20px;
+}
+#boulder-badge h1, #cascade-badge h1, #thunder-badge h1, #soul-badge h1, #marsh-badge h1, #volcano-badge h1 {
+    font-family: 'Averia Sans Libre';
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 30px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#boulder-badge {
+    background: #0095ff;
+    opacity: 40%;
+    width: 240px;
+}
+
+#cascade-badge {
+    background: #0095ff;
+    opacity: 40%;
+    width: 240px;
+}
+
+#thunder-badge {
+    background: #0095ff;
+    opacity: 40%;
+    width: 240px;
+}
+
+#soul-badge {
+    background: #0095ff;
+    opacity: 40%;
+}
+
+#marsh-badge {
+    background: #0095ff;
+    opacity: 40%;
+}
+
+#volcano-badge {
+    background: #0095ff;
+    opacity: 40%;
+}

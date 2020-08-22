@@ -19,6 +19,7 @@ var total = 0;
 var score = 0;
 var coins = 0;
 var TotalAccuracy = {};
+var Badges = {};
 var first = {};
 var second = {};
 var third = {};
@@ -167,6 +168,44 @@ function gotData(data) {
   document.getElementById("accuracy").innerHTML = accuracy;
   myFBref.child("stats/" + useruid).update({
     TotalAccuracy,
+  });
+  if(score >= 1000)
+  {
+    badge1000 = true;
+  }
+  if(score >= 10000)
+  {
+    badge1000 = true;
+    badge10000 = true;
+  }
+  if(total >= 100)
+  {
+    badge100 = true;
+  }
+  if(score < 1000)
+  {
+    badge1000 = false;
+    badge10000 = false;
+  }
+  if(score >= 1000 && score < 10000)
+  {
+    badge10000 = false;
+  }
+  if(total < 100)
+  {
+    badge100 = false;
+  }
+  badge1 = false;
+  badge2 = false;
+  badge3 = false;
+  Badges.Badge1000Points = badge1000;
+  Badges.Badge10000Points = badge10000;
+  Badges.Badge100Total = badge100;
+  Badges.BadgeFirstPlace = badge1;
+  Badges.BadgeSecondPlace = badge2;
+  Badges.BadgeThirdPlace = badge3;
+  myFBref.child("stats/" + useruid).update({
+    Badges,
   });
   document.getElementById("totalquestions").innerHTML = total;
   document.getElementById("totalscore").innerHTML = score;
