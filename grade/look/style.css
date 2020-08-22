@@ -287,9 +287,22 @@ nav navwidth {
     outline: transparent;
 }
 
-#buttonleaderboard:disabled {
-    background-color: #4f64ab !important;
-    font-size: 15px;
+#buttonbadges {
+    display: block;
+    font-family: 'Averia Sans Libre';
+    background-color: #0095ff !important;
+    border-color: black !important;
+    font-size: 20px;
+    outline: transparent;
+    margin-bottom: 3px !important;
+}
+
+#buttonbadges:hover {
+    font-family: 'Averia Sans Libre';
+    background-color: #2270a8 !important;
+    border-color: black !important;
+    font-size: 20px;
+    outline: transparent;
 }
 
 @media (max-width: 550px ) {
@@ -298,6 +311,16 @@ nav navwidth {
     }
 
     .new1 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 750px ) {
+    #buttonbadges {
+        display: none !important;
+    }
+
+    .new2 {
         display: none !important;
     }
 }

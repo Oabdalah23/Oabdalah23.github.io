@@ -2563,6 +2563,9 @@ function logout() {
 function leaderboard() {
   window.location.href = "account/leaderboard";
 }
+function badges() {
+  window.location.href = "badges";
+}
 
 first.Name = str;
 first.Accuracy = score;
