@@ -2623,10 +2623,9 @@ ninth.Accuracy = eighthaccuracy;
 tenth.Name = ninthname;
 tenth.Accuracy = ninthaccuracy;
 
-var datecount = 1;
+var datecount = 0;
 
 var dates = [
-  "08/1/2020 12:1 AM EST",
   "09/1/2020 12:1 AM EST",
   "10/1/2020 12:1 AM EST",
   "11/1/2020 12:1 AM EST",
@@ -2649,12 +2648,28 @@ function getESTOffset() {
 function showRemaining() {
   var now = new Date();
   var distance = end - now - getESTOffset() * _hour;
-  if (distance < 0) {
-    datecount++;
+  if (distance < 0)
+  {
+    end = new Date(dates[1]);
   }
   var days = Math.floor(distance / _day);
-
-  document.getElementById("time").innerHTML = days;
+  var hours = Math.floor(distance / _hour);
+  var minutes  = Math.floor(distance / _minute);
+  if (days > 0)
+  {
+    document.getElementById("time").innerHTML = days;
+    document.getElementById("end").innerHTML = " Days";
+  }
+  else if (hours > 0)
+  {
+    document.getElementById("time").innerHTML = hours;
+    document.getElementById("end").innerHTML = " Hours";
+  }
+  else
+  {
+    document.getElementById("time").innerHTML = minutes;
+    document.getElementById("end").innerHTML = " Minutes";
+  }
 }
 
 timer = setInterval(showRemaining, 1000);
