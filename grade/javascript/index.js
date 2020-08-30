@@ -169,12 +169,6 @@ function gotData(data) {
   myFBref.child("stats/" + useruid).update({
     TotalAccuracy,
   });
-  var badge1000check = stats['Badges'].Badge1000Points;
-  var badge10000check = stats['Badges'].Badge10000Points;
-  var badge100check = stats['Badges'].Badge100Total;
-  var badge1check = stats['Badges'].BadgeFirstPlace;
-  var badge2check = stats['Badges'].BadgeSecondPlace;
-  var badge3check = stats['Badges'].BadgeThirdPlace;
   if(score >= 1000)
   {
     badge1000 = true;
@@ -187,7 +181,7 @@ function gotData(data) {
   {
     badge100 = true;
   }
-  if(badge1000check == undefined || badge1000check == false)
+  if(stats['Badges'].Badge1000Points == undefined || stats['Badges'].Badge1000Points == false)
   {
     if(score < 1000)
     {
@@ -195,21 +189,21 @@ function gotData(data) {
       badge10000 = false;
     }
   }
-  if(badge10000check == undefined || badge10000check == false)
+  if(stats['Badges'].Badge10000Points == undefined || stats['Badges'].Badge10000Points == false)
   {
     if(score >= 1000 && score < 10000)
     {
       badge10000 = false;
     }
   }
-  if(badge100check == undefined || badge100check == false)
+  if(stats['Badges'].Badge100Total == undefined || stats['Badges'].Badge100Total == false)
   {
     if(total < 100)
     {
       badge100 = false;
     }
   }
-  if(badge1check == undefined || badge1check == false)
+  if(stats['Badges'].BadgeFirstPlace == undefined || stats['Badges'].BadgeFirstPlace == false)
   {
     badge1 = false;
   }
@@ -217,7 +211,7 @@ function gotData(data) {
   {
     badge1  = true;
   }
-  if(badge2check == undefined || badge2check == false)
+  if(stats['Badges'].BadgeSecondPlace == undefined || stats['Badges'].BadgeSecondPlace == false)
   {
     badge2 = false;
   }
@@ -225,7 +219,7 @@ function gotData(data) {
   {
     badge2 = true;
   }
-  if(badge3check == undefined || badge3check == false)
+  if(stats['Badges'].BadgeThirdPlace == undefined || stats['Badges'].BadgeThirdPlace == false)
   {
     badge3 = false;
   }
