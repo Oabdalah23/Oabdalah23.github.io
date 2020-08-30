@@ -188,6 +188,9 @@ function gotData(data) {
       badge1000 = true;
     }
   }
+  else{
+    badge1000 = true;
+  }
   if(badge10000check == undefined || badge10000check == false)
   {
     if(score >= 1000 && score < 10000)
@@ -199,6 +202,9 @@ function gotData(data) {
       badge10000 = true;
     }
   }
+  else{
+    badge10000 = true;
+  }
   if(badge100check == undefined || badge100check == false)
   {
     if(total < 100)
@@ -209,6 +215,9 @@ function gotData(data) {
     {
       badge100 = true;
     }
+  }
+  else{
+    badge100 = true;
   }
   if(badge1check == undefined || badge1check == false)
   {
