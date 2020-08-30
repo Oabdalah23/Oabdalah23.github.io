@@ -186,6 +186,8 @@ $(function () {
   });
 });
 
+var Badges = {};
+
 function gotData() {
   Badges.Badge1000Points = false;
   Badges.Badge10000Points = false;
