@@ -169,41 +169,48 @@ function gotData(data) {
   myFBref.child("stats/" + useruid).update({
     TotalAccuracy,
   });
-  if(score >= 1000)
-  {
-    badge1000 = true;
-  }
-  if(score >= 10000)
-  {
-    badge10000 = true;
-  }
-  if(total >= 100)
-  {
-    badge100 = true;
-  }
-  if(stats['Badges'].Badge1000Points == undefined || stats['Badges'].Badge1000Points == false)
+  var badge1000check = stats['Badges'].Badge1000Points;
+  var badge10000check = stats['Badges'].Badge10000Points;
+  var badge100check = stats['Badges'].Badge100Total;
+  var badge1check = stats['Badges'].BadgeFirstPlace;
+  var badge2check = stats['Badges'].BadgeSecondPlace;
+  var badge3check = stats['Badges'].BadgeThirdPlace;
+
+  if(badge1000check == undefined || badge1000check == false)
   {
     if(score < 1000)
     {
       badge1000 = false;
       badge10000 = false;
     }
+    else if(score >= 1000)
+    {
+      badge1000 = true;
+    }
   }
-  if(stats['Badges'].Badge10000Points == undefined || stats['Badges'].Badge10000Points == false)
+  if(badge10000check == undefined || badge10000check == false)
   {
     if(score >= 1000 && score < 10000)
     {
       badge10000 = false;
     }
+    else if(score >= 10000)
+    {
+      badge10000 = true;
+    }
   }
-  if(stats['Badges'].Badge100Total == undefined || stats['Badges'].Badge100Total == false)
+  if(badge100check == undefined || badge100check == false)
   {
     if(total < 100)
     {
       badge100 = false;
     }
+    else if(total >= 100)
+    {
+      badge100 = true;
+    }
   }
-  if(stats['Badges'].BadgeFirstPlace == undefined || stats['Badges'].BadgeFirstPlace == false)
+  if(badge1check == undefined || badge1check == false)
   {
     badge1 = false;
   }
@@ -211,7 +218,7 @@ function gotData(data) {
   {
     badge1  = true;
   }
-  if(stats['Badges'].BadgeSecondPlace == undefined || stats['Badges'].BadgeSecondPlace == false)
+  if(badge2check == undefined || badge2check == false)
   {
     badge2 = false;
   }
@@ -219,7 +226,7 @@ function gotData(data) {
   {
     badge2 = true;
   }
-  if(stats['Badges'].BadgeThirdPlace == undefined || stats['Badges'].BadgeThirdPlace == false)
+  if(badge3check == undefined || badge3check == false)
   {
     badge3 = false;
   }
