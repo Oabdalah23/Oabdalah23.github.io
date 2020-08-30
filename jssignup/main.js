@@ -187,6 +187,7 @@ $(function () {
 });
 
 var Badges = {};
+var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 function gotData() {
   Badges.Badge1000Points = false;
