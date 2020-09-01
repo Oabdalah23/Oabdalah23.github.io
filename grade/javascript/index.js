@@ -280,7 +280,7 @@ function gotLeaderboardData(data) {
   tenthname = stats["tenth"].Name;
   tenthaccuracy = stats["tenth"].Accuracy;
   while (1 === 1) {
-    if (score > firstaccuracy) {
+    if (score >= firstaccuracy) {
       if (str == firstname) {
         first.Name = str;
         first.Accuracy = score;
@@ -531,7 +531,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > secondaccuracy) {
+    } else if (score >= secondaccuracy) {
       if (str == firstname) {
         first.Name = str;
         first.Accuracy = score;
@@ -751,7 +751,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > thirdaccuracy) {
+    } else if (score >= thirdaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
@@ -946,7 +946,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > fourthaccuracy) {
+    } else if (score >= fourthaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
@@ -1122,7 +1122,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > fifthaccuracy) {
+    } else if (score >= fifthaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
@@ -1285,7 +1285,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > sixthaccuracy) {
+    } else if (score >= sixthaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
@@ -1440,7 +1440,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > seventhaccuracy) {
+    } else if (score >= seventhaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
@@ -1591,7 +1591,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > eighthaccuracy) {
+    } else if (score >= eighthaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
@@ -1749,7 +1749,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > ninthaccuracy) {
+    } else if (score >= ninthaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
@@ -1908,7 +1908,7 @@ function gotLeaderboardData(data) {
         });
         break;
       }
-    } else if (score > tenthaccuracy) {
+    } else if (score >= tenthaccuracy) {
       if (str == firstname) {
         first.Name = secondname;
         first.Accuracy = secondaccuracy;
