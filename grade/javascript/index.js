@@ -2633,7 +2633,7 @@ ninth.Accuracy = eighthaccuracy;
 tenth.Name = ninthname;
 tenth.Accuracy = ninthaccuracy;
 
-var datecount = 0;
+var datecount = 1;
 
 var dates = [
   "09/1/2020 12:1 AM EST",
