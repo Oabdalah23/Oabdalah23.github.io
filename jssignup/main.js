@@ -202,6 +202,7 @@ function gotData() {
   setTimeout(redirect, 2000);
 }
 
+
 const passwordToggle = document.querySelector('.js-password-toggle')
 
 passwordToggle.addEventListener('change', function() {
