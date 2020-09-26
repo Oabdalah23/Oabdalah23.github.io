@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164613225-1"></script>
 	<script>
-	   window.dataLayer = window.dataLayer || [];
-	   function gtag(){dataLayer.push(arguments);}
-	   gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	   gtag('config', 'UA-164613225-1');
+		gtag('config', 'UA-164613225-1');
 	</script>
 	<title>Log In | KidKalc</title>
 	<meta charset="UTF-8">
@@ -23,19 +24,20 @@
 	<script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" sizes="180x180" href="/grade/favicon/apple-touch-icon.png">
-  	<link rel="icon" type="image/png" sizes="32x32" href="/grade/favicon/favicon-32x32.png">
-  	<link rel="icon" type="image/png" sizes="16x16" href="/grade/favicon/favicon-16x16.png">
-  	<link rel="manifest" href="/grade/favicon/site.webmanifest">
+	<link rel="icon" type="image/png" sizes="32x32" href="/grade/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/grade/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/grade/favicon/site.webmanifest">
 	<link rel="stylesheet" type="text/css" href="fontssignup/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="fontssignup/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
+
 <body style="background-image: url(grade/look/bgg.jpg);">
 
 
-	
+
 	<div id="logincontainer" class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
@@ -43,7 +45,7 @@
 					<span id="title" class="login100-form-title p-b-50">
 						Sign In With
 					</span>
-	
+
 
 					<a onclick="googlesignin()" id="googlebtn" class="btn-google m-b-20">
 						<img src="imagessignup/icons/icon-google.png" alt="GOOGLE">
@@ -51,53 +53,56 @@
 					</a>
 
 					<span id="or" class="or p-t-20 p-b-0">
-						──────────   Or   ──────────
+						────────── Or ──────────
 					</span>
-					
+
 					<div class="p-t-20 p-b-9">
 						<span id="name" class="txt11">
 							Name (Optional)
 						</span>
 					</div>
-					<div autocomplete="off" id="namebox" class="wrap-input1001 validate-input" data-validate = "Name is required">
+					<div autocomplete="off" id="namebox" class="wrap-input1001 validate-input"
+						data-validate="Name is required">
 						<input autocomplete="off" id="name_field" class="input100" type="text">
 						<span class="focus-input100"></span>
-					</div>	
-					
+					</div>
+
 					<div class="p-t-20 p-b-9">
 						<span class="txt1">
 							Username
 						</span>
 					</div>
-					<div autocomplete="off" class="wrap-input100 validate-input" data-validate = "Username is required">
-						<input autocomplete="off" id="email_field" class="input100" type="text" >
+					<div autocomplete="off" class="wrap-input100 validate-input" data-validate="Username is required">
+						<input autocomplete="off" id="email_field" class="input100" type="text">
 						<span class="focus-input100"></span>
 					</div>
-					
+
 					<div class="p-t-13 p-b-9">
 						<span class="txt1">
 							Password
 						</span>
-						
+
 					</div>
-					<div autocomplete="off" class="wrap-input100 validate-input" data-validate = "Password is required">
+					<div autocomplete="off" class="wrap-input100 validate-input" data-validate="Password is required">
 						<input autocomplete="off" id="password_field" class="input1002" type="password">
 						<span class="focus-input100"></span>
 						<div class="absolute inset-y-0 right-0 flex items-center px-2">
 							<input class="hidden js-password-toggle" id="toggle" type="checkbox" />
-							<label class="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label" for="toggle">Show</label>
+							<label
+								class="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label"
+								for="toggle">Show</label>
 						</div>
 					</div>
 
 
-					<div   id ="signinbtn" class="container-login100-form-btn m-t-17">
+					<div id="signinbtn" class="container-login100-form-btn m-t-17">
 						<h1 onclick="login()" class="login100-form-btn">
 							Sign In
 						</h1>
 					</div>
 
-					<div  id="signupbtn" class="container-login100-form-btn m-t-17">
-						<h1  onclick="signup()" class="login100-form-btn">
+					<div id="signupbtn" class="container-login100-form-btn m-t-17">
+						<h1 onclick="signup()" class="login100-form-btn">
 							Sign Up
 						</h1>
 					</div>
@@ -105,7 +110,7 @@
 					<div class="errordiv m-t-17">
 						<p id="error" class="error"></p>
 					</div>
-					
+
 
 					<div class="w-full text-center p-t-55">
 						<span id="signuptxt" class="txt2">
@@ -123,36 +128,37 @@
 							Sign In
 						</a>
 					</div>
-                
-                    <ul class="back">
+
+					<ul class="back">
 						<li id="back" onclick="back()" class="back">
-						  <a class="fas fa-home"></a>
-					  </ul>
-				
+							<a class="fas fa-home"></a>
+					</ul>
+
 				</form>
 			</div>
 		</div>
 	</div>
 
-	
-	
 
-	
-<!--===============================================================================================-->
+
+
+
+	<!--===============================================================================================-->
 	<script>
-	  
-	  // Initialize Firebase
-	  var config = {
-		apiKey: "AIzaSyCSY_guUTymv77PDeCi9A8K11bmAystFX8",
-		authDomain: "kidkalc.firebaseapp.com",
-		databaseURL: "https://kidkalc.firebaseio.com",
-		projectId: "kidkalc",
-		storageBucket: "kidkalc.appspot.com",
-		messagingSenderId: "363718905093"
-	  };
-	  firebase.initializeApp(config);
+
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyCSY_guUTymv77PDeCi9A8K11bmAystFX8",
+			authDomain: "kidkalc.firebaseapp.com",
+			databaseURL: "https://kidkalc.firebaseio.com",
+			projectId: "kidkalc",
+			storageBucket: "kidkalc.appspot.com",
+			messagingSenderId: "363718905093"
+		};
+		firebase.initializeApp(config);
 	</script>
 	<script src="jssignup//main.js"></script>
 
 </body>
+
 </html>
