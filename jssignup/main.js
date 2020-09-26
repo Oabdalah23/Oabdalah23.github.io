@@ -25,6 +25,7 @@ function signupchange() {
   document.getElementById("title").innerHTML = "Sign Up";
   document.getElementById("or").style.display = "none";
   document.getElementById("title").className = "login100-form-title p-b-20";
+  document.title = "Sign Up | KidKalc";
 }
 
 function signin() {
@@ -47,6 +48,7 @@ function signin() {
     document.getElementById("or").innerHTML = "──────────   Or   ──────────";
   }
   document.getElementById("title").className = "login100-form-title p-b-50";
+  document.title = "Log In | KidKalc";
 }
 
 function login() {
