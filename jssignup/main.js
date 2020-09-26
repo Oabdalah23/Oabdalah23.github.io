@@ -201,3 +201,21 @@ function gotData() {
   });
   setTimeout(redirect, 2000);
 }
+
+const passwordToggle = document.querySelector('.js-password-toggle')
+
+passwordToggle.addEventListener('change', function() {
+  const password = document.querySelector('#password_field'),
+  passwordLabel = document.querySelector('.js-password-label')
+
+  if (password.type === 'password') {
+    password.type = 'text'
+    passwordLabel.innerHTML = 'Hide'
+  } else {
+    password.type = 'password'
+    passwordLabel.innerHTML = 'Show'
+  }
+
+  password.focus()
+})
+

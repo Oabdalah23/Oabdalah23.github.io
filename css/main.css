@@ -749,3 +749,27 @@ button.arrow-left:after {
   top: 2px;
   color: black;
 }
+
+.input1002 {
+  font-family: Poppins-Regular;
+  color: #333333;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 90.5%;
+  background: transparent;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.input1002:focus+.focus-input100 {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}

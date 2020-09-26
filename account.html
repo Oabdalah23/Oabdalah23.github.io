@@ -14,6 +14,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.5/tailwind.min.css">
 	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
@@ -80,8 +81,12 @@
 						
 					</div>
 					<div autocomplete="off" class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input autocomplete="off" id="password_field" class="input100" type="password"  >
+						<input autocomplete="off" id="password_field" class="input1002" type="password">
 						<span class="focus-input100"></span>
+						<div class="absolute inset-y-0 right-0 flex items-center px-2">
+							<input class="hidden js-password-toggle" id="toggle" type="checkbox" />
+							<label class="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label" for="toggle">Show</label>
+						</div>
 					</div>
 
 
