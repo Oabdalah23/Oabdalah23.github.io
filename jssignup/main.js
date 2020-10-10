@@ -189,9 +189,15 @@ $(function () {
 });
 
 var Badges = {};
+var Streak = {};
 var myFBref = new Firebase("https://kidkalc.firebaseio.com/");
 
 function gotData() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yyyy = today.getFullYear();
+  today = mm + "/" + dd + "/" + yyyy;
   Badges.Badge1000Points = false;
   Badges.Badge10000Points = false;
   Badges.Badge100Total = false;
@@ -204,8 +210,11 @@ function gotData() {
   Badges.Streak2 = false;
   Badges.Streak3 = false;
   Badges.Streak4 = false;
+  Streak.LoginStreak = 0;
+  Streak.LoginStreakDate = today;
   myFBref.child("stats/" + useruid).update({
     Badges,
+    Streak,
   });
   setTimeout(redirect, 2000);
 }
