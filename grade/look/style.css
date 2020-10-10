@@ -197,6 +197,11 @@ nav navwidth {
     border-radius: 0rem;
     text-shadow: 0 0.5px 0 #70c4ff, 0 1px 0 #66c0ff, 0 1.5px 0 #54b9ff, 0 2px 0 #42b2ff, 0 2.5px 0 #29a8ff, 0 3px 0 #19a2ff, 0 3.5px 0 #0098ff, 0 4px 0 #028eed;
     cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition:    all 1s;
+    -ms-transition:     all 1s;
+    -o-transition:      all 1s;
+    transition:         all 1s;
 }
 
 #buttons02 .button {
@@ -257,6 +262,11 @@ nav navwidth {
     border-color: black !important;
     font-size: 12px;
     outline: transparent;
+    -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 
@@ -277,6 +287,11 @@ nav navwidth {
     font-size: 20px;
     outline: transparent;
     margin-bottom: 3px !important;
+    -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 #buttonleaderboard:hover {
@@ -295,6 +310,11 @@ nav navwidth {
     font-size: 20px;
     outline: transparent;
     margin-bottom: 3px !important;
+    -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 #buttonbadges:hover {
@@ -361,6 +381,11 @@ nav navwidth {
     line-height: 50px;
     background-color: #c9deff;
     border-radius: 6px;
+    -webkit-transition: all 1s;
+    -moz-transition:    all 1s;
+    -ms-transition:     all 1s;
+    -o-transition:      all 1s;
+    transition:         all 1s;
 }
 
 .menushare .share:hover.top .submenu li:nth-child(1) {
@@ -479,6 +504,11 @@ nav navwidth {
     line-height: 50px;
     background-color: #c9deff;
     border-radius: 6px;
+    -webkit-transition: all 1s;
+    -moz-transition:    all 1s;
+    -ms-transition:     all 1s;
+    -o-transition:      all 1s;
+    transition:         all 1s;
 }
 
 .help .menubottom i.fa:hover {
@@ -514,6 +544,11 @@ nav navwidth {
     background-color: #c9deff;
     border-radius: 6px;
     animation: none;
+    -webkit-transition: all 1s;
+    -moz-transition:    all 1s;
+    -ms-transition:     all 1s;
+    -o-transition:      all 1s;
+    transition:         all 1s;
 }
 
 .account .account:hover {
@@ -586,10 +621,28 @@ nav navwidth {
     align-items: center;
     padding-top: 10%;
     padding-bottom: 8%;
-    background-image: linear-gradient(to left top,
-            rgba(161, 211, 255) 0%,
-            rgba(255, 181, 190) 100%);
+    background: linear-gradient(151deg, #a1d3ff, #ffb5be, #b5ffbb, #c1b5ff, #ffbc69) ;
+    background-size: 400%, 400%;
     border-radius: 3%;
+    -webkit-animation: GraidentCard 30s ease infinite;
+    -moz-animation: GraidentCard 30s ease infinite;
+    animation: GraidentCard 30s ease infinite;
+}
+
+@-webkit-keyframes GraidentCard {
+    0%{background-position:0% 34%}
+    50%{background-position:100% 67%}
+    100%{background-position:0% 34%}
+}
+@-moz-keyframes GraidentCard {
+    0%{background-position:0% 34%}
+    50%{background-position:100% 67%}
+    100%{background-position:0% 34%}
+}
+@keyframes GraidentCard { 
+    0%{background-position:0% 34%}
+    50%{background-position:100% 67%}
+    100%{background-position:0% 34%}
 }
 
 #onecard,
@@ -712,4 +765,9 @@ nav navwidth {
     .season {
         visibility: hidden;
     }
+}
+
+.card__total #firemoji {
+    font-size: 15px;
+    vertical-align: 31%;
 }

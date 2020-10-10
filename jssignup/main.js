@@ -198,6 +198,12 @@ function gotData() {
   Badges.BadgeFirstPlace = false;
   Badges.BadgeSecondPlace = false;
   Badges.BadgeThirdPlace = false;
+  Badges.Badge1000Total = false;
+  Badges.BadgeLeaderboard = false;
+  Badges.Streak1 = false;
+  Badges.Streak2 = false;
+  Badges.Streak3 = false;
+  Badges.Streak4 = false;
   myFBref.child("stats/" + useruid).update({
     Badges,
   });

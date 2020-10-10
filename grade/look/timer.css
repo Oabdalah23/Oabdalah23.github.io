@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.base-timer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 79%;
+  width: 75px;
+  height: 75px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 5px;
+  stroke: transparent;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 5px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  font-family: 'Secular One', sans-serif;
+  color: white;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+

@@ -51,31 +51,98 @@ function gotData(data) {
       var badge1 = stats[k].BadgeFirstPlace;
       var badge2 = stats[k].BadgeSecondPlace;
       var badge3 = stats[k].BadgeThirdPlace; 
+      var badge1000total = stats[k].Badge1000Total; 
+      var leaderboardcheck = stats[k].BadgeLeaderboard;
+      var badgestreak1 = stats[k].Streak1;
+      var badgestreak2 = stats[k].Streak2;
+      var badgestreak3 = stats[k].Streak3;
+      var badgestreak4 = stats[k].Streak4;
     }
     if(badge1000 == true)
     {
         document.getElementById('soul-badge').style.opacity = '1';
     }
+    else {
+      document.getElementById('soul-badge').style.opacity = '30%';
+    }
     if(badge10000 == true)
     {
         document.getElementById('volcano-badge').style.opacity = '1';
+    }
+    else {
+      document.getElementById('volcano-badge').style.opacity = '30%';
     }
     if(badge100 == true)
     {
         document.getElementById('marsh-badge').style.opacity = '1';
     }
+    else {
+      document.getElementById('marsh-badge').style.opacity = '30%';
+    }
     if(badge1 == true)
     {
         document.getElementById('boulder-badge').style.opacity = '1';
+    }
+    else {
+      document.getElementById('boulder-badge').style.opacity = '30%';
     }
     if(badge2 == true)
     {
         document.getElementById('cascade-badge').style.opacity = '1';
     }
+    else {
+      document.getElementById('cascade-badge').style.opacity = '30%';
+    }
     if(badge3 == true)
     {
         document.getElementById('thunder-badge').style.opacity = '1';
     }
+    else {
+      document.getElementById('thunder-badge').style.opacity = '30%';
+    }
+    if(badge1000total == true)
+    {
+        document.getElementById('mercury-badge').style.opacity = '1';
+    }
+    else {
+      document.getElementById('mercury-badge').style.opacity = '30%';
+    }
+    if(leaderboardcheck == true)
+    {
+        document.getElementById('rain-badge').style.opacity = '1';
+    }
+    else {
+      document.getElementById('rain-badge').style.opacity = '30%';
+    }
+    if(badgestreak1 == true)
+    {
+        document.getElementById('streak1-badge').style.opacity = '1';
+    } 
+    else {
+      document.getElementById('streak1-badge').style.opacity = '30%';
+    }
+    if(badgestreak2 == true)
+    {
+        document.getElementById('streak2-badge').style.opacity = '1';
+    }
+    else {
+      document.getElementById('streak2-badge').style.opacity = '30%';
+    }
+    if(badgestreak3 == true)
+    {
+        document.getElementById('streak3-badge').style.opacity = '1';
+    }
+    else {
+      document.getElementById('streak3-badge').style.opacity = '30%';
+    }
+    if(badgestreak4 == true)
+    {
+        document.getElementById('streak4-badge').style.opacity = '1';
+    }
+    else {
+      document.getElementById('streak4-badge').style.opacity = '30%';
+    }
+
     $("#loader").fadeOut();
   }
 
@@ -110,3 +177,62 @@ function back() {
 function redirect() {
   location.replace("https://KidKalc.com");
 }
+
+
+var slideIndex = 0;
+var slideIndexCurrent = 0;
+showSlides();
+//showSlidesCurrent(slideIndexCurrent);
+
+function currentSlide(n) {
+  showSlidesCurrent(slideIndexCurrent = n);
+
+}
+
+
+/*** CURRENT SLIDE on click ***/
+function currentSlide(n) {
+  showSlidesCurrent(slideIndexCurrent = n);
+
+}
+
+function showSlidesCurrent(n) {
+  //var slideIndex = 1;
+  var i;
+  var slides = document.getElementsByClassName("wrapper");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndexCurrent = 1}   
+
+  if (n < 0) {slideIndexCurrent = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexCurrent-1].style.display = "block";  
+  dots[slideIndexCurrent-1].className += " active";
+  slideIndexCurrent++;
+}
+
+
+/*** SHOW SLIDE with timer ***/
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("wrapper");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+//  showSlidesCurrent(slideIndexCurrent);

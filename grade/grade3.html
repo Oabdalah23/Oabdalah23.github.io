@@ -31,8 +31,9 @@
    <meta name="viewport" content="width=device-width" , initial-scale=1>
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Grade 3 | KidKalc</title>
-   <link rel="stylesheet" href="look/grade3.css">
+   <link rel="stylesheet" href="look/grades.css">
    <link rel="stylesheet" href="/grade/look/loader.css">
+   <link rel="stylesheet" href="/grade/look/timer.css">
    <meta name="twitter:site" content="@KidKalc">
    <meta name="title" content="Grade 3 | KidKalc">
    <meta property="og:title" content="Grade 3 | KidKalc">
@@ -54,15 +55,15 @@
 
    <div class="loader__wrap" id="loader" role="alertdialog" aria-busy="true" aria-live="polite" aria-label="Loading…">
       <div class="loader" aria-hidden="true">
-        <span>K</span>
-        <span>I</span>
-        <span>D</span>
-        <span>K</span>
-        <span id="spana"><i id = "icon" class="fa fa-dice-d6"></i></span>
-        <span>L</span>
-        <span>C</span>
+         <span>K</span>
+         <span>I</span>
+         <span>D</span>
+         <span>K</span>
+         <span id="spana"><i id="icon" class="fa fa-dice-d6"></i></span>
+         <span>L</span>
+         <span>C</span>
       </div>
-    </div>
+   </div>
 
    <div class="dropdown">
       <divdrop>
@@ -117,17 +118,23 @@
    <div class="middlecontent">
       <h1 class="title" id="question"></h1>
       <ul class="sc">
-         <p id="finprompt" class="solution">
-            Score<br />0
-         </p>
-         <p id="coins" class="coins">
-            Total<br />1
-         </p>
       </ul>
       <p id="difficulty" class="diff">
          Difficulty
       </p>
    </div>
+   <p id="finprompt" class="solution">
+      Score<br>
+      <span id="scoreq">
+         0
+      </span>
+   </p>
+   <p id="coins" class="coins">
+      Total<br>
+      <span id="totalq">
+         1
+      </span>
+   </p>
    <input autocomplete="off" id="textbox" name="name" class="textinput" type="text" value="">
    <button id="check" type="button" class="check" onclick="outputname()"></button>
    <ul class="home">
@@ -139,7 +146,9 @@
          <li class="menubottom bottomright">
             <i onclick="help()" class="fa fa-question"></i>
       </ul>
+      <!-- <div id="timer"></div> -->
 </body>
+
 <script src="javascript/grade3.js"></script>
 
 </html>

@@ -76,28 +76,38 @@
 }
 
 
-#wrapper {
+.background {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: table;
     table-layout: fixed;
-    width: 720px;
-    height: 560px;
+    width: 800px;
     border: 2px solid whitesmoke;
+    background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
+    background-size: 400%, 400%;
+    -webkit-animation: Badge 20s ease infinite;
+    -moz-animation: Badge 20s ease infinite;
+    animation: Badge 20s ease infinite;
 }
-#boulder-badge, #cascade-badge, #thunder-badge, #soul-badge, #marsh-badge, #volcano-badge {
+
+.wrapper {
+    display: none;
+}
+
+#boulder-badge, #cascade-badge, #thunder-badge, #soul-badge, #marsh-badge, #volcano-badge, #mercury-badge, #rain-badge, #streak1-badge, #streak2-badge, #streak3-badge, #streak4-badge {
+    background: transparent;
     display: table-cell;
     vertical-align: bottom;
     text-align: center;
-    width: 200px;
+    width: 240px;
     height: 240px;
     padding: 20px;
 }
-#boulder-badge h1, #cascade-badge h1, #thunder-badge h1, #soul-badge h1, #marsh-badge h1, #volcano-badge h1 {
+#boulder-badge h1, #cascade-badge h1, #thunder-badge h1, #soul-badge h1, #marsh-badge h1, #volcano-badge h1,  #mercury-badge h1, #rain-badge h1, #streak1-badge h1, #streak2-badge h1, #streak3-badge h1, #streak4-badge h1{
     font-family: 'Averia Sans Libre';
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     color: white;
     margin-top: 30px;
@@ -105,34 +115,90 @@
 }
 
 #boulder-badge {
-    background: #0095ff;
-    opacity: 40%;
-    width: 240px;
-}
+    opacity: 30%;
+} 
 
 #cascade-badge {
-    background: #0095ff;
-    opacity: 40%;
-    width: 240px;
-}
+    opacity: 30%;
+} 
 
-#thunder-badge {
-    background: #0095ff;
-    opacity: 40%;
-    width: 240px;
-}
+#thunder-badge{
+    opacity: 30%;
+} 
 
-#soul-badge {
-    background: #0095ff;
-    opacity: 40%;
-}
+#soul-badge{
+    opacity: 30%;
+} 
 
-#marsh-badge {
-    background: #0095ff;
-    opacity: 40%;
-}
+#marsh-badge{
+    opacity: 30%;
+} 
 
 #volcano-badge {
-    background: #0095ff;
-    opacity: 40%;
+    opacity: 30%;
 }
+
+#mercury-badge {
+    opacity: 30%;
+}
+
+#rain-badge {
+    opacity: 30%;
+}
+
+#streak1-badge {
+    opacity: 30%;
+} 
+
+#streak2-badge {
+    opacity: 30%;
+} 
+
+#streak3-badge {
+    opacity: 30%;
+} 
+
+#streak4-badge {
+    opacity: 30%;
+}
+
+@-webkit-keyframes Badge {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Badge {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Badge { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(240, 84, 84, 0.25);
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor:pointer;
+    bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .active {
+    background-color: #a63838;
+  }
+  
+  .dotsdiv {
+      position: absolute;
+      bottom: 3px;
+      width: 100%;
+      transform: translateX(-50);
+  }

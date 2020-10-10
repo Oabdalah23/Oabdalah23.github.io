@@ -69,7 +69,7 @@ body {
   text-align: center;
   text-shadow: 3px 3px #0095ff;
   color: #ebebeb;
-  top: 4vh;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   -webkit-touch-callout: none;
@@ -105,22 +105,20 @@ body {
 }
 
 .check {
-
   background-color: transparent;
   border-color: transparent;
-
 }
 
-.textinput {
+#textbox {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 45vh;
+  top: 45%;
   font-family: 'Averia Sans Libre';
   text-decoration: none;
   padding: 0;
   letter-spacing: 0;
-  color: white ;
+  color: white;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -140,18 +138,27 @@ body {
   border-right-color: transparent;
   border-bottom-color: white !important;
   box-shadow: 0px 2px 0px -1px #0095ff;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .solution {
   font-family: 'Averia Sans Libre';
   position: absolute;
-  font-size: 3vw;
+  font-size: 43px;
   text-align: center;
-  text-shadow: 2px 2px #0095ff;
+  text-shadow: 0 0.5px 0 #ffcc87, 0 1px 0 #ffc87d, 0 1.5px 0 #ffc370, 0 2px 0 #ffbd61, 0 2.5px 0 #ffb64f, 0 3px 0 #ffae3b, 0 3.5px 0 #ffa82b, 0 4px 0 #ffa119;
   color: #ebebeb;
-  left: 89.25vw;
-  top: 0.01vh;
-  width: 8.5vw;
+  width: auto;
+  right: 30px;
+  top: 15px;
+}
+
+#scoreq {
+  text-shadow: 0 0.5px 0 #70c4ff, 0 1px 0 #66c0ff, 0 1.5px 0 #54b9ff, 0 2px 0 #42b2ff, 0 2.5px 0 #29a8ff, 0 3px 0 #19a2ff, 0 3.5px 0 #0098ff, 0 4px 0 #028eed;
 }
 
 .diff {
@@ -165,20 +172,28 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  -webkit-transition: text-shadow 1s;
+  -moz-transition: text-shadow 1s;
+  -ms-transition: text-shadow 1s;
+  -o-transition: text-shadow 1s;
+  transition: text-shadow 1s;
 }
 
 .coins {
   font-family: 'Averia Sans Libre';
   position: absolute;
-  font-size: 3vw;
+  font-size: 43px;
   text-align: center;
-  text-shadow: 2px 2px #0095ff;
+  text-shadow: 0 0.5px 0 #ffcc87, 0 1px 0 #ffc87d, 0 1.5px 0 #ffc370, 0 2px 0 #ffbd61, 0 2.5px 0 #ffb64f, 0 3px 0 #ffae3b, 0 3.5px 0 #ffa82b, 0 4px 0 #ffa119;
   color: #ebebeb;
-  top: 0.01vh;
-  left: 1.4vw;
-  width: 8.5vw;
+  width: auto;
+  left: 30px;
+  top: 15px;
 }
 
+#totalq {
+  text-shadow: 0 0.5px 0 #70c4ff, 0 1px 0 #66c0ff, 0 1.5px 0 #54b9ff, 0 2px 0 #42b2ff, 0 2.5px 0 #29a8ff, 0 3px 0 #19a2ff, 0 3.5px 0 #0098ff, 0 4px 0 #028eed;
+}
 
 div divdrop {
   font-family: 'Averia Sans Libre';
@@ -198,7 +213,7 @@ div divdrop {
   font-family: 'Averia Sans Libre';
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: transparent;
   text-shadow: 2px 2px #0095ff;
   font-size: 100%;
   min-width: 160px;
@@ -210,23 +225,54 @@ div divdrop {
   display: block;
 }
 
+
 @media (max-width: 940px) {
   .textinput {
     text-shadow: 0px 0px white;
   }
 
-  div divdrop {
-    display: inline-block;
+  .coins {
+    font-size: 5vw;
+    left: 15px;
+    top: 5px;
   }
 
-  .sc {
-    display: none;
+  .solution {
+    font-size: 5vw;
+    right: 15px;
+    top: 5px;
   }
 
   .diff {
     display: none;
   }
 }
+
+@media (max-width: 420px) {
+  .coins {
+    font-size: 6vw;
+    left: 15px;
+    top: 5px;
+    text-shadow: 0 0.3px 0 #ffcc87, 0 0.6px 0 #ffc87d, 0 0.9px 0 #ffc370, 0 1.2px 0 #ffbd61, 0 1.5px 0 #ffb64f, 0 1.8px 0 #ffae3b, 0 2.1px 0 #ffa82b, 0 2.4px 0 #ffa119;
+  }
+
+  .solution {
+    font-size: 6vw;
+    right: 15px;
+    top: 5px;
+    text-shadow: 0 0.3px 0 #ffcc87, 0 0.6px 0 #ffc87d, 0 0.9px 0 #ffc370, 0 1.2px 0 #ffbd61, 0 1.5px 0 #ffb64f, 0 1.8px 0 #ffae3b, 0 2.1px 0 #ffa82b, 0 2.4px 0 #ffa119;
+  }
+
+  #scoreq {
+    text-shadow: 0 0.3px 0 #70c4ff, 0 0.6px 0 #66c0ff, 0 0.9px 0 #54b9ff, 0 1.2px 0 #42b2ff, 0 1.5px 0 #29a8ff, 0 1.8px 0 #19a2ff, 0 2.1px 0 #0098ff, 0 2.4px 0 #028eed;
+  }
+
+  #totalq {
+    text-shadow: 0 0.3px 0 #70c4ff, 0 0.6px 0 #66c0ff, 0 0.9px 0 #54b9ff, 0 1.2px 0 #42b2ff, 0 1.5px 0 #29a8ff, 0 1.8px 0 #19a2ff, 0 2.1px 0 #0098ff, 0 2.4px 0 #028eed;
+  }
+}
+
+
 
 .mid-center {
   position: absolute;
@@ -290,6 +336,11 @@ div divdrop {
   color: black;
   background-color: #c9deff;
   border-radius: 6px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .help .menubottom i.fa:hover {
@@ -321,6 +372,11 @@ div divdrop {
   border-radius: 6px;
   font-size: 17.5px;
   color: black;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .home .menubottom i.fa:hover {
