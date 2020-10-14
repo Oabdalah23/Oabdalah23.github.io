@@ -2592,6 +2592,8 @@ function gotData(data) {
   } else {
     badgestreak4 = true;
   }
+  document.getElementById("totalquestions").innerHTML = total;
+  document.getElementById("totalscore").innerHTML = score;
   Badges.Badge1000Points = badge1000;
   Badges.Badge10000Points = badge10000;
   Badges.Badge100Total = badge100;
@@ -2608,8 +2610,6 @@ function gotData(data) {
     Badges,
   });
 
-  document.getElementById("totalquestions").innerHTML = total;
-  document.getElementById("totalscore").innerHTML = score;
   //document.getElementById("totalcoins").innerHTML = coins;
 }
 
