@@ -63,10 +63,10 @@ firebase.auth().onAuthStateChanged(function (user) {
     username = user;
     useruid = user.uid;
     database = firebase.database();
-    leaderboardref = database.ref("stats/leaderboard");
-    leaderboardref.on("value", gotLeaderboardData);
     ref = database.ref("stats/" + useruid);
     ref.on("value", gotData);
+    leaderboardref = database.ref("stats/leaderboard");
+    leaderboardref.on("value", gotLeaderboardData);
   } else {
     username = "NotSignedIn";
 
@@ -2362,8 +2362,16 @@ function gotLeaderboardData(data) {
     str == tenthname
   ) {
     leaderboardcheck = true;
+    Badges.BadgeLeaderboard = leaderboardcheck;
+    myFBref.child("stats/" + useruid).update({
+      Badges,
+    });
   } else {
     leaderboardcheck = false;
+    Badges.BadgeLeaderboard = leaderboardcheck;
+    myFBref.child("stats/" + useruid).update({
+      Badges,
+    });
   }
 }
 
@@ -2484,7 +2492,6 @@ function gotData(data) {
   var badge2check = stats["Badges"].BadgeSecondPlace;
   var badge3check = stats["Badges"].BadgeThirdPlace;
   var badge1000totalcheck = stats["Badges"].Badge1000Total;
-  var badgeleaderboardcheck = stats["Badges"].BadgeLeaderboard;
   var badgestreak1check = stats["Badges"].BadgeStreak1;
   var badgestreak2check = stats["Badges"].BadgeStreak2;
   var badgestreak3check = stats["Badges"].BadgeStreak3;
@@ -2543,9 +2550,6 @@ function gotData(data) {
   } else {
     badge3 = true;
   }
-  if (badgeleaderboardcheck == undefined || badgeleaderboardcheck == false) {
-    badgeleaderboardcheck = leaderboardcheck;
-  }
   if (badgestreak1check == undefined || badgestreak1check == false) {
     if (loginstreakcount < 7) {
       badgestreak1 = false;
@@ -2594,8 +2598,8 @@ function gotData(data) {
   Badges.BadgeFirstPlace = badge1;
   Badges.BadgeSecondPlace = badge2;
   Badges.BadgeThirdPlace = badge3;
+  Badges.BadgeLeaderboard = leaderboardcheck;
   Badges.Badge1000Total = badge1000total;
-  Badges.BadgeLeaderboard = badgeleaderboardcheck;
   Badges.Streak1 = badgestreak1;
   Badges.Streak2 = badgestreak2;
   Badges.Streak3 = badgestreak3;
