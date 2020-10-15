@@ -28,7 +28,7 @@ body {
 .leaderboard header {
     --start: 15%;
     height: 130px;
-    background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(54, 89, 219, .33) 10%, rgba(54, 89, 219, .33) 17%), linear-gradient(to right, #5b7cfa, #3659db);
+    background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(54, 89, 219, 0.33) 10%, rgba(54, 89, 219, .33) 17%), linear-gradient(to right, #5b7cfa, #3659db);
     color: #ffc77d;
     position: relative;
     border-radius: 12px 12px 0 0;
@@ -66,8 +66,8 @@ body {
 }
 
 .leaderboard header .leaderboard__icon {
-    fill: #fff;
-    opacity: 0.35;
+    fill: #ffc77d;
+    opacity: 0.60;
     width: 50px;
     position: absolute;
     top: 50%;

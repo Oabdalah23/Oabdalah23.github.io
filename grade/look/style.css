@@ -716,16 +716,7 @@ nav navwidth {
     }
 }
 
-.modal-body::-webkit-scrollbar {
-    display: none;
-}
 
-.modal-body {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
 
 .season {
     position: fixed;
