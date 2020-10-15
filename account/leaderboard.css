@@ -85,7 +85,7 @@ body {
     padding: 15px 15px 20px;
     display: block;
     row-gap: 8px;
-    height: 500px;
+    height: 53vh;
     object-fit: none;
     overflow: scroll;
     overflow-x: hidden;
@@ -312,5 +312,5 @@ body {
 }
 
 .leaderboard__profile{
-    height: 23%;
+    height: 105px;
 }
