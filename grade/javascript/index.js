@@ -2470,13 +2470,16 @@ function gotData(data) {
       } else {
         document.getElementById("loginstreak").innerHTML = loginstreakcount;
       }
-    } else {
+    } else if (Difference_In_Days < 1) {
       if (loginstreakcount >= 3) {
         document.getElementById("loginstreak").innerHTML = loginstreakcount;
         document.getElementById("firemoji").innerHTML = "🔥";
       } else {
         document.getElementById("loginstreak").innerHTML = loginstreakcount;
       }
+    } else if (Difference_In_Days > 1) {
+      loginstreakcount = 0;
+      document.getElementById("loginstreak").innerHTML = loginstreakcount;
     }
   }
   Streak.LoginStreakDate = loginstreakdate;
