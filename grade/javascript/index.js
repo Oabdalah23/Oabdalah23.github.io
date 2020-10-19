@@ -123,6 +123,7 @@ var score4firebaseleader;
 var score5firebaseleader;
 
 function gotLeaderboardData(data) {
+  score = score;
   var stats = data.val();
   firstname = stats["first"].Name;
   firstaccuracy = stats["first"].Accuracy;
@@ -4647,7 +4648,6 @@ function gotLeaderboardData2(data) {
 
 function gotLeaderboardData3(data) {
   score = score0firebaseleader;
-  console.log(score);
   var stats = data.val();
   firstname = stats["first"].Name;
   firstaccuracy = stats["first"].Accuracy;
