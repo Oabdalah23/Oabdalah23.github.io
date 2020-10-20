@@ -446,7 +446,7 @@ function gotLeaderboardData6(data) {
   document.getElementById("usernamescore65").innerHTML = fifthname;
   document.getElementById("score65").innerHTML = fifthaccuracy;
   document.getElementById("usernamescore66").innerHTML = sixthname;
-  document.getElementById("score6").innerHTML = sixthaccuracy;
+  document.getElementById("score66").innerHTML = sixthaccuracy;
   document.getElementById("usernamescore67").innerHTML = seventhname;
   document.getElementById("score67").innerHTML = seventhaccuracy;
   document.getElementById("usernamescore68").innerHTML = eighthname;
