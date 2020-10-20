@@ -32,6 +32,7 @@ var ninth = {};
 var tenth = {};
 var Streak = {};
 var str = "";
+var actualscore;
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -123,7 +124,7 @@ var score4firebaseleader;
 var score5firebaseleader;
 
 function gotLeaderboardData(data) {
-  score = score;
+  score = actualscore;
   var stats = data.val();
   firstname = stats["first"].Name;
   firstaccuracy = stats["first"].Accuracy;
@@ -18216,6 +18217,7 @@ function gotData(data) {
   accuracy = Math.round(100 * (score / total)) / 100;
   TotalAccuracy.Accuracy = accuracy;
   TotalAccuracy.Name = str;
+  actualscore = score;
   document.getElementById("accuracy").innerHTML = accuracy;
   myFBref.child("stats/" + useruid).update({
     TotalAccuracy,
