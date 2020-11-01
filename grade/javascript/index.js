@@ -18294,8 +18294,9 @@ function gotData(data) {
     badge1000 = true;
   }
   if (badge10000check == undefined || badge10000check == false) {
-    if (score >= 1000 && score < 10000) {
+    if (score < 10000) {
       badge10000 = false;
+      console.log(badge10000);
     } else if (score >= 10000) {
       badge10000 = true;
     }
