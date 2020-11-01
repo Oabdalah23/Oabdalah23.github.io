@@ -18215,6 +18215,9 @@ function gotData(data) {
     }
   }
   accuracy = Math.round(100 * (score / total)) / 100;
+  if (isNaN(accuracy)) {
+    accuracy = 0;
+  }
   TotalAccuracy.Accuracy = accuracy;
   TotalAccuracy.Name = str;
   actualscore = score;
@@ -18278,6 +18281,7 @@ function gotData(data) {
   var badgestreak2check = stats["Badges"].BadgeStreak2;
   var badgestreak3check = stats["Badges"].BadgeStreak3;
   var badgestreak4check = stats["Badges"].BadgeStreak4;
+
 
   if (badge1000check == undefined || badge1000check == false) {
     if (score < 1000) {
