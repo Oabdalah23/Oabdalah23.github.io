@@ -18386,7 +18386,6 @@ function gotData(data) {
   Badges.BadgeFirstPlace = badge1;
   Badges.BadgeSecondPlace = badge2;
   Badges.BadgeThirdPlace = badge3;
-  Badges.BadgeLeaderboard = leaderboardcheck;
   Badges.Badge1000Total = badge1000total;
   Badges.Streak1 = badgestreak1;
   Badges.Streak2 = badgestreak2;
@@ -18530,7 +18529,6 @@ tenth.Accuracy = ninthaccuracy;
 var datecount = 1;
 
 var dates = [
-  "11/1/2020 12:1 AM EST",
   "12/1/2020 12:1 AM EST",
   "01/1/2021 12:1 AM EST",
 ];
