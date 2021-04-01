@@ -1,0 +1,1574 @@
+{
+  "stats" : {
+    "0iWkowHDjEhSgok55YLi3x6GB4z1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade2" : {
+        "Grade2Score" : 0,
+        "Grade2Total" : 0
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "jhudson410"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "1edeW189KDbmyEwDyOXAzUtXExh2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "5GGi5zw9UZWqHX0Sw1LPhckvC8T2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "10/19/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "asd"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "5VmaCzbKIQfN4dX3H3NwfMUBWFc2" : {
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "5ncmF9pYuNfeOsZN9UZdK1Mp1mp1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 1,
+        "LoginStreakDate" : "10/26/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "danieljames"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "BD5sTFkPkgVwDUebmHAqsVuWgZm1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "jwilliams"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "ELzealfAkyWsVPVWxpZr9IbOgeV2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "zel10"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "EbtqpjZRtneBlxWKfa42THw0iaf1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "test3"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "Ee8FVh6WQMO0NwObpGZDVXHG2kv1" : {
+      "Badges" : {
+        "BadgeLeaderboard" : true
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "vinumber.for1.lrgdrvethru"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "GZjmf08q7CfQXQbhTsZylFw3Yrk2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "aljazair"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "IuROFXrspjUU3tczp7ReWaxxGx63" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      }
+    },
+    "JfvnIkrCBQQ8myeYzb3Qlld3POk1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "test"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "JyUbLZ7iTme8mlAdasBoNiDRaRq2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : true,
+        "Badge1000Total" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : true,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "03/01/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "sallyd"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "KJ7ilFFORCPbivIvmVhmR5JreUE3" : {
+      "Badges" : {
+        "Badge10000Points" : true,
+        "Badge1000Points" : true,
+        "Badge1000Total" : true,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : true,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : true,
+        "BadgeThirdPlace" : true,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade2" : {
+        "Grade2Score" : 0,
+        "Grade2Total" : 0
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "03/31/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "23oabdallah"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "LmQAXppGHyMx9pykdQzVjFQOchi2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "11/23/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "raghad"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "M1pWKrFuYCh2AKz2fmAwBBStkNG3" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : true,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "03/15/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" :0,
+        "Name" : "raghadkge"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "O5BzVaEOiJSdDEcUQzif5iWeidM2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : true,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade2" : {
+        "Grade2Score" : 0,
+        "Grade2Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "goodguy"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "O9QbH84J85OLISgMoCV7E1VZIjm2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "rasl3nn"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "P66d80HFhleCKxvr3KF51fq9TIH2" : {
+      "Badges" : {
+        "BadgeLeaderboard" : true
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "sherylr1974"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "PjTfTnQuMQh7BVx5EWg2v3eYQzG2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "10/15/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "moumen"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "Q4NNrHsO23hJEG363wtHQFRBpEf2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "bengy"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "QxyGTDIBp4OtpfsY4933GXjGsvC2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "30aabdallah"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "RGKyl57Dy9UbOEhdSSdRL0lFYtg1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : true,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "mathnothard"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "S1HaPgfM8qNkWxJRFHPWhCzjjaW2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "mark"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "Uplq7d642GYUXRlpceZYMM4TsWq1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : true,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : true
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "kal"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "VuDZ3NFgrGfOWm7oBeYKLfynZtD2" : {
+      "Badges" : {
+        "BadgeLeaderboard" : true
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "itakenovaferrumironpills"
+      }
+    },
+    "XuX7rrLwcBTb0gEpWKDUnbvJlFA2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "23mayeche"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "ZYbwii2K4ORosETeavWlZr2fXOH2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "bassam98"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "bPT4Qe9Y3LhqcS1vI6NyZ73xopa2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "11/07/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "lam"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "cKUSeaGVTCRnHEWwwNbCmoVNcIq1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : true,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade2" : {
+        "Grade2Score" : 0,
+        "Grade2Total" : 0
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "03/21/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "bananax12"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "cOPGxBepADN9BqmayljrwCWJLhD3" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "03/09/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "aya"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "d6CLRy7sbQQdrWjTDt6FXL44efG3" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade2" : {
+        "Grade2Score" : 0,
+        "Grade2Total" : 0
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "unicorn.cupcake123"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "dO1wNysZUHelG2ASZHyV6MLRQy52" : {
+      "Badges" : {
+        "BadgeLeaderboard" : false
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "jacoballenmitchell"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "gmoAeNGfv8dJTlarwjqdg6jl4m42" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "10/31/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "mathdestroyer"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "hlwATOY5k1YLbMrp1FvIQfmfdji1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : true,
+        "Badge1000Total" : true,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : true,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : true,
+        "BadgeThirdPlace" : true,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade2" : {
+        "Grade2Score" : 0,
+        "Grade2Total" : 0
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "02/27/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "anasabdallah2e"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "i5skXQPQV1QGBEDIQnf8uoYhhlo2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Streak" : {
+        "test" : 0
+      }
+    },
+    "leaderboard" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "leaderboard2" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "leaderboard3" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "leaderboard4" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "leaderboard5" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "leaderboard6" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "leaderboard7" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "leaderboard8" : {
+      "eighth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser8"
+      },
+      "fifth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser5"
+      },
+      "first" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser1"
+      },
+      "fourth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser4"
+      },
+      "ninth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser9"
+      },
+      "second" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser2"
+      },
+      "seventh" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser7"
+      },
+      "sixth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser6"
+      },
+      "tenth" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser10"
+      },
+      "third" : {
+        "Accuracy" : 0,
+        "Name" : "KidKalcUser3"
+      }
+    },
+    "mVg6ixibbxbJ0wMX52THPCvNqxm2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "try"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "mX4h2c02J4O8ZGU4UBcYT3J3MzA2" : {
+      "Badges" : {
+        "Badge10000Points" : true,
+        "Badge1000Points" : true,
+        "Badge1000Total" : true,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : true,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : true,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade2" : {
+        "Grade2Score" : 0,
+        "Grade2Total" : 0
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Grade4" : {
+        "Grade4Score" : 0,
+        "Grade4Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "01/08/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "coolguy10"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "nCGMHcHrR1QWFYzw3wqLEvGaZsm1" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "02/18/2021"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "admin"
+      }
+    },
+    "pzIxYkpXZbbXF25ttQYc25a6E4M2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Kindergarten" : {
+        "KindergartenScore" : 0,
+        "KindergartenTotal" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 0,
+        "LoginStreakDate" : "10/10/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "mohtelsayed"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "qgYnGsmL3QT7OL2jBs7W7Wn7Dr03" : {
+      "Badges" : {
+        "BadgeLeaderboard" : true
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "emeraldcrafter.team"
+      }
+    },
+    "undefined" : {
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Grade5" : {
+        "Grade5Score" : 0,
+        "Grade5Total" : 0
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "wswO6SVTvDWTJDX4RunVi8gll7Z2" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge100Total" : true,
+        "BadgeFirstPlace" : false,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Streak" : {
+        "test" : 0
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "sandy"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "xgCDLCe2DxROX0KtAx26z4wV4T23" : {
+      "Badges" : {
+        "Badge10000Points" : false,
+        "Badge1000Points" : false,
+        "Badge1000Total" : false,
+        "Badge100Total" : false,
+        "BadgeFirstPlace" : false,
+        "BadgeLeaderboard" : true,
+        "BadgeSecondPlace" : false,
+        "BadgeThirdPlace" : false,
+        "Streak1" : false,
+        "Streak2" : false,
+        "Streak3" : false,
+        "Streak4" : false
+      },
+      "Grade1" : {
+        "Grade1Score" : 0,
+        "Grade1Total" : 0
+      },
+      "Grade3" : {
+        "Grade3Score" : 0,
+        "Grade3Total" : 0
+      },
+      "Streak" : {
+        "LoginStreak" : 1,
+        "LoginStreakDate" : "10/15/2020"
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "sprinkles"
+      },
+      "TotalCoins" : {
+        "CoinsFirebase" : 0
+      }
+    },
+    "zm6arXTEvsNEcyJvwBBL0IHigWa2" : {
+      "Badges" : {
+        "BadgeLeaderboard" : true
+      },
+      "TotalAccuracy" : {
+        "Accuracy" : 0,
+        "Name" : "pa2037396"
+      }
+    }
+  }
+}
