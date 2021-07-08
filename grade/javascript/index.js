@@ -18529,8 +18529,8 @@ tenth.Accuracy = ninthaccuracy;
 var datecount = 1;
 
 var dates = [
-  "06/1/2021 12:1 AM EST",
   "07/1/2021 12:1 AM EST",
+  "08/1/2021 12:1 AM EST",
 ];
 
 var end = new Date(dates[datecount]);
